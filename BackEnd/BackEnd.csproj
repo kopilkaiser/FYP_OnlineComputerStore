@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddInventoryForm.Designer.cs">
+      <DependentUpon>AddInventoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prototype_designs\PrototypeHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="Prototype_designs\SellerShop.Designer.cs">
       <DependentUpon>SellerShop.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddInventoryForm.resx">
+      <DependentUpon>AddInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prototype_designs\PrototypeHome.resx">
       <DependentUpon>PrototypeHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +136,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\man-300x300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{db9a5181-a640-45c7-91c6-ed717b387910}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
