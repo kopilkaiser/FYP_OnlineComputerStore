@@ -15,6 +15,7 @@ namespace BackEnd
     public partial class AddInventoryForm : Form
     {
         int InventoryId;
+
         clsInventory AnInventory = new clsInventory();
         public AddInventoryForm()
         {
