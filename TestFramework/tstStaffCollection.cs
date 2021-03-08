@@ -30,8 +30,7 @@ namespace TestFramework
             TestStaff.Phonenum = "123456789123456";
             TestStaff.Salary = 19999.99m;
             TestStaff.DateJoined = DateTime.Now.Date;
-            TestStaff.Active = true;
-            //TestStaff.IsAdmin = false;
+            TestStaff.Active = true;           
             //assign the data to the property
             AllStaffs.ThisStaff = TestStaff;
             //test to see that the two values are the same;
@@ -67,6 +66,7 @@ namespace TestFramework
             Assert.AreEqual(AllStaffs.ThisStaff, TestItem);
         }
 
+        [TestMethod]
         public void DeleteMethodOK()
         {
             //create an instance of the class we want to create
@@ -76,7 +76,7 @@ namespace TestFramework
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set it's properties
-            TestItem.StaffId = 1;
+            TestItem.StaffId = 10;
             TestItem.AccountNo = 1;
             TestItem.Name = "Syed";
             TestItem.Phonenum = "123456789123456";
@@ -88,7 +88,7 @@ namespace TestFramework
             //add the record
             PrimaryKey = AllStaffs.Add();
             //set the primary key of the test data
-            TestItem.AccountNo = PrimaryKey;
+            TestItem.StaffId = PrimaryKey;
             //find the record
             AllStaffs.ThisStaff.Find(PrimaryKey);
             //delete the record
@@ -121,12 +121,11 @@ namespace TestFramework
             //add the record
             PrimaryKey = AllStaffs.Add();
             //set the primary key of the test data
-            TestItem.AccountNo = PrimaryKey;
-            //modify the test data
-            TestItem.StaffId = 1;
-            TestItem.AccountNo = 1;
+            TestItem.StaffId = PrimaryKey;
+            //modify the test data            
+            TestItem.AccountNo = 3;
             TestItem.Name = "Syed";
-            TestItem.Phonenum = "123456789123456";
+            TestItem.Phonenum = "99999999999";
             TestItem.Salary = 19999.99m;
             TestItem.DateJoined = DateTime.Now.Date;
             TestItem.Active = true;

@@ -7,31 +7,11 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "OnlineComputerStore", "Onli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackEnd", "BackEnd\BackEnd.csproj", "{5F909EC5-CCF1-4124-A66C-E4CB75AE3385}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FrontEnd", "FrontEnd\", "{67D4333D-7087-4E8F-A41B-695B21B544A8}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_52595"
-		Debug.AspNetCompiler.PhysicalPath = "FrontEnd\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52595\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_52595"
-		Release.AspNetCompiler.PhysicalPath = "FrontEnd\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52595\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "52595"
-		SlnRelativePath = "FrontEnd\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{DB9A5181-A640-45C7-91C6-ED717B387910}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFramework", "TestFramework\TestFramework.csproj", "{39FE51DE-43F8-4169-845B-AAA30E8ECACE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontEnd", "FrontEnd\FrontEnd.csproj", "{759A9F8A-21B6-4E67-8ECA-41A2AFC38BDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +29,6 @@ Global
 		{5F909EC5-CCF1-4124-A66C-E4CB75AE3385}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F909EC5-CCF1-4124-A66C-E4CB75AE3385}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F909EC5-CCF1-4124-A66C-E4CB75AE3385}.Release|Any CPU.Build.0 = Release|Any CPU
-		{67D4333D-7087-4E8F-A41B-695B21B544A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67D4333D-7087-4E8F-A41B-695B21B544A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67D4333D-7087-4E8F-A41B-695B21B544A8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{67D4333D-7087-4E8F-A41B-695B21B544A8}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{DB9A5181-A640-45C7-91C6-ED717B387910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB9A5181-A640-45C7-91C6-ED717B387910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB9A5181-A640-45C7-91C6-ED717B387910}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -61,6 +37,10 @@ Global
 		{39FE51DE-43F8-4169-845B-AAA30E8ECACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39FE51DE-43F8-4169-845B-AAA30E8ECACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39FE51DE-43F8-4169-845B-AAA30E8ECACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{759A9F8A-21B6-4E67-8ECA-41A2AFC38BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{759A9F8A-21B6-4E67-8ECA-41A2AFC38BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{759A9F8A-21B6-4E67-8ECA-41A2AFC38BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{759A9F8A-21B6-4E67-8ECA-41A2AFC38BDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
