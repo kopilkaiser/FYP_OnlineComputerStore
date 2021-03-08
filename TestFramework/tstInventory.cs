@@ -320,7 +320,7 @@ namespace TestFramework
             clsInventory AnInventory = new clsInventory();
             string Error = "";
             string Category = "";
-            Category = Category.PadRight(99, 'a');
+            Category = Category.PadRight(19, 'a');
             Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
             Assert.AreEqual(Error, "");
         }
@@ -331,7 +331,7 @@ namespace TestFramework
             clsInventory AnInventory = new clsInventory();
             string Error = "";
             string Category = "";
-            Category = Category.PadRight(100, 'a');
+            Category = Category.PadRight(20, 'a');
             Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
             Assert.AreEqual(Error, "");
         }
@@ -353,7 +353,7 @@ namespace TestFramework
             clsInventory AnInventory = new clsInventory();
             string Error = "";
             string Category = "";
-            Category = Category.PadRight(50, 'a');
+            Category = Category.PadRight(10, 'a');
             Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
             Assert.AreEqual(Error, "");
         }

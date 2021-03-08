@@ -122,7 +122,7 @@ namespace ClassLibrary
 
             if (name.Length > 40)
             {
-                Error = Error + "The inventory name cannot exceed 100 characters : ";
+                Error = Error + "The inventory name cannot exceed 40 characters : ";
             }
 
             //if price entered is a valid price
@@ -176,9 +176,9 @@ namespace ClassLibrary
                 Error = Error + "The category cannot be blank : ";
             }
 
-            if (category.Length > 100)
+            if (category.Length > 20)
             {
-                Error = Error + "The category cannot exceed 100 characters : ";
+                Error = Error + "The category cannot exceed 20 characters : ";
             }
 
             //if date entered is a valid date
