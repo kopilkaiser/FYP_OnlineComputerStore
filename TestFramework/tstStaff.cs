@@ -454,60 +454,60 @@ namespace TestFramework
             Assert.AreNotEqual(Error, "");
         }
 
-        //TestMethods for DateAdded property by different test types and test data
+        //TestMethods for DateJoined property 
 
         [TestMethod]
-        public void DateAddedExtremeMin()
+        public void DateJoinedExtremeMin()
         {
             clsStaff AStaff = new clsStaff();
             string Error = "";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(-100);
-            string DateAdded = TestDate.ToString();
+            string DateJoined = TestDate.ToString();
             Error = AStaff.Valid(Name, Phonenum, Salary, DateJoined);
             Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
-        public void DateAddedMinMinusOne()
+        public void DateJoinedMinMinusOne()
         {
             clsStaff AStaff = new clsStaff();
             string Error = "";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddDays(-1);
-            string DateAdded = TestDate.ToString();
+            string DateJoined = TestDate.ToString();
             Error = AStaff.Valid(Name, Phonenum, Salary, DateJoined);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
-        public void DateAddedMinBoundary()
+        public void DateJoinedMinBoundary()
         {
             clsStaff AStaff = new clsStaff();
-            string DateAdded = DateTime.Now.Date.ToString();
+            string DateJoined = DateTime.Now.Date.ToString();
             string Error = "";
             Error = AStaff.Valid(Name, Phonenum, Salary, DateJoined);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
-        public void DateAddedExtremeMax()
+        public void DateJoinedExtremeMax()
         {
             clsStaff AStaff = new clsStaff();
             string Error = "";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(100);
-            string DateAdded = TestDate.ToString();
+            string DateJoined = TestDate.ToString();
             Error = AStaff.Valid(Name, Phonenum, Salary, DateJoined);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
-        public void DateAddedInvalidDataType()
+        public void DateJoinedInvalidDataType()
         {
             clsStaff AStaff = new clsStaff();
             string Error = "";
-            string DateAdded = "a";
+            string DateJoined = "a";
             Error = AStaff.Valid(Name, Phonenum, Salary, DateJoined);
             Assert.AreNotEqual(Error, "");
         }

@@ -56,16 +56,7 @@ namespace ClassLibrary
         //public property for the address list
         public List<clsInventory> InventoryList
         {
-            /*get
-            {
-                //return the private data
-                return mInventoryList;
-            }
-            set
-            {
-                //set the private data
-                mInventoryList = value;
-            }*/
+         
 
             get
             {
@@ -155,7 +146,7 @@ namespace ClassLibrary
             dBConnection = new clsDataConnection();
             dBConnection.AddParameter("@Category", Category);
             //execute the stored procedure
-            dBConnection.Execute("sproc_tblInventory_FIlterByCategory");
+            dBConnection.Execute("sproc_tblInventory_FilterByCategory");
             //populate the array list with the data table
             PopulateArray(dBConnection);
         }

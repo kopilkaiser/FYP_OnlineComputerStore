@@ -54,7 +54,7 @@ namespace TestFramework
             TestItem.Salary = 19999.99m;
             TestItem.DateJoined = DateTime.Now.Date;
             TestItem.Active = true;
-            //set ThisAddress to the test data
+            //set ThisStaff to the test data
             AllStaffs.ThisStaff = TestItem;
             //add the record
             PrimaryKey = AllStaffs.Add();

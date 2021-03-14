@@ -74,7 +74,9 @@ namespace ClassLibrary
                     NewStaff.Salary = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["Salary"]);
                     //get the Date when the Staff member joined from the query results
                     NewStaff.DateJoined = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["DateJoined"]);
-         
+                    //get the Active status of the Staff 
+                    NewStaff.Active = Convert.ToBoolean(dBConnection.DataTable.Rows[Index]["Active"]);
+
                     //increment the index
                     Index++;
                     //add the address to the list
@@ -142,7 +144,7 @@ namespace ClassLibrary
             //filters the records based on a full or partial post code
             //connect to the database
             //clsDataConnection DB = new clsDataConnection();
-            //send the Category parameter to the database
+            //send the Name parameter to the database
             dBConnection = new clsDataConnection();
             dBConnection.AddParameter("@Name", Name);
             //execute the stored procedure
@@ -166,18 +168,18 @@ namespace ClassLibrary
             while (Index < RecordCount)
             {
                 //create a blank address
-                clsStaff AnStaff = new clsStaff();
+                clsStaff AStaff = new clsStaff();
                 //read in the fields from the current record
-                AnStaff.StaffId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["StaffId"]);
-                AnStaff.AccountNo = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["AccountNo"]);
-                AnStaff.Name = Convert.ToString(dBConnection.DataTable.Rows[Index]["Name"]);
-                AnStaff.Phonenum = Convert.ToString(dBConnection.DataTable.Rows[Index]["Phonenum"]);
-                AnStaff.Salary = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["Salary"]);
-                AnStaff.DateJoined = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["DateJoined"]);
-                AnStaff.Active = Convert.ToBoolean(dBConnection.DataTable.Rows[Index]["Active"]);
+                AStaff.StaffId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["StaffId"]);
+                AStaff.AccountNo = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["AccountNo"]);
+                AStaff.Name = Convert.ToString(dBConnection.DataTable.Rows[Index]["Name"]);
+                AStaff.Phonenum = Convert.ToString(dBConnection.DataTable.Rows[Index]["Phonenum"]);
+                AStaff.Salary = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["Salary"]);
+                AStaff.DateJoined = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["DateJoined"]);
+                AStaff.Active = Convert.ToBoolean(dBConnection.DataTable.Rows[Index]["Active"]);
 
                 //add the record to the private data member
-                mStaffList.Add(AnStaff);
+                mStaffList.Add(AStaff);
                 //point at the next record
                 Index++;
             }
