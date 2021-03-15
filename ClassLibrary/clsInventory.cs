@@ -123,7 +123,7 @@ namespace ClassLibrary
             if (name.Length > 40)
             {
                 Error = Error + "The inventory name cannot exceed 40 characters : ";
-            }
+            } 
 
             //if price entered is a valid price
             try

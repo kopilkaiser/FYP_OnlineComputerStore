@@ -120,7 +120,7 @@ namespace ClassLibrary
             {
                 PhonenumTemp = Convert.ToInt64(phonenum);
 
-                if (PhonenumTemp > 123456789123456)
+                if (PhonenumTemp > 999999999999999)
                 {
                     Error = Error + "The Phone number cannot exceed more than 15 numbers : ";
                 }
