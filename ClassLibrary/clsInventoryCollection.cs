@@ -92,10 +92,9 @@ namespace ClassLibrary
 
         public int Add()
         {
+            //connect to the database
             dBConnection = new clsDataConnection();
             //add a new record to the database based on the values of ThisInventory
-            //connect to the database
-            //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
             dBConnection.AddParameter("@Name", mThisInventory.Name);
             dBConnection.AddParameter("@Price", mThisInventory.Price);

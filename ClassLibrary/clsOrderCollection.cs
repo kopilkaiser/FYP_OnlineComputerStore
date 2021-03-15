@@ -164,7 +164,7 @@ namespace ClassLibrary
                 AnOrder.AccountNo = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["AccountNo"]);
                 AnOrder.Email = Convert.ToString(dBConnection.DataTable.Rows[Index]["Email"]);
                 AnOrder.TotalPrice = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["TotalPrice"]);
-                AnOrder.DateOrdered = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["DateJoined"]);
+                AnOrder.DateOrdered = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["DateOrdered"]);
 
                 //add the record to the private data member
                 mOrderList.Add(AnOrder);

@@ -80,7 +80,7 @@ namespace TestFramework
             //invoke the method
             Found = AnOrder.Find(OrderId);
             //test to see that the result is correct
-            Assert.IsFalse(Found);
+            Assert.IsTrue(Found);
         }
 
         //TestMethods for DateOrdered property by different test types and test data

@@ -19,7 +19,7 @@ namespace TestFramework
         int InventoryId = 1;
         string Name = "Cadbury";
         string Price = "6.99";
-        string Quantity = "1000";
+        string Quantity = "10000";
         string Category = "Electronics";
         string DateAdded = DateTime.Now.Date.ToString();
 
@@ -512,7 +512,7 @@ namespace TestFramework
         {
             clsInventory AnInventory = new clsInventory();
             string Error = "";
-            string Quantity = "999";
+            string Quantity = "9999";
             Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
             Assert.AreEqual(Error, "");
         }
@@ -522,7 +522,7 @@ namespace TestFramework
         {
             clsInventory AnInventory = new clsInventory();
             string Error = "";
-            string Quantity = "1000";
+            string Quantity = "10000";
             Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
             Assert.AreEqual(Error, "");
         }
@@ -532,7 +532,7 @@ namespace TestFramework
         {
             clsInventory AnInventory = new clsInventory();
             string Error = "";
-            string Quantity = "1001";
+            string Quantity = "10001";
             Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
             Assert.AreNotEqual(Error, "");
         }
@@ -542,7 +542,7 @@ namespace TestFramework
         {
             clsInventory AnInventory = new clsInventory();
             string Error = "";
-            string Quantity = "500";
+            string Quantity = "5000";
             Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
             Assert.AreEqual(Error, "");
         }
@@ -552,7 +552,7 @@ namespace TestFramework
         {
             clsInventory AnInventory = new clsInventory();
             string Error = "";
-            string Quantity = "5000";
+            string Quantity = "99999999";
             Error = AnInventory.Valid(Name, Price, Quantity, Category, DateAdded);
             Assert.AreNotEqual(Error, "");
         }

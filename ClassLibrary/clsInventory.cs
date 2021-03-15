@@ -152,7 +152,7 @@ namespace ClassLibrary
             {
                 QuantityTemp = Convert.ToInt32(quantity);
 
-                if (QuantityTemp > 1000)
+                if (QuantityTemp > 10000)
                 {
                     Error = Error + "The quantity of inventory cannot exceed 1000 : ";
                 }
