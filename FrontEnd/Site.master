@@ -64,7 +64,7 @@
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                         <li><a runat="server" href ="~/SignInPage">Sign In</a></li>
                         <li><a runat="server" href ="~/SignUp">Sign Up</a></li>
-                        <li><a runat="server" href="">Product</a></li>
+                     
                         <li><br />
                         </li>
                         
@@ -73,8 +73,9 @@
                 </div>
             </div>
                          <nav>                 
+                             <asp:HyperLink ID="hypSignOut" runat="server" NavigateUrl="~/SignOut.aspx">Sign Out</asp:HyperLink>
                         <asp:TextBox ID="txtUserEmail" runat="server" ReadOnly="true"></asp:TextBox>
-                        <asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropdown" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" AutoPostBack="true" >
+                        &nbsp<asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropdown" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" AutoPostBack="true" >
                         <asp:ListItem >Manage Profile</asp:ListItem>
                         <asp:ListItem Value="~/About.aspx">About</asp:ListItem>
                         <asp:ListItem Value="~/Contact.aspx">Contact</asp:ListItem>

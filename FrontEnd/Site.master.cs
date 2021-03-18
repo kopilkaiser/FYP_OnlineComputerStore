@@ -40,10 +40,11 @@ namespace FrontEnd
             //set the state of the following to not authenticated i.e. they will be visible when not logged in
 
             //set the state of the following to not authenticated i.e. they will be visible when logged in
-           DropDownList2.Visible = Authenticated;
+            DropDownList2.Visible = Authenticated;
+            hypSignOut.Visible = Authenticated;
 
             txtUserEmail.Visible = Authenticated;
-            txtUserEmail.Text = "Welcome" + Sec.UserEMail + "!";
+            txtUserEmail.Text = "Welcome  " + Sec.UserEMail + "!";
 
         }
 

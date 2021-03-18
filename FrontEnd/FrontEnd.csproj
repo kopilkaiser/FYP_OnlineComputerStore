@@ -133,6 +133,7 @@
     <Content Include="ActivateAccount.aspx" />
     <Content Include="ReSet.aspx" />
     <Content Include="ChangePassword.aspx" />
+    <Content Include="SignOut.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="PracticeForm.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -274,6 +275,13 @@
     </Compile>
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignOut.aspx.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignOut.aspx.designer.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
