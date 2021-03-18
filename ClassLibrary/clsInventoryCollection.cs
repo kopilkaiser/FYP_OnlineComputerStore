@@ -65,15 +65,16 @@ namespace ClassLibrary
                 while (Index < dBConnection.Count)
                 {
                     clsInventory NewInventory = new clsInventory();
-                    //get the house no from the query results
-                    NewInventory.Name = Convert.ToString(dBConnection.DataTable.Rows[Index]["Name"]);
-                    //get the street from the query results
-                    NewInventory.Price = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["Price"]);
-                    //get the post code from the query results
-                    NewInventory.Quantity = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["Quantity"]);
-                    //get the address no from the query results
-                    NewInventory.Category = Convert.ToString(dBConnection.DataTable.Rows[Index]["Category"]);
+                    //get the Inventory Id from the query results
                     NewInventory.InventoryId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["InventoryId"]);
+                    //get the Name  from the query results
+                    NewInventory.Name = Convert.ToString(dBConnection.DataTable.Rows[Index]["Name"]);
+                    //get the Price from the query results
+                    NewInventory.Price = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["Price"]);
+                    //get the Quantity from the query results
+                    NewInventory.Quantity = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["Quantity"]);
+                    //get the Category no from the query results
+                    NewInventory.Category = Convert.ToString(dBConnection.DataTable.Rows[Index]["Category"]);
                     //increment the index
                     Index++;
                     //add the address to the list

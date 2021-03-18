@@ -60,6 +60,7 @@
     <Compile Include="tstOderCollection.cs" />
     <Compile Include="tstOrderline.cs" />
     <Compile Include="tstOrderlineCollection.cs" />
+    <Compile Include="tstPayment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FrontEnd.SiteMaster" %>
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FrontEnd.SiteMaster" %>
 
 <!DOCTYPE html>
 
@@ -6,15 +6,22 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> My ASP.NET Application</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
+            
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    
+    <style type="text/css">
+        .auto-style1 {
+            width: 163px;
+            height: 124px;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -37,6 +44,7 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+            
 
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -45,25 +53,49 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/"><span style="font-family:Arial, Helvetica, sans-serif; font-size:30px;">Tech Galaxy</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav" style="float: right">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href ="~/SignInPage">Sign In</a></li>
+                        <li><a runat="server" href ="~/SignUp">Sign Up</a></li>
+                        <li><a runat="server" href="">Product</a></li>
+                        <li><br />
+                        </li>
                         
                     </ul>
+                    
                 </div>
             </div>
+                         <nav>                 
+                        <asp:TextBox ID="txtUserEmail" runat="server" ReadOnly="true"></asp:TextBox>
+                        <asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropdown" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" AutoPostBack="true" >
+                        <asp:ListItem >Manage Profile</asp:ListItem>
+                        <asp:ListItem Value="~/About.aspx">About</asp:ListItem>
+                        <asp:ListItem Value="~/Contact.aspx">Contact</asp:ListItem>
+                         </asp:DropDownList>
+                        </nav>
         </div>
+
+        <div id="body" style="text-align:center">
+            <img src="Images/TechGalaxy11.PNG" class="auto-style1"/>
+
+        </div>
+
+     
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                  
+
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>Developer - KopilKaiser</p>
             </footer>
         </div>
 

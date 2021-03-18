@@ -215,6 +215,14 @@ namespace ClassLibrary
             }
         }
 
+        public string AllDetails
+        {
+            get
+            {
+                return ("CustomerId:" + CustomerId + "_" + "AccountNo:" + AccountNo + "_" + "Name:" + Name + "_" + "Phonenum:" + Phonenum + "_"
+                    + "DateJoined:" + DateJoined.ToString("dd/MM/yyyy") + "_" + "Active:" + Active);
+            }
+        }
 
     }
 }

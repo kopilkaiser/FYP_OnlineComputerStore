@@ -1,7 +1,10 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 50px;
+    padding-top: 80px;
     padding-bottom: 20px;
+    background-color: white;
+    margin: 0px;
+    
 }
 
 /* Wrapping element */
@@ -18,6 +21,28 @@ textarea {
     max-width: 280px;
 }
 
+.DropDownList2 {
+    font-size: 50px;
+    padding: 5px 0px 0px 0px;
+}
+
+nav{
+    display:flex;
+    justify-content:flex-end;
+    
+}
+nav a {
+    //display:flex;
+    justify-content:right;
+    color: ghostwhite;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: background-color: 0.4s;
+}
+
+nav a:hover {
+    background-color: black;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

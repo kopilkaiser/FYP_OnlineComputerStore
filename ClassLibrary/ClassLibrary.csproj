@@ -51,6 +51,7 @@
     <Compile Include="clsOrderline.cs" />
     <Compile Include="clsOrderlineCollection.cs" />
     <Compile Include="clsPayment.cs" />
+    <Compile Include="clsPaymentCollection.cs" />
     <Compile Include="clsSecurity.cs" />
     <Compile Include="clsStaff.cs" />
     <Compile Include="clsStaffCollection.cs" />

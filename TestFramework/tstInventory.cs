@@ -9,7 +9,7 @@ namespace TestFramework
     //Testing Framework for my project, Online Computer Store
     //Developer: Kopil Kaiser
     //Supervisor: Hakeem Ibrahim
-    //References: Code has been taken from Matthew Dean, contact:mjdean@dmu.ac.uk
+    //References: Modification done from code provided by Matthew Dean, contact:mjdean@dmu.ac.uk
 
     //Testing for the class Inventory
     [TestClass]

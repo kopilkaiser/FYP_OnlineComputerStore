@@ -234,5 +234,15 @@ namespace ClassLibrary
                 return false;
             }
         }
+
+        public string AllDetails
+        {
+            get
+            {
+                return ("PaymentId:" + PaymentId + "_" + "PayeeName:" + PayeeName + "_" + "Method:" + Method + "_" 
+                    + "DatePurchased:" + DateTime.Now.Date.ToString("dd/MM/yyyy") + "_" + "Amount:" + Amount + "_" 
+                    + "CardNumber:" + CardNumber + "_" + "OrderId" + OrderId); 
+            }
+        }
     }
 }

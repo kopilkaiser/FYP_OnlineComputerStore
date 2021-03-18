@@ -244,7 +244,8 @@ namespace ClassLibrary
         {
             get
             {
-                return ("InventoryId:" + InventoryId + "_" + "Name:" + Name + "_" + "Price:" + Price + "_" + "Quantity:" + Quantity + "_" + "Category:" + Category + "_" + "DateAdded:" + DateTime.Now.Date.ToString("dd/MM/yyyy"));
+                return ("InventoryId:" + InventoryId + "_" + "Name:" + Name + "_" + "Price:" + Price + "_"
+                    + "Quantity:" + Quantity + "_" + "Category:" + Category + "_" + "DateAdded:" + DateTime.Now.Date.ToString("dd/MM/yyyy"));
             }
         }
     }
