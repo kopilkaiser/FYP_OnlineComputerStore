@@ -44,7 +44,7 @@ namespace FrontEnd
             hypSignOut.Visible = Authenticated;
 
             txtUserEmail.Visible = Authenticated;
-            txtUserEmail.Text = "Welcome  " + Sec.UserEMail + "!";
+            txtUserEmail.Text = "Welcome " + Sec.UserEMail + "!";
 
         }
 

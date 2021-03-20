@@ -52,6 +52,36 @@
     <Compile Include="AddInventoryForm.Designer.cs">
       <DependentUpon>AddInventoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="mdiChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiChangePasswordForm.Designer.cs">
+      <DependentUpon>mdiChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdiAddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiAddUserForm.Designer.cs">
+      <DependentUpon>mdiAddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdiMainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiMainMenuForm.Designer.cs">
+      <DependentUpon>mdiMainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdiSignInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiSignInForm.Designer.cs">
+      <DependentUpon>mdiSignInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent.Designer.cs">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prototype_designs\PrototypeHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +116,21 @@
     </Compile>
     <EmbeddedResource Include="AddInventoryForm.resx">
       <DependentUpon>AddInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiAddUserForm.resx">
+      <DependentUpon>mdiAddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiChangePasswordForm.resx">
+      <DependentUpon>mdiChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiMainMenuForm.resx">
+      <DependentUpon>mdiMainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent.resx">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiSignInForm.resx">
+      <DependentUpon>mdiSignInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prototype_designs\PrototypeHome.resx">
       <DependentUpon>PrototypeHome.cs</DependentUpon>
@@ -145,6 +190,24 @@
       <Project>{db9a5181-a640-45c7-91c6-ed717b387910}</Project>
       <Name>ClassLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-analyze-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-file-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-folder-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-help-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

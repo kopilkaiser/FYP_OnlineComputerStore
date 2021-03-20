@@ -74,7 +74,7 @@
             </div>
                          <nav>                 
                              <asp:HyperLink ID="hypSignOut" runat="server" NavigateUrl="~/SignOut.aspx">Sign Out</asp:HyperLink>
-                        <asp:TextBox ID="txtUserEmail" runat="server" ReadOnly="true"></asp:TextBox>
+                        <asp:TextBox ID="txtUserEmail" runat="server" ReadOnly="true" widht="30px"></asp:TextBox>
                         &nbsp<asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropdown" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" AutoPostBack="true" >
                         <asp:ListItem >Manage Profile</asp:ListItem>
                         <asp:ListItem Value="~/About.aspx">About</asp:ListItem>
