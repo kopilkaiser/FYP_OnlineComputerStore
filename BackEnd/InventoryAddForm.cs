@@ -12,19 +12,13 @@ using ClassLibrary;
 using System.Data.SqlClient;
 namespace BackEnd
 {
-    public partial class AddInventoryForm : Form
+    public partial class InventoryAddForm : Form
     {
         int InventoryId;
-
-        clsInventory AnInventory = new clsInventory();
-        public AddInventoryForm()
+        public InventoryAddForm()
         {
             InitializeComponent();
         }
-
-    
-
-       
 
         void DisplayInventory()
         {
@@ -37,7 +31,6 @@ namespace BackEnd
             txtPrice.Text = AllInventories.ThisInventory.Price.ToString();
             txtQuantity.Text = AllInventories.ThisInventory.Quantity.ToString();
             txtDateAdded.Text = AllInventories.ThisInventory.DateAdded.ToString();
-            //txtCategory.Text = AllInventories.ThisInventory.Category;
             chkActive.Checked = AllInventories.ThisInventory.Active;
             comboBoxCategory.SelectedText = AllInventories.ThisInventory.Category;
 
@@ -63,9 +56,9 @@ namespace BackEnd
                 //add the record
                 AllInventories.Add();
                 //all done so redirect back to the main page
-               // InventoryManageForm IM = new InventoryManageForm();
+                InventoryManageForm IM = new InventoryManageForm();
                 this.Hide();
-               // IM.Show();
+                IM.ShowDialog();
                 this.Close();
             }
             else
@@ -77,31 +70,82 @@ namespace BackEnd
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            //add the new record
-            Add();
-        }
+            clsInventoryCollection AllInventories = new clsInventoryCollection();
+            string Error = AllInventories.ThisInventory.Valid(txtName.Text, txtPrice.Text, txtQuantity.Text, Convert.ToString(comboBoxCategory.SelectedItem), txtDateAdded.Text);
+            string message = "Are you sure to Add the new Inventory to the Database?";
+            string caption = "User Confirmation!";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
 
+            //Displays the MessageBox
+
+            //if there are no Errors returned
+            if (Error == "")
+            {
+                //show the Message box
+                result = MessageBox.Show(message, caption, buttons);
+
+                //if "Yes" is pressed
+                if (result == DialogResult.Yes)
+                {
+                    //execute the Update method
+                    Add();
+
+                    //create an instance of ManageInventoryForm
+                    InventoryManageForm mdiMF = new InventoryManageForm();
+                    //hide the current form
+                    this.Hide();
+                    //show the Manaage Inventory Form
+                    mdiMF.ShowDialog();
+                    //close the current form
+                    this.Close();
+                }
+            }
+            else
+            {
+                //report an error
+                lblError.Text = "There were problems with the data entered : " + Error;
+            }
+
+        }
+                 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            //InventoryManageForm IM = new InventoryManageForm();
+            InventoryManageForm IM = new InventoryManageForm();
 
             this.Hide();
-           ////////// IM.Show();
+            IM.ShowDialog();
             this.Close();
         }
 
         private void AddInventoryForm_Load(object sender, EventArgs e)
         {
-            //InventoryId = Convert.ToInt32(InventoryId);
+            InventoryId = Convert.ToInt32(InventoryId);
 
 
-            //DisplayInventory();
-            txtDateAdded.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");           
+            //Display the details of the Inventory
+            txtDateAdded.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
             txtName.Text = "";
             txtPrice.Text = "";
             txtQuantity.Text = "";
 
-            chkActive.Checked = false;
+            chkActive.Checked = true;
+        }
+
+        private void AddInventoryForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if "Enter" Key is pressed press the button "OK"
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnOK.PerformClick();
+            }
+
+            //if the "Esc" Key is pressed press the button "Cancel"
+            if(e.KeyCode == Keys.Escape)
+            {
+                btnCancel.PerformClick();
+            }
+
         }
     }
 }

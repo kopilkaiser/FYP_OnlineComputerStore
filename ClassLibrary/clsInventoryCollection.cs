@@ -75,6 +75,8 @@ namespace ClassLibrary
                     NewInventory.Quantity = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["Quantity"]);
                     //get the Category no from the query results
                     NewInventory.Category = Convert.ToString(dBConnection.DataTable.Rows[Index]["Category"]);
+                    //get the Active status of the Inventory from the query results
+                    NewInventory.Active = Convert.ToBoolean(dBConnection.DataTable.Rows[Index]["Active"]);
                     //increment the index
                     Index++;
                     //add the address to the list

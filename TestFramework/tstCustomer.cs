@@ -6,11 +6,11 @@ namespace TestFramework
 {
     [TestClass]
     public class tstCustomer
-    {
+    { 
         //some good test data
         string CustomerId = "1";
         string Name = "Smith John";
-        string Phonenum = "123456789123456";
+        string Phonenum = "111111111111111";
         string AccountNo = "1";
         string DateJoined = DateTime.Now.Date.ToString();
 
@@ -352,7 +352,7 @@ namespace TestFramework
         {
             clsCustomer ACustomer = new clsCustomer();
             string Error = "";
-            string Phonenum = "123456789123456";
+            string Phonenum = "111111111111111";
             Error = ACustomer.Valid(Name, Phonenum, AccountNo, DateJoined);
             Assert.AreEqual(Error, "");
         }

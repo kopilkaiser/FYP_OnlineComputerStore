@@ -12,7 +12,7 @@ namespace TestFramework
         string PayeeName = "Michael Jolly";
         string Amount = "9.99";
         string Method = "Visa Debit";
-        string CardNumber = "4898889899888877";
+        string CardNumber = "9999999999999999";
         string OrderId = "1";
         string DatePurchased = DateTime.Now.Date.ToString();
 

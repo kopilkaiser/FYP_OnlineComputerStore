@@ -117,12 +117,12 @@ namespace ClassLibrary
 
             if (name.Length == 0)
             {
-                Error = Error + "The inventory name cannot be blank : ";
+                Error = Error + "The Name cannot be blank : ";
             }
 
             if (name.Length > 40)
             {
-                Error = Error + "The inventory name cannot exceed 40 characters : ";
+                Error = Error + "The Name cannot exceed 40 characters : ";
             } 
 
             //if price entered is a valid price
@@ -133,18 +133,18 @@ namespace ClassLibrary
 
                 if (PriceTemp > 100000m)
                 {
-                    Error = Error + "The price of inventory cannot exceed 100000 : ";
+                    Error = Error + "The Price cannot exceed 100000 : ";
                 }
 
                 if (PriceTemp < 0m)
                 {
-                    Error = Error + "The price of inventory cannot be less than zero : ";
+                    Error = Error + "The Price cannot be less than zero : ";
                 }
             }
             catch
             {
                 //record the error
-                Error = Error + "The price entered is not valid : ";
+                Error = Error + "The Price is invalid : ";
             }
 
             //if Quantity entered is a valid quantity
@@ -154,31 +154,31 @@ namespace ClassLibrary
 
                 if (QuantityTemp > 10000)
                 {
-                    Error = Error + "The quantity of inventory cannot exceed 1000 : ";
+                    Error = Error + "The Quantity cannot exceed 1000 : ";
                 }
 
                 if (QuantityTemp < 0)
                 {
-                    Error = Error + "The quantity of inventory cannot be less than zero : ";
+                    Error = Error + "The Quantity cannot be less than zero : ";
                 }
 
             }
             catch
             {
                 //record the error
-                Error = Error + "The quantity entered is not valid : ";
+                Error = Error + "The Quantity is invalid : ";
 
             }
 
 
             if (category.Length == 0)
             {
-                Error = Error + "The category cannot be blank : ";
+                Error = Error + "The Category cannot be blank : ";
             }
 
             if (category.Length > 20)
             {
-                Error = Error + "The category cannot exceed 20 characters : ";
+                Error = Error + "The Category cannot exceed 20 characters : ";
             }
 
             //if date entered is a valid date
@@ -204,7 +204,7 @@ namespace ClassLibrary
             catch
             {
                 //record the error
-                Error = Error + "The date entered was not a valid date : ";
+                Error = Error + "Date entered is invalid date : ";
             }
 
             return Error;
@@ -244,8 +244,8 @@ namespace ClassLibrary
         {
             get
             {
-                return ("InventoryId:" + InventoryId + "_" + "Name:" + Name + "_" + "Price:" + Price + "_"
-                    + "Quantity:" + Quantity + "_" + "Category:" + Category + "_" + "DateAdded:" + DateTime.Now.Date.ToString("dd/MM/yyyy"));
+                return ("InventoryId:" + InventoryId + "__" + "Name:" + Name + "__" + "Price:" + Price + "__"
+                    + "Quantity:" + Quantity + "__" + "Category:" + Category + "__" + "DateAdded:" + DateTime.Now.Date.ToString("dd/MM/yyyy") + "_" + "Active: " + Active);
             }
         }
     }

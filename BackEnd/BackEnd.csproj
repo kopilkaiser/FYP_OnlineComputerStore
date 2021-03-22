@@ -46,11 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddInventoryForm.cs">
+    <Compile Include="CustomerAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddInventoryForm.Designer.cs">
-      <DependentUpon>AddInventoryForm.cs</DependentUpon>
+    <Compile Include="CustomerAddForm.Designer.cs">
+      <DependentUpon>CustomerAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerDeleteForm.Designer.cs">
+      <DependentUpon>CustomerDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerUpdateForm.Designer.cs">
+      <DependentUpon>CustomerUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryAddForm.Designer.cs">
+      <DependentUpon>InventoryAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerManageForm.Designer.cs">
+      <DependentUpon>CustomerManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryDeleteForm.Designer.cs">
+      <DependentUpon>InventoryDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryManageForm.Designer.cs">
+      <DependentUpon>InventoryManageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="mdiChangePasswordForm.cs">
       <SubType>Form</SubType>
@@ -114,8 +150,32 @@
     <Compile Include="Prototype_designs\SellerShop.Designer.cs">
       <DependentUpon>SellerShop.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddInventoryForm.resx">
-      <DependentUpon>AddInventoryForm.cs</DependentUpon>
+    <Compile Include="InventoryUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryUpdateForm.Designer.cs">
+      <DependentUpon>InventoryUpdateForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomerAddForm.resx">
+      <DependentUpon>CustomerAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerDeleteForm.resx">
+      <DependentUpon>CustomerDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerManageForm.resx">
+      <DependentUpon>CustomerManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUpdateForm.resx">
+      <DependentUpon>CustomerUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryAddForm.resx">
+      <DependentUpon>InventoryAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryDeleteForm.resx">
+      <DependentUpon>InventoryDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryManageForm.resx">
+      <DependentUpon>InventoryManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiAddUserForm.resx">
       <DependentUpon>mdiAddUserForm.cs</DependentUpon>
@@ -156,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prototype_designs\SellerShop.resx">
       <DependentUpon>SellerShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryUpdateForm.resx">
+      <DependentUpon>InventoryUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>

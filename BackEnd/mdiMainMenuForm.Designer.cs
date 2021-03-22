@@ -41,7 +41,7 @@ namespace BackEnd
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(269, 28);
+            this.label1.Location = new System.Drawing.Point(306, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 39);
             this.label1.TabIndex = 0;
@@ -50,17 +50,19 @@ namespace BackEnd
             // btnManageInventory
             // 
             this.btnManageInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageInventory.Location = new System.Drawing.Point(83, 116);
+            this.btnManageInventory.Location = new System.Drawing.Point(127, 134);
             this.btnManageInventory.Name = "btnManageInventory";
             this.btnManageInventory.Size = new System.Drawing.Size(163, 83);
             this.btnManageInventory.TabIndex = 1;
             this.btnManageInventory.Text = "Inventory Management";
             this.btnManageInventory.UseVisualStyleBackColor = true;
+            this.btnManageInventory.Click += new System.EventHandler(this.btnManageInventory_Click);
             // 
             // btnManagePayment
             // 
+            this.btnManagePayment.Enabled = false;
             this.btnManagePayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManagePayment.Location = new System.Drawing.Point(276, 236);
+            this.btnManagePayment.Location = new System.Drawing.Point(320, 254);
             this.btnManagePayment.Name = "btnManagePayment";
             this.btnManagePayment.Size = new System.Drawing.Size(163, 83);
             this.btnManagePayment.TabIndex = 1;
@@ -69,8 +71,9 @@ namespace BackEnd
             // 
             // btnManageStaff
             // 
+            this.btnManageStaff.Enabled = false;
             this.btnManageStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageStaff.Location = new System.Drawing.Point(276, 116);
+            this.btnManageStaff.Location = new System.Drawing.Point(320, 134);
             this.btnManageStaff.Name = "btnManageStaff";
             this.btnManageStaff.Size = new System.Drawing.Size(163, 83);
             this.btnManageStaff.TabIndex = 1;
@@ -80,17 +83,19 @@ namespace BackEnd
             // btnManageCustomer
             // 
             this.btnManageCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageCustomer.Location = new System.Drawing.Point(83, 236);
+            this.btnManageCustomer.Location = new System.Drawing.Point(127, 254);
             this.btnManageCustomer.Name = "btnManageCustomer";
             this.btnManageCustomer.Size = new System.Drawing.Size(163, 83);
             this.btnManageCustomer.TabIndex = 1;
             this.btnManageCustomer.Text = "Customer Management";
             this.btnManageCustomer.UseVisualStyleBackColor = true;
+            this.btnManageCustomer.Click += new System.EventHandler(this.btnManageCustomer_Click);
             // 
             // btnManageOrder
             // 
+            this.btnManageOrder.Enabled = false;
             this.btnManageOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageOrder.Location = new System.Drawing.Point(469, 116);
+            this.btnManageOrder.Location = new System.Drawing.Point(513, 134);
             this.btnManageOrder.Name = "btnManageOrder";
             this.btnManageOrder.Size = new System.Drawing.Size(163, 83);
             this.btnManageOrder.TabIndex = 2;
@@ -109,6 +114,7 @@ namespace BackEnd
             this.Controls.Add(this.btnManageInventory);
             this.Controls.Add(this.label1);
             this.Name = "mdiMainMenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
