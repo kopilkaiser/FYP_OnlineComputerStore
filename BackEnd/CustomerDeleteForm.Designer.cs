@@ -47,6 +47,7 @@ namespace BackEnd
             // btnNo
             // 
             this.btnNo.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnNo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNo.Location = new System.Drawing.Point(229, 126);
             this.btnNo.Name = "btnNo";
@@ -82,6 +83,7 @@ namespace BackEnd
             this.Name = "CustomerDeleteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerDeleteForm";
+            this.Load += new System.EventHandler(this.CustomerDeleteForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

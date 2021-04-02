@@ -68,5 +68,10 @@ namespace BackEnd
             //delete the record
             AllCustomers.Delete();
         }
+
+        private void CustomerDeleteForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -71,7 +71,6 @@ namespace BackEnd
             // 
             // btnManageStaff
             // 
-            this.btnManageStaff.Enabled = false;
             this.btnManageStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageStaff.Location = new System.Drawing.Point(320, 134);
             this.btnManageStaff.Name = "btnManageStaff";
@@ -79,6 +78,7 @@ namespace BackEnd
             this.btnManageStaff.TabIndex = 1;
             this.btnManageStaff.Text = "Staff Management";
             this.btnManageStaff.UseVisualStyleBackColor = true;
+            this.btnManageStaff.Click += new System.EventHandler(this.btnManageStaff_Click);
             // 
             // btnManageCustomer
             // 

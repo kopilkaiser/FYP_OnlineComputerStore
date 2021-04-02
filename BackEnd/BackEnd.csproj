@@ -156,6 +156,12 @@
     <Compile Include="InventoryUpdateForm.Designer.cs">
       <DependentUpon>InventoryUpdateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffManageForm.Designer.cs">
+      <DependentUpon>StaffManageForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomerAddForm.resx">
       <DependentUpon>CustomerAddForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryUpdateForm.resx">
       <DependentUpon>InventoryUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffManageForm.resx">
+      <DependentUpon>StaffManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>

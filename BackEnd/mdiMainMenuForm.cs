@@ -32,5 +32,13 @@ namespace BackEnd
             CM.ShowDialog();
             this.Close();
         }
+
+        private void btnManageStaff_Click(object sender, EventArgs e)
+        {
+            StaffManageForm SM = new StaffManageForm();
+            this.Hide();
+            SM.ShowDialog();
+            this.Close();
+        }
     }
 }
