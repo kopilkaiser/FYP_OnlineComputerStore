@@ -103,7 +103,7 @@
 					  %>
 			<br />
 			<div style="float:right;">
-			  <asp:Label runat="server" style="font-weight:700; font-size:medium;">SubTotal: </asp:Label><asp:TextBox ID="txtOrderTotal" runat="server" ReadOnly="True" CssClass="auto-style13" BackColor="#333333" ForeColor="White" OnTextChanged="txtOrderTotal_TextChanged"></asp:TextBox>
+			  <asp:Label runat="server" style="font-weight:700; font-size:medium;">SubTotal: </asp:Label><asp:TextBox ID="txtOrderTotal" runat="server" ReadOnly="True" CssClass="auto-style13" BackColor="#333333" ForeColor="White"></asp:TextBox>
 						 <br /><br />
 		   </div>
 			<br />

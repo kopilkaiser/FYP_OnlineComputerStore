@@ -123,7 +123,6 @@ namespace ClassLibrary
         public string Valid(string email, string totalPrice, string dateOrdered, string shippingAddress, string phonenum)
         {
             string Error = "";
-            Int32 AccountNoTemp;
             decimal TotalPriceTemp;
             DateTime DateTemp;
             Int64 PhonenumTemp;

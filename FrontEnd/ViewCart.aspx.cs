@@ -98,9 +98,5 @@ namespace FrontEnd
         }
 
 
-        protected void txtOrderTotal_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

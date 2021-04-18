@@ -141,8 +141,9 @@
     <Content Include="RemoveCartItem.aspx" />
     <Content Include="Payment.aspx" />
     <Content Include="ViewProfile.aspx" />
+    <Content Include="EMailViewer1.aspx" />
+    <Content Include="PaymentComplete.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="PracticeForm.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -204,13 +205,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="PracticeForm.aspx.cs">
-      <DependentUpon>PracticeForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PracticeForm.aspx.designer.cs">
-      <DependentUpon>PracticeForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -331,6 +325,20 @@
     </Compile>
     <Compile Include="ViewProfile.aspx.designer.cs">
       <DependentUpon>ViewProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMailViewer1.aspx.cs">
+      <DependentUpon>EMailViewer1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMailViewer1.aspx.designer.cs">
+      <DependentUpon>EMailViewer1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentComplete.aspx.cs">
+      <DependentUpon>PaymentComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentComplete.aspx.designer.cs">
+      <DependentUpon>PaymentComplete.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

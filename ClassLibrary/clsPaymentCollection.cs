@@ -137,7 +137,7 @@ namespace ClassLibrary
             //clsDataConnection DB = new clsDataConnection();
             dBConnection = new clsDataConnection();
             //set the parameters for the stored procedure
-            dBConnection.AddParameter("@InventoryId", mThisPayment.PaymentId);
+            dBConnection.AddParameter("@PaymentId", mThisPayment.PaymentId);
             //execute the stored procedure
             dBConnection.Execute("sproc_tblPayment_Delete");
         }

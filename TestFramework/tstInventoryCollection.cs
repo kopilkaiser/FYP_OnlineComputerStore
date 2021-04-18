@@ -56,7 +56,7 @@ namespace TestFramework
             TestItem.Quantity = 100;
             TestItem.Category = "Electronics";
             TestItem.DateAdded = DateTime.Now.Date;
-            //set ThisAddress to the test data
+            //set ThisInventory to the test data
             AllInventories.ThisInventory = TestItem;
             //add the record
             PrimaryKey = AllInventories.Add();

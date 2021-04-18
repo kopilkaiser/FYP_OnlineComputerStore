@@ -91,5 +91,106 @@ namespace TestFramework
             Error = APayment.Valid(PayeeName, Method, Amount, CardNumber, DatePurchased, Email);
             Assert.AreEqual(Error, "");
         }
+
+
+        //TestMethods for Name property by different test types and test data
+
+        [TestMethod]
+        public void NameExtremeMin()
+        {
+            clsPayment APayment = new clsPayment();
+            string Error = "";
+            string PayeeName = "";
+            Error = APayment.Valid(PayeeName, Method, Amount, CardNumber, DatePurchased, Email);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMinMinusOne()
+        {
+            clsPayment APayment = new clsPayment();
+            string Error = "";
+            string PayeeName = "";
+            Error = APayment.Valid(PayeeName, Method, Amount, CardNumber, DatePurchased, Email);
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void NameMinBoundary()
+        {
+            clsPayment APayment = new clsPayment();
+            string Error = "";
+            string PayeeName = "a";
+            Error = APayment.Valid(PayeeName, Method, Amount, CardNumber, DatePurchased, Email);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void NameMinPlusOne()
+        {
+            clsPayment APayment = new clsPayment();
+            string Error = "";
+            string PayeeName = "aa";
+            Error = APayment.Valid(PayeeName, Method, Amount, CardNumber, DatePurchased, Email);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void NameMaxMinusOne()
+        {
+            clsPayment APayment = new clsPayment();
+            string Error = "";
+            string PayeeName = "";
+            PayeeName = PayeeName.PadRight(39, 'a');
+            Error = APayment.Valid(PayeeName, Method, Amount, CardNumber, DatePurchased, Email);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMaxBoundary()
+        {
+            clsPayment APayment = new clsPayment();
+            string Error = "";
+            string PayeeName = "";
+            PayeeName = PayeeName.PadRight(40, 'a');
+            Error = APayment.Valid(PayeeName, Method, Amount, CardNumber, DatePurchased, Email);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMaxPlusOne()
+        {
+            clsPayment APayment = new clsPayment();
+            string Error = "";
+            string PayeeName = "";
+            PayeeName = PayeeName.PadRight(41, 'a');
+            Error = APayment.Valid(PayeeName, Method, Amount, CardNumber, DatePurchased, Email);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMid()
+        {
+            clsPayment APayment = new clsPayment();
+            string Error = "";
+            string PayeeName = "";
+            PayeeName = PayeeName.PadRight(20, 'a');
+            Error = APayment.Valid(PayeeName, Method, Amount, CardNumber, DatePurchased, Email);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameExtremeMax()
+        {
+            clsPayment APayment = new clsPayment();
+            string Error = "";
+            string PayeeName = "";
+            PayeeName = PayeeName.PadRight(500, 'a');
+            Error = APayment.Valid(PayeeName, Method, Amount, CardNumber, DatePurchased, Email);
+            Assert.AreNotEqual(Error, "");
+        }
+
     }
 }

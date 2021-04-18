@@ -41,22 +41,19 @@
         <tr>
             <td class="text-right" style="font-family: Arial; font-weight: bold; font-size: medium; width: 513px">&nbsp;</td>
             <td>
-                <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="text-right" style="font-family: Arial; font-weight: bold; font-size: medium; width: 513px">&nbsp;</td>
             <td>
-                <asp:TextBox ID="txtPhonenum" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="text-right" style="font-family: Arial; font-weight: bold; font-size: medium; width: 513px">&nbsp;</td>
             <td>
-                <asp:TextBox ID="txtDateJoined" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>

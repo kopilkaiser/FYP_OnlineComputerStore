@@ -27,8 +27,7 @@ namespace FrontEnd
             Price = Convert.ToDecimal(Request.QueryString["Price"]);
             ImagePath = Convert.ToString(Request.QueryString["ImagePath"]);
 
-            txtName.Text = Convert.ToString(Name);
-           
+            txtName.Text = Convert.ToString(Name);         
             txtPrice.Text = Convert.ToString(Price);
         }
 

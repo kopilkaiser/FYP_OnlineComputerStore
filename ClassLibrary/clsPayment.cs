@@ -101,6 +101,38 @@ namespace ClassLibrary
             }
         }
 
+
+
+        public bool Find(int PaymentId)
+        {
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the Inventory id to search for
+            DB.AddParameter("@PaymentId", PaymentId);
+            //execute the stored procedure
+            DB.Execute("sproc_tblPayment_FilterByPaymentId");
+            //if one record is found (there should be either one or zero!)
+            if (DB.Count == 1)
+            {
+                //copy the data from the database from the private data members
+                mPaymentId = Convert.ToInt32(DB.DataTable.Rows[0]["PaymentId"]);
+                mPayeeName = Convert.ToString(DB.DataTable.Rows[0]["PayeeName"]);
+                mMethod = Convert.ToString(DB.DataTable.Rows[0]["Method"]);
+                mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
+                mAmount = Convert.ToDecimal(DB.DataTable.Rows[0]["Amount"]);
+                mCardNumber = Convert.ToString(DB.DataTable.Rows[0]["CardNumber"]);
+                mDatePurchased = Convert.ToDateTime(DB.DataTable.Rows[0]["DatePurchased"]);
+                //return that everything worked ok
+                return true;
+            }
+            //if no record was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
+        }
+
         public string Valid(string payeeName, string method, string amount, string cardNumber, string datePurchased, string email)
         {
             string Error = "";
@@ -109,7 +141,7 @@ namespace ClassLibrary
             decimal AmountTemp;
             Int64 CardNumberTemp;
 
-            if(email.Length == 0)
+            if (email.Length == 0)
             {
                 Error = Error + "The Email cannot be blank : ";
             }
@@ -145,9 +177,9 @@ namespace ClassLibrary
 
                 AmountTemp = Convert.ToDecimal(amount);
 
-                if (AmountTemp > 100000m)
+                if (AmountTemp > 100000000m)
                 {
-                    Error = Error + "Total Amount cannot exceed 100000 : ";
+                    Error = Error + "Total Amount cannot exceed 100000000 : ";
                 }
 
                 if (Amount < 0m)
@@ -166,12 +198,12 @@ namespace ClassLibrary
             {
                 CardNumberTemp = Convert.ToInt64(cardNumber);
 
-                if (CardNumberTemp > 9999999999999999)
+                if (CardNumberTemp > 11111111111111111)
                 {
                     Error = Error + "The Card Number cannot exceed 16 : ";
                 }
 
-                if (CardNumberTemp < 9999999999999999)
+                if (CardNumberTemp < 111111111111111)
                 {
                     Error = Error + "The Card number cannot be less than 16 : ";
                 }
@@ -183,7 +215,7 @@ namespace ClassLibrary
                 Error = Error + "The Card Number is not valid : ";
 
             }
-    
+
             //if date entered is a valid date
             try
             {
@@ -211,36 +243,6 @@ namespace ClassLibrary
             }
 
             return Error;
-        }
-
-        public bool Find(int PaymentId)
-        {
-            //create an instance of the data connection
-            clsDataConnection DB = new clsDataConnection();
-            //add the parameter for the Inventory id to search for
-            DB.AddParameter("@PaymentId", PaymentId);
-            //execute the stored procedure
-            DB.Execute("sproc_tblPayment_FilterByPaymentId");
-            //if one record is found (there should be either one or zero!)
-            if (DB.Count == 1)
-            {
-                //copy the data from the database from the private data members
-                mPaymentId = Convert.ToInt32(DB.DataTable.Rows[0]["PaymentId"]);
-                mPayeeName = Convert.ToString(DB.DataTable.Rows[0]["PayeeName"]);
-                mMethod = Convert.ToString(DB.DataTable.Rows[0]["Method"]);
-                mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
-                mAmount = Convert.ToDecimal(DB.DataTable.Rows[0]["Amount"]);
-                mCardNumber = Convert.ToString(DB.DataTable.Rows[0]["CardNumber"]);
-                mDatePurchased = Convert.ToDateTime(DB.DataTable.Rows[0]["DatePurchased"]);
-                //return that everything worked ok
-                return true;
-            }
-            //if no record was found
-            else
-            {
-                //return false indicating a problem
-                return false;
-            }
         }
 
         public string AllDetails

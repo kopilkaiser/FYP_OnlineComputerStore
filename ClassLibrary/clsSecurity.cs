@@ -43,12 +43,6 @@ public class clsSecurity
     //stores the most recently sent email message by the security system
     private clsEMail mEMailMessage;
 
-    private string mName;
-
-    private string mPhonenum;
-
-    private DateTime mDateJoined;
-
     //constructor
     public clsSecurity()
     {
@@ -56,7 +50,7 @@ public class clsSecurity
         mAttempts = 0;
     }
 
-    public string SignUp(string EMail, string Password1, string Password2, Boolean Active, string Name, string Phonenum, DateTime DateJoined)
+    public string SignUp(string EMail, string Password1, string Password2, Boolean Active)
     //public method allowing the user to sign up for an account
     {
         //var to store any errors
@@ -82,11 +76,6 @@ public class clsSecurity
                         DB.AddParameter("@AccountEMail", EMail.ToLower());
                         DB.AddParameter("@AccountPassword", HashPassword);
                         DB.AddParameter("@Active", Active);
-
-                        DB.AddParameter("@Name", Name);
-                        DB.AddParameter("@Phonenum", Phonenum);
-                        DB.AddParameter("@DateJoined", DateJoined);
-
                         DB.Execute("sproc_tblAccount_Add");
                         //if active not set to true then request email activation
                         if (Active == false)
@@ -188,8 +177,6 @@ public class clsSecurity
             //add the parameters
             UserAccount.AddParameter("@AccountEMail", EMail);
             UserAccount.AddParameter("@AccountPassword", Password);
-            //UserAccount.AddParameter("@Name", Name);
-            //UserAccount.AddParameter("@Phonenum", Phonenum);
             //execute the query
             UserAccount.Execute("sproc_tblAccount_FilterByEmailAndPassword");
             //If there is only one record found then return true
@@ -199,8 +186,6 @@ public class clsSecurity
                 mAdmin = Convert.ToBoolean(UserAccount.DataTable.Rows[0]["IsAdmin"]);
                 //store the users email address in the data member
                 mUserEMail = EMail;
-               // mName = Name;
-                //mPhonenum = Phonenum;
             }
             else //otherwise return false
             {
@@ -252,31 +237,6 @@ public class clsSecurity
             return mUserEMail;
         }
     }
-
-    public string Name
-    {
-        get
-        {
-            return mName;
-        }
-    }
-
-    public string Phonenum
-    {
-        get
-        {
-            return mPhonenum;
-        }
-    }
-
-    public DateTime DateJoined
-    {
-        get
-        {
-            return mDateJoined;
-        }
-    }
-
 
     public clsEMail EMailMessage
     //allows access to the last sent email message

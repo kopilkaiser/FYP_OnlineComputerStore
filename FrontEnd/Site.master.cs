@@ -15,12 +15,6 @@ namespace FrontEnd
         clsSecurity Sec;
         protected void Page_Load(object sender, EventArgs e)
         {
-            MyCart = (clsCart)Session["MyCart"];
-            //if the cart is null then we need to initialise it
-            if (MyCart == null)
-            {
-                MyCart = new clsCart();
-            }
             //on load get the current state from the session
             Sec = (clsSecurity)Session["Sec"];
             //if the object is null then it needs initialising
@@ -38,13 +32,6 @@ namespace FrontEnd
             {
                 DropDownList2.SelectedValue = Request.Url.AbsolutePath;
             }
-        }
-
-        protected void Page_UnLoad(object sender, EventArgs e)
-        {
-            //you must also save the cart every time the unload event takes place
-            Session["MyCart"] = MyCart;
-            Session["Sec"] = Sec;
         }
 
         protected void SetLinks(Boolean Authenticated)

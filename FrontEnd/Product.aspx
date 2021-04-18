@@ -5,11 +5,11 @@
     <script runat="server">
 
        clsCart MyCart = new clsCart();
-          clsSecurity Sec;
+       clsSecurity Sec;
 
      protected void Page_Load(object sender, EventArgs e)
     {
-            Sec = (clsSecurity)Session["Sec"];
+          Sec = (clsSecurity)Session["Sec"];
         //upon loading the page you need to read in the cart from the session object
         MyCart = (clsCart)Session["MyCart"];
         //if the cart is null then we need to initialise it
@@ -36,7 +36,7 @@
         <p style="font-size: 16px"> You have&nbsp;Total <asp:Label ID="lblCartCount" runat="server" ForeColor="Red" ></asp:Label>&nbsp;items</p>
 
          <p style="font-size:16px; font-weight:600 ">Please Sign In to <span style="font-style:italic; font-size:22px; font-weight:800; color:red;">"View the Cart"</span> option.</p>
-          <!-- <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink> &nbsp; -->
+          <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink> &nbsp;
             
         &nbsp;
          <br />
