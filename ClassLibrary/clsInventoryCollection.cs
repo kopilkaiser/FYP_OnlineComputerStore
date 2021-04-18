@@ -77,6 +77,7 @@ namespace ClassLibrary
                     NewInventory.Category = Convert.ToString(dBConnection.DataTable.Rows[Index]["Category"]);
                     //get the Active status of the Inventory from the query results
                     NewInventory.Active = Convert.ToBoolean(dBConnection.DataTable.Rows[Index]["Active"]);
+                    //get the Image Path of the Inventory from the query results
                     NewInventory.ImagePath = Convert.ToString(dBConnection.DataTable.Rows[Index]["ImagePath"]);
                     //increment the index
                     Index++;

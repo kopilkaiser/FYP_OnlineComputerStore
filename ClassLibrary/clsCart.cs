@@ -24,18 +24,20 @@ namespace ClassLibrary
             }
         }
 
-        private string mCardNumber;
+        private string mShippingAddress;
         private string mEmail;
+        private string mPhonenum;
+        private decimal mTotalPrice;
 
-        public string CardNumber
+        public string ShippingAddress
         {
             get
             {
-                return mCardNumber;
+                return mShippingAddress;
             }
             set
             {
-                mCardNumber = value;
+                mShippingAddress = value;
             }
         }
 
@@ -50,6 +52,31 @@ namespace ClassLibrary
                 mEmail = value;
             }
         }
+
+        public string Phonenum
+        {
+            get
+            {
+                return mPhonenum;
+            }
+            set
+            {
+                mPhonenum = value;
+            }
+        }
+
+        public decimal TotalPrice
+        {
+            get
+            {
+                return mTotalPrice;
+            }
+            set
+            {
+                mTotalPrice = value;
+            }
+        }
+
 
         public void Checkout()
         {

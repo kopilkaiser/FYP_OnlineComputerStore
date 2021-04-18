@@ -64,8 +64,6 @@ namespace ClassLibrary
                     clsStaff NewStaff = new clsStaff();
                     //get the Staff Id from the query results
                     NewStaff.StaffId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["StaffId"]);
-                    //get the Account no from the query results
-                    NewStaff.AccountNo = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["AccountNo"]);
                     //get the Name from the query results
                     NewStaff.Name = Convert.ToString(dBConnection.DataTable.Rows[Index]["Name"]);
                     //get the Phone number from the query results
@@ -99,7 +97,6 @@ namespace ClassLibrary
             //connect to the database
             //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
-            dBConnection.AddParameter("@AccountNo", mThisStaff.AccountNo);
             dBConnection.AddParameter("@Name", mThisStaff.Name);
             dBConnection.AddParameter("@Phonenum", mThisStaff.Phonenum);
             dBConnection.AddParameter("@Salary", mThisStaff.Salary);
@@ -117,7 +114,6 @@ namespace ClassLibrary
             //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
             dBConnection.AddParameter("@StaffId", mThisStaff.StaffId);
-            dBConnection.AddParameter("@AccountNo", mThisStaff.AccountNo);
             dBConnection.AddParameter("@Name", mThisStaff.Name);
             dBConnection.AddParameter("@Phonenum", mThisStaff.Phonenum);
             dBConnection.AddParameter("@Salary", mThisStaff.Salary);
@@ -171,7 +167,6 @@ namespace ClassLibrary
                 clsStaff AStaff = new clsStaff();
                 //read in the fields from the current record
                 AStaff.StaffId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["StaffId"]);
-                AStaff.AccountNo = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["AccountNo"]);
                 AStaff.Name = Convert.ToString(dBConnection.DataTable.Rows[Index]["Name"]);
                 AStaff.Phonenum = Convert.ToString(dBConnection.DataTable.Rows[Index]["Phonenum"]);
                 AStaff.Salary = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["Salary"]);

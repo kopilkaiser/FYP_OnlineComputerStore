@@ -199,7 +199,6 @@ namespace ClassLibrary
             {
                 //copy the data from the database from the private data members
                 mStaffId = Convert.ToInt32(DB.DataTable.Rows[0]["StaffId"]);
-                mAccountNo = Convert.ToInt32(DB.DataTable.Rows[0]["AccountNo"]);
                 mName = Convert.ToString(DB.DataTable.Rows[0]["Name"]);
                 mPhonenum = Convert.ToString(DB.DataTable.Rows[0]["Phonenum"]);
                 mSalary = Convert.ToDecimal(DB.DataTable.Rows[0]["Salary"]);

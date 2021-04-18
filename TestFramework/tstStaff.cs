@@ -118,7 +118,7 @@ namespace TestFramework
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with method
-            int StaffId = 3;
+            int StaffId = 1;
             //invoke the method
             Found = AnStaff.Find(StaffId);
             //test to see that the result is correct

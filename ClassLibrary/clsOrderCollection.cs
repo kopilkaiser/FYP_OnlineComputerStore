@@ -64,14 +64,18 @@ namespace ClassLibrary
                 while (Index < dBConnection.Count)
                 {
                     clsOrder NewOrder = new clsOrder();
-                    //get the house no from the query results
-                    NewOrder.AccountNo = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["AccountNo"]);
-                    //get the street from the query results
+                    //get the Order Id from the query results
+                    NewOrder.OrderId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["OrderId"]);
+                    //get the Email from the query results
                     NewOrder.Email = Convert.ToString(dBConnection.DataTable.Rows[Index]["Email"]);
-                    //get the post code from the query results
+                    //get the Total Price from the query results
                     NewOrder.TotalPrice = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["TotalPrice"]);
-                    //get the address no from the query results
+                    //get the Date Ordered from the query results
                     NewOrder.DateOrdered = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["DateOrdered"]);
+                    //get the Shipping Address from the query results
+                    NewOrder.ShippingAddress = Convert.ToString(dBConnection.DataTable.Rows[Index]["ShippingAddress"]);
+                    //get the Date Ordered from the query results
+                    NewOrder.Phonenum = Convert.ToString(dBConnection.DataTable.Rows[Index]["Phonenum"]);
                     //increment the index
                     Index++;
                     //add the address to the list
@@ -94,7 +98,8 @@ namespace ClassLibrary
             //connect to the database
             //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
-            dBConnection.AddParameter("@AccountNo", mThisOrder.AccountNo);
+            dBConnection.AddParameter("@ShippingAddress", mThisOrder.ShippingAddress);
+            dBConnection.AddParameter("@Phonenum", mThisOrder.Phonenum);
             dBConnection.AddParameter("@Email", mThisOrder.Email);
             dBConnection.AddParameter("@TotalPrice", mThisOrder.TotalPrice);
             dBConnection.AddParameter("@DateOrdered", mThisOrder.DateOrdered);
@@ -110,7 +115,8 @@ namespace ClassLibrary
             //clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
             dBConnection.AddParameter("@OrderId", mThisOrder.OrderId);
-            dBConnection.AddParameter("@AccountNo", mThisOrder.AccountNo);
+            dBConnection.AddParameter("@ShippingAddress", mThisOrder.ShippingAddress);
+            dBConnection.AddParameter("@Phonenum", mThisOrder.Phonenum);
             dBConnection.AddParameter("@TotalPrice", mThisOrder.TotalPrice);
             dBConnection.AddParameter("@Email", mThisOrder.Email);
             dBConnection.AddParameter("@DateOrdered", mThisOrder.DateOrdered);
@@ -161,7 +167,8 @@ namespace ClassLibrary
                 clsOrder AnOrder = new clsOrder();
                 //read in the fields from the current record
                 AnOrder.OrderId = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["OrderId"]);
-                AnOrder.AccountNo = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["AccountNo"]);
+                AnOrder.ShippingAddress = Convert.ToString(dBConnection.DataTable.Rows[Index]["ShippingAddress"]);
+                AnOrder.Phonenum = Convert.ToString(dBConnection.DataTable.Rows[Index]["Phonenum"]);
                 AnOrder.Email = Convert.ToString(dBConnection.DataTable.Rows[Index]["Email"]);
                 AnOrder.TotalPrice = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["TotalPrice"]);
                 AnOrder.DateOrdered = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["DateOrdered"]);

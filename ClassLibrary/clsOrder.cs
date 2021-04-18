@@ -10,10 +10,12 @@ namespace ClassLibrary
     {
         private int mOrderId;
         private string mEmail;
-        private int mAccountNo;
         private DateTime mDateOrdered;
         private decimal mTotalPrice;
+        private string mShippingAddress;
+        private string mPhonenum;
 
+        
         public int OrderId
         {
             get
@@ -35,18 +37,6 @@ namespace ClassLibrary
             set
             {
                 mEmail = value;
-            }
-        }
-
-        public int AccountNo
-        {
-            get
-            {
-                return mAccountNo;
-            }
-            set
-            {
-                mAccountNo = value;
             }
         }
 
@@ -74,6 +64,30 @@ namespace ClassLibrary
             }
         }
 
+        public string ShippingAddress
+        {
+            get
+            {
+                return mShippingAddress;
+            }
+            set
+            {
+                mShippingAddress = value;
+            }
+        }
+
+        public string Phonenum
+        {
+            get
+            {
+                return mPhonenum;
+            }
+            set
+            {
+                mPhonenum = value;
+            }
+        }
+
         public bool Find(int OrderId)
         {
             //create an instance of the data connection
@@ -88,9 +102,11 @@ namespace ClassLibrary
                 //copy the data from the database from the private data members
                 mOrderId = Convert.ToInt32(DB.DataTable.Rows[0]["OrderId"]);
                 mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
-                mAccountNo = Convert.ToInt32(DB.DataTable.Rows[0]["AccountNo"]);
                 mDateOrdered = Convert.ToDateTime(DB.DataTable.Rows[0]["DateOrdered"]);
                 mTotalPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["TotalPrice"]);
+                mShippingAddress = Convert.ToString(DB.DataTable.Rows[0]["ShippingAddress"]);
+                mPhonenum = Convert.ToString(DB.DataTable.Rows[0]["Phonenum"]);
+
 
                 //return that everything worked ok
                 return true;
@@ -104,12 +120,14 @@ namespace ClassLibrary
 
         }
 
-        public string Valid(string accountNo, string email, string totalPrice, string dateOrdered)
+        public string Valid(string email, string totalPrice, string dateOrdered, string shippingAddress, string phonenum)
         {
             string Error = "";
             Int32 AccountNoTemp;
             decimal TotalPriceTemp;
             DateTime DateTemp;
+            Int64 PhonenumTemp;
+
 
             if (email.Length == 0)
             {
@@ -121,23 +139,36 @@ namespace ClassLibrary
                 Error = Error + "The Email cannot exceed 40 characters : ";
             }
 
+            if (shippingAddress.Length == 0)
+            {
+                Error = Error + "The Shipping Address field cannot be left blank : ";
+            }
+
+            if (shippingAddress.Length > 250)
+            {
+                Error = Error + "The Shipping Address cannot exceed 250 characters : ";
+            }
+
+
+            //if Phone number entered is valid
             try
             {
-                AccountNoTemp = Convert.ToInt32(accountNo);
+                PhonenumTemp = Convert.ToInt64(phonenum);
 
-                if (AccountNoTemp <=0)
+                if (PhonenumTemp > 11111111111111111)
                 {
-                    Error = Error + "Please enter an Acccount number : ";
+                    Error = Error + "The Phone number cannot exceed more than 16 numbers : ";
                 }
 
-                if(AccountNoTemp > 10000)
+                if (PhonenumTemp < 11111111111)
                 {
-                    Error = Error + "Account number cannot exceed 10000 : ";
+                    Error = Error + "The Phone number cannot be less than 11 numbers : ";
                 }
             }
+            //if Phone number entered is invalid
             catch
             {
-                Error = Error + "Please enter a valid Account number : ";
+                Error = Error + "The Phone number entered is invalid : ";
             }
 
             try
@@ -190,7 +221,8 @@ namespace ClassLibrary
         {
             get
             {
-                return ("OrderId:" + OrderId + "_" + "AccountNo:" + AccountNo + "_"  + "Email:" + Email + "_" + "TotalPrice:" + TotalPrice + "_" + "DateOrdered:" + DateOrdered.ToString("dd/MM/yyyy"));
+                return ("OrderId:" + OrderId + "_" + "Email:" + Email + "_" + "TotalPrice:" + TotalPrice + "_" + 
+                    "ShippingAddress:" + ShippingAddress + "Phonenum:" + Phonenum + "DateOrdered:" + DateOrdered.ToString("dd/MM/yyyy"));
             }
         }
 
@@ -206,7 +238,9 @@ namespace ClassLibrary
             //pass the data as parameters to the data layer
             DB.AddParameter("@DateOrdered", DateTime.Now.Date);
             DB.AddParameter("@Email", ShoppingCart.Email);
-            DB.AddParameter("@CardNumber", ShoppingCart.CardNumber);
+            DB.AddParameter("@TotalPrice", ShoppingCart.TotalPrice);
+            DB.AddParameter("@Phonenum", ShoppingCart.Phonenum);
+            DB.AddParameter("@ShippingAddress", ShoppingCart.ShippingAddress);
 
             //execute the stored procedure capturing the primary key of the new record in the variable OrderNo
             Int32 NewOrderNo;

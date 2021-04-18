@@ -25,7 +25,6 @@ namespace TestFramework
             clsStaff TestStaff = new clsStaff();
             //set the properties of the test object
             TestStaff.StaffId = 1;
-            TestStaff.AccountNo = 1;
             TestStaff.Name = "Syed";
             TestStaff.Phonenum = "123456789123456";
             TestStaff.Salary = 19999.99m;
@@ -48,7 +47,6 @@ namespace TestFramework
             Int32 PrimaryKey = 0;
             //set it's properties
             TestItem.StaffId = 1;
-            TestItem.AccountNo = 1;
             TestItem.Name = "Syed";
             TestItem.Phonenum = "123456789123456";
             TestItem.Salary = 19999.99m;
@@ -77,7 +75,6 @@ namespace TestFramework
             Int32 PrimaryKey = 0;
             //set it's properties
             TestItem.StaffId = 10;
-            TestItem.AccountNo = 1;
             TestItem.Name = "Syed";
             TestItem.Phonenum = "123456789123456";
             TestItem.Salary = 19999.99m;
@@ -110,7 +107,6 @@ namespace TestFramework
             Int32 PrimaryKey = 0;
             //set it's properties
             TestItem.StaffId = 1;
-            TestItem.AccountNo = 1;
             TestItem.Name = "Syed";
             TestItem.Phonenum = "123456789123456";
             TestItem.Salary = 19999.99m;
@@ -123,7 +119,6 @@ namespace TestFramework
             //set the primary key of the test data
             TestItem.StaffId = PrimaryKey;
             //modify the test data            
-            TestItem.AccountNo = 3;
             TestItem.Name = "Syed";
             TestItem.Phonenum = "99999999999";
             TestItem.Salary = 19999.99m;

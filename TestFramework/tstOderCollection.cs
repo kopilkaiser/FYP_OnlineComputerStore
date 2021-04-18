@@ -25,9 +25,9 @@ namespace TestFramework
             clsOrder TestOrder = new clsOrder();
             //set the properties of the test object
             TestOrder.OrderId = 1;
-            TestOrder.AccountNo = 3;
+            TestOrder.ShippingAddress = "99 Granby Street, Leicester, UK";
+            TestOrder.Phonenum = "1111111111111111";
             TestOrder.Email = "Noman Malik";
-            TestOrder.AccountNo = 1;
             TestOrder.DateOrdered = DateTime.Now.Date;
             //assign the data to the property
             AllOrders.ThisOrder = TestOrder;
@@ -46,9 +46,9 @@ namespace TestFramework
             Int32 PrimaryKey = 0;
             //set the properties of the test Customer object
             TestItem.OrderId = 2;
-            TestItem.AccountNo = 3;
+            TestItem.ShippingAddress = "99 Granby Street, Leicester, UK";
+            TestItem.Phonenum = "1111111111111111";
             TestItem.Email = "mashycotton@email.com";
-            TestItem.AccountNo = 1;
             TestItem.DateOrdered = DateTime.Now.Date;
             //assign the data to the property
             AllOrders.ThisOrder = TestItem;
@@ -73,9 +73,9 @@ namespace TestFramework
             Int32 PrimaryKey = 0;
             //set the properties of the test Customer object
             TestItem.OrderId = 2;
-            TestItem.AccountNo = 3;
+            TestItem.ShippingAddress = "99 Granby Street, Leicester, UK";
+            TestItem.Phonenum = "1111111111111111"; 
             TestItem.Email = "shourovjaki@outlook.com";
-            TestItem.AccountNo = 1;
             TestItem.DateOrdered = DateTime.Now.Date;
             //assign the data to the property
             AllOrders.ThisOrder = TestItem;
@@ -84,9 +84,9 @@ namespace TestFramework
             //set the primary key of the test data
             TestItem.OrderId = PrimaryKey;
             //modify the test data
-            TestItem.AccountNo = 3;
+            TestItem.ShippingAddress = "102 Jaguar Lane, London";
+            TestItem.Phonenum = "1111111111111111"; 
             TestItem.Email = "jakishourov@hotmail.com";
-            TestItem.AccountNo = 1;
             TestItem.DateOrdered = DateTime.Now.Date;
             //set the record based on the new test data
             AllOrders.ThisOrder = TestItem;
@@ -109,9 +109,8 @@ namespace TestFramework
             Int32 PrimaryKey = 0;
             //set it's properties
             TestItem.OrderId = 2;
-            TestItem.AccountNo = 3;
-            TestItem.Email = "Junnun Malik";
-            TestItem.AccountNo = 1;
+            TestItem.ShippingAddress = "99 Granby Street, Leicester, UK";
+            TestItem.Phonenum = "1111111111111111"; TestItem.Email = "Junnun Malik";
             TestItem.DateOrdered = DateTime.Now.Date;
             //set ThisAddress to the test data
             AllOrders.ThisOrder = TestItem;

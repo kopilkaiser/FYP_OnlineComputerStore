@@ -76,7 +76,7 @@ namespace TestFramework
             // invoke the method
             Found = AnOrderline.Find(OrderId);
             // test to see that the result is correct
-            Assert.IsFalse(Found);
+            Assert.IsTrue(Found);
         }
 
         [TestMethod]

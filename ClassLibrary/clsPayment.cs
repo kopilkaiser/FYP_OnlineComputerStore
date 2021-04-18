@@ -12,10 +12,10 @@ namespace ClassLibrary
         private int mPaymentId;
         private string mPayeeName;
         private string mMethod;
-        private int mOrderId;
         private string mCardNumber;
         private decimal mAmount;
         private DateTime mDatePurchased;
+        private string mEmail;
 
         public int PaymentId
         {
@@ -29,15 +29,15 @@ namespace ClassLibrary
             }
         }
 
-        public int OrderId
+        public string Email
         {
             get
             {
-                return mOrderId;
+                return mEmail;
             }
             set
             {
-                mOrderId = value;
+                mEmail = value;
             }
         }
         
@@ -101,7 +101,7 @@ namespace ClassLibrary
             }
         }
 
-        public string Valid(string payeeName, string method, string amount, string cardNumber, string datePurchased)
+        public string Valid(string payeeName, string method, string amount, string cardNumber, string datePurchased, string email)
         {
             string Error = "";
 
@@ -109,7 +109,15 @@ namespace ClassLibrary
             decimal AmountTemp;
             Int64 CardNumberTemp;
 
+            if(email.Length == 0)
+            {
+                Error = Error + "The Email cannot be blank : ";
+            }
 
+            if (email.Length > 40)
+            {
+                Error = Error + "The Emai cannot exceed 40 characters : ";
+            }
 
             if (payeeName.Length == 0)
             {
@@ -220,7 +228,7 @@ namespace ClassLibrary
                 mPaymentId = Convert.ToInt32(DB.DataTable.Rows[0]["PaymentId"]);
                 mPayeeName = Convert.ToString(DB.DataTable.Rows[0]["PayeeName"]);
                 mMethod = Convert.ToString(DB.DataTable.Rows[0]["Method"]);
-                mOrderId = Convert.ToInt32(DB.DataTable.Rows[0]["OrderId"]);
+                mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
                 mAmount = Convert.ToDecimal(DB.DataTable.Rows[0]["Amount"]);
                 mCardNumber = Convert.ToString(DB.DataTable.Rows[0]["CardNumber"]);
                 mDatePurchased = Convert.ToDateTime(DB.DataTable.Rows[0]["DatePurchased"]);
@@ -239,9 +247,8 @@ namespace ClassLibrary
         {
             get
             {
-                return ("PaymentId:" + PaymentId + "_" + "PayeeName:" + PayeeName + "_" + "Method:" + Method + "_" 
-                    + "DatePurchased:" + DateTime.Now.Date.ToString("dd/MM/yyyy") + "_" + "Amount:" + Amount + "_" 
-                    + "CardNumber:" + CardNumber + "_" + "OrderId" + OrderId); 
+                return ("PaymentId:" + PaymentId + "_" + "PayeeName:" + PayeeName + "_" + "Email" + Email + "_" + "_" +"CardNumber:" + CardNumber + "_" + "Method:" + Method + "_"  
+                    + "Amount:" + Amount + "_" + "DatePurchased:" + DateTime.Now.Date.ToString("dd/MM/yyyy")); 
             }
         }
     }

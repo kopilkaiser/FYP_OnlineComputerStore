@@ -46,35 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerAddForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerAddForm.Designer.cs">
-      <DependentUpon>CustomerAddForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerDeleteForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerDeleteForm.Designer.cs">
-      <DependentUpon>CustomerDeleteForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerUpdateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerUpdateForm.Designer.cs">
-      <DependentUpon>CustomerUpdateForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="InventoryAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InventoryAddForm.Designer.cs">
       <DependentUpon>InventoryAddForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerManageForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerManageForm.Designer.cs">
-      <DependentUpon>CustomerManageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="InventoryDeleteForm.cs">
       <SubType>Form</SubType>
@@ -162,18 +138,6 @@
     <Compile Include="StaffManageForm.Designer.cs">
       <DependentUpon>StaffManageForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CustomerAddForm.resx">
-      <DependentUpon>CustomerAddForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDeleteForm.resx">
-      <DependentUpon>CustomerDeleteForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomerManageForm.resx">
-      <DependentUpon>CustomerManageForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomerUpdateForm.resx">
-      <DependentUpon>CustomerUpdateForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InventoryAddForm.resx">
       <DependentUpon>InventoryAddForm.cs</DependentUpon>
     </EmbeddedResource>

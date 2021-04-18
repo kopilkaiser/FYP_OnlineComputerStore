@@ -106,11 +106,11 @@ namespace TestFramework
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            int InventoryId = 3;
+            int InventoryId = 1;
             //invoke the method
             Found = AnInventory.Find(InventoryId);
             //test to see that the result is correct
-            Assert.IsFalse(Found);
+            Assert.IsTrue(Found);
         }
 
         //TestMethods for DateAdded property by different test types and test data

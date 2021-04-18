@@ -13,7 +13,7 @@ namespace TestFramework
         string Amount = "9.99";
         string Method = "Visa Debit";
         string CardNumber = "9999999999999999";
-        string OrderId = "1";
+        string Email = "gmail@gmail.com";
         string DatePurchased = DateTime.Now.Date.ToString();
 
         [TestMethod]
@@ -62,16 +62,16 @@ namespace TestFramework
         }
 
         [TestMethod]
-        public void OrderIdPropertyOK()
+        public void EmailPropertyOK()
         {
             //create an instance of the class we want to create
             clsPayment APayment = new clsPayment();
             //create some test data to assign to the property
-            Int32 OrderId = 1;
+            string Email = "gmail@gmail.com";
             //assign the data to the property
-            APayment.OrderId = OrderId;
+            APayment.Email = Email;
             //test to see that the two values are the same
-            Assert.AreEqual(APayment.OrderId, OrderId);
+            Assert.AreEqual(APayment.Email, Email);
         }
 
         [TestMethod]
@@ -88,7 +88,7 @@ namespace TestFramework
         {
             clsPayment APayment = new clsPayment();
             string Error = "";
-            Error = APayment.Valid(PayeeName, Method, Amount, CardNumber, DatePurchased);
+            Error = APayment.Valid(PayeeName, Method, Amount, CardNumber, DatePurchased, Email);
             Assert.AreEqual(Error, "");
         }
     }

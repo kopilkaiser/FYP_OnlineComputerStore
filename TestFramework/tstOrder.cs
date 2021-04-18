@@ -11,8 +11,9 @@ namespace TestFramework
         int OrderId = 1;
         string Email = "moosasamsurladi@gmail.com";
         string TotalPrice = "2959.99";
-        string AccountNo = "1000";
         string DateOrdered = DateTime.Now.Date.ToString();
+        string Phonenum = "1111111111111111";
+        string ShippingAddress = "99 Grasmere Street, LE2 7DA, Leicester";
 
         [TestMethod]
         public void InstanceOK()
@@ -42,15 +43,6 @@ namespace TestFramework
         }
 
         [TestMethod]
-        public void AccountNoPropertyOK()
-        {
-            clsOrder AnOrder = new clsOrder();
-            Int32 AccountNo = 100;
-            AnOrder.AccountNo = AccountNo;
-            Assert.AreEqual(AccountNo, AnOrder.AccountNo);
-        }
-
-        [TestMethod]
         public void DateOrderedPropertyOK()
         {
             clsOrder AnOrder = new clsOrder();
@@ -60,11 +52,29 @@ namespace TestFramework
         }
 
         [TestMethod]
+        public void PhonenumPropertyOK()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Phonenum = "1111111111111111";
+            AnOrder.Phonenum = Phonenum;
+            Assert.AreEqual(Phonenum, AnOrder.Phonenum);
+        }
+
+        [TestMethod]
+        public void ShippingAddressPropertyOK()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string ShippingAddress = "99 Grasmere Street, LE2 7DA, Leicester";
+            AnOrder.ShippingAddress = ShippingAddress;
+            Assert.AreEqual(ShippingAddress, AnOrder.ShippingAddress);
+        }
+
+        [TestMethod]
         public void ValidMethodOK()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
         }
 
@@ -93,7 +103,7 @@ namespace TestFramework
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(-100);
             string DateOrdered = TestDate.ToString();
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -106,7 +116,7 @@ namespace TestFramework
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddDays(-1);
             string DateOrdered = TestDate.ToString();
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -115,7 +125,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string DateOrdered = DateTime.Now.Date.ToString();
             string Error = "";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -127,7 +137,7 @@ namespace TestFramework
             TestDate = DateTime.Now.Date;
             TestDate = DateTime.Now.AddYears(100);
             string DateOrdered = TestDate.ToString();
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -136,7 +146,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string DateOrdered = "a";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -148,7 +158,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string Email = "";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -158,7 +168,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string Email = "";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
 
         }
@@ -168,7 +178,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string Email = "a";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
 
         }
@@ -179,7 +189,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string Email = "aa";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
 
         }
@@ -191,7 +201,7 @@ namespace TestFramework
             string Error = "";
             string Email = "";
             Email = Email.PadRight(39, 'a');
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
         }
 
@@ -202,7 +212,7 @@ namespace TestFramework
             string Error = "";
             string Email = "";
             Email = Email.PadRight(40, 'a');
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
         }
 
@@ -213,7 +223,7 @@ namespace TestFramework
             string Error = "";
             string Email = "";
             Email = Email.PadRight(41, 'a');
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -224,7 +234,7 @@ namespace TestFramework
             string Error = "";
             string Email = "";
             Email = Email.PadRight(20, 'a');
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
         }
 
@@ -235,7 +245,7 @@ namespace TestFramework
             string Error = "";
             string Email = "";
             Email = Email.PadRight(500, 'a');
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -247,7 +257,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string TotalPrice = "-1";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -257,7 +267,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string TotalPrice = "-1";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
 
         }
@@ -267,7 +277,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string TotalPrice = "0";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
 
         }
@@ -278,7 +288,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string TotalPrice = "2";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
 
         }
@@ -289,7 +299,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string TotalPrice = "9999";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
         }
 
@@ -299,7 +309,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string TotalPrice = "100000";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
         }
 
@@ -309,7 +319,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string TotalPrice = "100001";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -319,7 +329,7 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string TotalPrice = "50000";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
         }
 
@@ -329,102 +339,200 @@ namespace TestFramework
             clsOrder AnOrder = new clsOrder();
             string Error = "";
             string TotalPrice = "999999999.99";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
 
-        //TestMethods for AccountNo property
-
+        //TestMethods for ShippingAddress property
         [TestMethod]
-        public void AccountNoExtremeMin()
+        public void ShippingAddressExtremeMin()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            string ShippingAddress = "";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
-        public void AccountNoMinMinusOne()
+        public void ShippingAddressMinMinusOne()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            string ShippingAddress = "";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
 
         }
         [TestMethod]
-        public void AccountNoMinBoundary()
+        public void ShippingAddressMinBoundary()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "9";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            string ShippingAddress = "a";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
 
         }
 
         [TestMethod]
-        public void AccountNoMinPlusOne()
+        public void ShippingAddressMinPlusOne()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "99";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            string ShippingAddress = "aa";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
 
         }
 
         [TestMethod]
-        public void AccountNoMaxMinusOne()
+        public void ShippingAddressMaxMinusOne()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "9999";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            string ShippingAddress = "";
+            ShippingAddress = ShippingAddress.PadRight(249, 'a');
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void AccountNoMaxBoundary()
+        public void ShippingAddressMaxBoundary()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "10000";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            string ShippingAddress = "";
+            ShippingAddress = ShippingAddress.PadRight(250, 'a');
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void AccountNoMaxPlusOne()
+        public void ShippingAddressMaxPlusOne()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "10001";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            string ShippingAddress = "";
+            ShippingAddress = ShippingAddress.PadRight(251, 'a');
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
 
         [TestMethod]
-        public void AccountNoMid()
+        public void ShippingAddressMid()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "5000";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            string ShippingAddress = "";
+            ShippingAddress = ShippingAddress.PadRight(125, 'a');
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void AccountNoExtremeMax()
+        public void ShippingAddressExtremeMax()
         {
             clsOrder AnOrder = new clsOrder();
             string Error = "";
-            string AccountNo = "500000";
-            Error = AnOrder.Valid(AccountNo, Email, TotalPrice, DateOrdered);
+            string ShippingAddress = "";
+            ShippingAddress = ShippingAddress.PadRight(500, 'a');
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
             Assert.AreNotEqual(Error, "");
         }
+
+        //TestMethods for Phonenum Property
+        [TestMethod]
+        public void PhonenumExtremeMin()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string Phonenum = "";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhonenumMinMinusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string Phonenum = "";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
+            Assert.AreNotEqual(Error, "");
+
+        }
+        [TestMethod]
+        public void PhonenumMinBoundary()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string Phonenum = "1";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PhonenumMinPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string Phonenum = "12";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void PhonenumMaxMinusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string Phonenum = "12345678912345";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhonenumMaxBoundary()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string Phonenum = "111111111111111";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhonenumMaxPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string Phonenum = "12345678912345677";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhonenumMid()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string Phonenum = "1234567896";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhonenumExtremeMax()
+        {
+            clsOrder AnOrder = new clsOrder();
+            string Error = "";
+            string Phonenum = "123456789123456789";
+            Error = AnOrder.Valid(Email, TotalPrice, DateOrdered, ShippingAddress, Phonenum);
+            Assert.AreNotEqual(Error, "");
+        }
+
     }
 }
