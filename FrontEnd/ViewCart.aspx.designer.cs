@@ -11,52 +11,34 @@ namespace FrontEnd
 {
 
 
-    public partial class SiteMaster
+    public partial class ViewCart
     {
 
         /// <summary>
-        /// hypViewCart control.
+        /// txtOrderTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hypViewCart;
+        protected global::System.Web.UI.WebControls.TextBox txtOrderTotal;
 
         /// <summary>
-        /// hypSignOut control.
+        /// hypBrowseProducts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hypSignOut;
+        protected global::System.Web.UI.WebControls.HyperLink hypBrowseProducts;
 
         /// <summary>
-        /// txtUserEmail control.
+        /// hypCheckOut control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserEmail;
-
-        /// <summary>
-        /// DropDownList2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
-
-        /// <summary>
-        /// MainContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.HyperLink hypCheckOut;
     }
 }

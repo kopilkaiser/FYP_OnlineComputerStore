@@ -11,7 +11,7 @@ namespace FrontEnd
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            txtDateJoined.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
         }
 
 
@@ -26,7 +26,7 @@ namespace FrontEnd
             //create a new instance of the security class
             clsSecurity Sec = new clsSecurity();
             //try to sign up using the supplied credentials
-            string Outcome = Sec.SignUp(txtEmail.Text, txtPassword.Text, txtConfirmPassword.Text, false);
+            string Outcome = Sec.SignUp(txtEmail.Text, txtPassword.Text, txtConfirmPassword.Text, false, txtName.Text, txtPhonenum.Text, Convert.ToDateTime(txtDateJoined.Text));
             //report the outcome of the operation
             lblError.Text = Outcome;
             //store the object in the session objec for other pages to access

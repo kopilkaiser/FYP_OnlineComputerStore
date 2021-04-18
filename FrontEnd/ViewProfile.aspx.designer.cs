@@ -11,52 +11,43 @@ namespace FrontEnd
 {
 
 
-    public partial class SiteMaster
+    public partial class WebForm7
     {
 
         /// <summary>
-        /// hypViewCart control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hypViewCart;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// hypSignOut control.
+        /// lblPhonenum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hypSignOut;
+        protected global::System.Web.UI.WebControls.Label lblPhonenum;
 
         /// <summary>
-        /// txtUserEmail control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserEmail;
+        protected global::System.Web.UI.WebControls.Label lblName;
 
         /// <summary>
-        /// DropDownList2 control.
+        /// lblDateJoined control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
-
-        /// <summary>
-        /// MainContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Label lblDateJoined;
     }
 }

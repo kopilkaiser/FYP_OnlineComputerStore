@@ -2,10 +2,11 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+   <div class="jumbotron" style="background-image: url(/Catalog/computer1.jpg); background-size: cover; height: 600px; opacity: 0.9">
+        <h1 style="font-style: oblique; color:aliceblue">Exclusive <br />Tech-Products</h1>
+        <p style="color:black; font-style:oblique; font-weight: 600; background-color: beige; width: 30%" class="lead">Our products are brand new,<br /> with good service warranty,<br /> the quality is well-built</p>
+
+        <p><a href="Product.aspx" class="btn btn-primary btn-lg">Browse All Products &raquo;</a></p>
     </div>
 
     <div class="row">

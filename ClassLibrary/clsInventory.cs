@@ -11,6 +11,20 @@ namespace ClassLibrary
         private DateTime mDateAdded;
         private bool mActive;
         private int mInventoryId;
+        private string mImagePath;
+
+        public string ImagePath
+        {
+            get
+            {
+                return mImagePath;
+            }
+
+            set
+            {
+                mImagePath = value;
+            }
+        }
 
         public bool Active
         {
@@ -229,6 +243,7 @@ namespace ClassLibrary
                 mQuantity = Convert.ToInt32(DB.DataTable.Rows[0]["Quantity"]);
                 mCategory = Convert.ToString(DB.DataTable.Rows[0]["Category"]);
                 mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
+                mImagePath = Convert.ToString(DB.DataTable.Rows[0]["ImagePath"]);
                 //return that everything worked ok
                 return true;
             }

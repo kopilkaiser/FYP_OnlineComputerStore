@@ -4,15 +4,23 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ClassLibrary;
 
 namespace FrontEnd
 {
     public partial class SiteMaster : MasterPage       
     {
+        clsCart MyCart = new clsCart();
         //create an instance of the security class with page level scope
         clsSecurity Sec;
         protected void Page_Load(object sender, EventArgs e)
         {
+            MyCart = (clsCart)Session["MyCart"];
+            //if the cart is null then we need to initialise it
+            if (MyCart == null)
+            {
+                MyCart = new clsCart();
+            }
             //on load get the current state from the session
             Sec = (clsSecurity)Session["Sec"];
             //if the object is null then it needs initialising
@@ -32,6 +40,13 @@ namespace FrontEnd
             }
         }
 
+        protected void Page_UnLoad(object sender, EventArgs e)
+        {
+            //you must also save the cart every time the unload event takes place
+            Session["MyCart"] = MyCart;
+            Session["Sec"] = Sec;
+        }
+
         protected void SetLinks(Boolean Authenticated)
         {
             //sets the visible state of the links based on the authentication state
@@ -42,6 +57,7 @@ namespace FrontEnd
             //set the state of the following to not authenticated i.e. they will be visible when logged in
             DropDownList2.Visible = Authenticated;
             hypSignOut.Visible = Authenticated;
+            hypViewCart.Visible = Authenticated;
 
             txtUserEmail.Visible = Authenticated;
             txtUserEmail.Text = "Welcome " + Sec.UserEMail + "!";
