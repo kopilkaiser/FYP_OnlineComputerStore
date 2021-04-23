@@ -30,7 +30,7 @@ namespace FrontEnd
 
         protected void Page_UnLoad(object sender, EventArgs e)
         {
-            //you must also save the cart every time the unload event takes place
+            //you must also save the cart every time the unload event takes place 
             Session["MyCart"] = MyCart;
             //update the security state in the session
             Session["Sec"] = Sec;
@@ -47,7 +47,15 @@ namespace FrontEnd
                 MyCart.Phonenum = txtPhonenum.Text;
                 MyCart.Checkout();
 
-                Response.Redirect("PaymentComplete.aspx");
+                if ((txtStreet.Text.Length != 0) && (txtPostCode.Text.Length != 0) && (txtPhonenum.Text.Length != 0) && (txtCity.Text.Length != 0))
+                {
+                    Response.Redirect("PaymentComplete.aspx");
+                }
+
+                else
+                {
+                    lblError.Text = "Please fill up all the following fields: Street Address, Post Code, City, Phonenum ";
+                }
             }
 
             else

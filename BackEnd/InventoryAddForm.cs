@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using System.Web.UI.WebControls;
 using ClassLibrary;
 using System.Data.SqlClient;
+
 namespace BackEnd
 {
     public partial class InventoryAddForm : Form
@@ -18,23 +18,6 @@ namespace BackEnd
         public InventoryAddForm()
         {
             InitializeComponent();
-        }
-
-        void DisplayInventory()
-        {
-            //create an instance of the inventory collection
-            clsInventoryCollection AllInventories = new clsInventoryCollection();
-            //find the record to update
-            AllInventories.ThisInventory.Find(InventoryId);
-            //display the data for this record
-            txtName.Text = AllInventories.ThisInventory.Name;
-            txtPrice.Text = AllInventories.ThisInventory.Price.ToString();
-            txtQuantity.Text = AllInventories.ThisInventory.Quantity.ToString();
-            txtDateAdded.Text = AllInventories.ThisInventory.DateAdded.ToString();
-            chkActive.Checked = AllInventories.ThisInventory.Active;
-            comboBoxCategory.SelectedText = AllInventories.ThisInventory.Category;
-
-
         }
 
         void Add()
@@ -53,6 +36,9 @@ namespace BackEnd
                 AllInventories.ThisInventory.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
                 AllInventories.ThisInventory.Active = chkActive.Checked;
                 AllInventories.ThisInventory.Category = Convert.ToString(comboBoxCategory.SelectedItem);
+                AllInventories.ThisInventory.Description = Convert.ToString(txtDescription.Text);
+                AllInventories.ThisInventory.ImagePath = Convert.ToString(txtImagePath.Text);
+
                 //add the record
                 AllInventories.Add();
                 //all done so redirect back to the main page
@@ -128,17 +114,13 @@ namespace BackEnd
             txtName.Text = "";
             txtPrice.Text = "";
             txtQuantity.Text = "";
-
+            comboBoxCategory.Text = "";
             chkActive.Checked = true;
+            comboBoxCategory.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void AddInventoryForm_KeyDown(object sender, KeyEventArgs e)
         {
-            //if "Enter" Key is pressed press the button "OK"
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnOK.PerformClick();
-            }
 
             //if the "Esc" Key is pressed press the button "Cancel"
             if(e.KeyCode == Keys.Escape)

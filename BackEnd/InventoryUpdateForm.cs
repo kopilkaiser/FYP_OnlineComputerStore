@@ -33,6 +33,7 @@ namespace BackEnd
             //display the current data for the record
             DisplayInventory();
             txtDateAdded.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
+            comboBoxCategory.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
 
@@ -40,7 +41,7 @@ namespace BackEnd
         {
             clsInventoryCollection AllInventories = new clsInventoryCollection();
             string Error = AllInventories.ThisInventory.Valid(txtName.Text, txtPrice.Text, txtQuantity.Text, Convert.ToString(comboBoxCategory.SelectedItem), txtDateAdded.Text);
-            string message = "Are you sure to Update the existing Inventory in the Database?";
+            string message = "Are you sure to Update the existing Inventory?";
             string caption = "User Confirmation!";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result;
@@ -99,7 +100,8 @@ namespace BackEnd
             txtDateAdded.Text = AllInventories.ThisInventory.DateAdded.ToString();
             chkActive.Checked = AllInventories.ThisInventory.Active;
             comboBoxCategory.SelectedItem = AllInventories.ThisInventory.Category;
-
+            txtImagePath.Text = AllInventories.ThisInventory.ImagePath;
+            txtDescription.Text = AllInventories.ThisInventory.Description;
         }
 
         public void Update()
@@ -119,8 +121,12 @@ namespace BackEnd
                 AllInventories.ThisInventory.Price = Convert.ToDecimal(txtPrice.Text);
                 AllInventories.ThisInventory.Quantity = Convert.ToInt32(txtQuantity.Text);
                 AllInventories.ThisInventory.Category = Convert.ToString(comboBoxCategory.SelectedItem);
-                AllInventories.ThisInventory.DateAdded = Convert.ToDateTime(Convert.ToString(txtDateAdded.Text));
+                AllInventories.ThisInventory.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
                 AllInventories.ThisInventory.Active = chkActive.Checked;
+                AllInventories.ThisInventory.Description = txtDescription.Text;
+                AllInventories.ThisInventory.ImagePath = txtImagePath.Text;
+
+
                 //UPDATE the record
                 AllInventories.Update();
                 //All Done so Redirect to the previous Form

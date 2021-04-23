@@ -141,6 +141,7 @@ namespace ClassLibrary
             decimal AmountTemp;
             Int64 CardNumberTemp;
 
+
             if (email.Length == 0)
             {
                 Error = Error + "The Email cannot be blank : ";
@@ -179,18 +180,18 @@ namespace ClassLibrary
 
                 if (AmountTemp > 100000000m)
                 {
-                    Error = Error + "Total Amount cannot exceed 100000000 : ";
+                    Error = Error + "Total Amount reached limits : ";
                 }
 
-                if (Amount < 0m)
+                if (AmountTemp < 0m)
                 {
-                    Error = Error + "Ammount cannot be less than zero : ";
+                    Error = Error + "Ammount cannot be negative : ";
                 }
             }
             catch
             {
                 //record the error
-                Error = Error + "The Amount entered is not valid : ";
+                Error = Error + "The Amount entered is invalid : ";
             }
 
             //if Quantity entered is a valid quantity
@@ -212,7 +213,7 @@ namespace ClassLibrary
             catch
             {
                 //record the error
-                Error = Error + "The Card Number is not valid : ";
+                Error = Error + "The Card Number entered is invalid : ";
 
             }
 

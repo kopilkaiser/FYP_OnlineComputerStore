@@ -106,7 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Catalog\computer1.jpg" />
+    <Content Include="Catalog\Images\computer1.jpg" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -127,7 +127,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Images\TechGalaxy.PNG" />
     <Content Include="Images\TechGalaxy11.PNG" />
-    <Content Include="ProductPage.aspx" />
     <Content Include="SignInPage.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="EMailViewer.aspx" />
@@ -227,13 +226,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="ProductPage.aspx.cs">
-      <DependentUpon>ProductPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductPage.aspx.designer.cs">
-      <DependentUpon>ProductPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="SignInPage.aspx.cs">
       <DependentUpon>SignInPage.aspx</DependentUpon>
@@ -343,7 +335,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Catalog\Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

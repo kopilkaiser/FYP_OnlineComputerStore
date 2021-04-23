@@ -39,9 +39,10 @@ namespace BackEnd
             this.btnYes.BackColor = System.Drawing.Color.Crimson;
             this.btnYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYes.ForeColor = System.Drawing.Color.FloralWhite;
-            this.btnYes.Location = new System.Drawing.Point(94, 108);
+            this.btnYes.Location = new System.Drawing.Point(90, 101);
+            this.btnYes.Margin = new System.Windows.Forms.Padding(2);
             this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(85, 45);
+            this.btnYes.Size = new System.Drawing.Size(64, 37);
             this.btnYes.TabIndex = 0;
             this.btnYes.Text = "Yes";
             this.btnYes.UseVisualStyleBackColor = false;
@@ -50,10 +51,12 @@ namespace BackEnd
             // btnNo
             // 
             this.btnNo.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnNo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNo.Location = new System.Drawing.Point(209, 108);
+            this.btnNo.Location = new System.Drawing.Point(177, 101);
+            this.btnNo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(88, 45);
+            this.btnNo.Size = new System.Drawing.Size(66, 37);
             this.btnNo.TabIndex = 0;
             this.btnNo.Text = "No";
             this.btnNo.UseVisualStyleBackColor = false;
@@ -63,21 +66,25 @@ namespace BackEnd
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 50);
+            this.label1.Location = new System.Drawing.Point(32, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 20);
+            this.label1.Size = new System.Drawing.Size(281, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Are you sure to Delete the Inventory?";
             // 
-            // InventoryConfirmDeleteForm
+            // InventoryDeleteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AcceptButton = this.btnYes;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 238);
+            this.CancelButton = this.btnNo;
+            this.ClientSize = new System.Drawing.Size(334, 204);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnYes);
-            this.Name = "InventoryConfirmDeleteForm";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "InventoryDeleteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Confirm Deletion";
             this.ResumeLayout(false);

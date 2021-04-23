@@ -151,7 +151,7 @@ namespace ClassLibrary
             dBConnection = new clsDataConnection();
             dBConnection.AddParameter("@PayeeName", PayeeName);
             //execute the stored procedure
-            dBConnection.Execute("sproc_tblPayment_ReportByPayeeName");
+            dBConnection.Execute("sproc_tblPayment_FilterByPayeeName");
             //populate the array list with the data table
             PopulateArray(dBConnection);
         }

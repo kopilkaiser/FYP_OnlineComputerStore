@@ -67,6 +67,12 @@
                                  %><td style="font-weight:bold; text-align:center" class="auto-style4"><%
                      Response.Write("Category");
                      %></td><%
+                                         %><td style="font-weight:bold; text-align:center" class="auto-style4"><%
+                     Response.Write("Description");
+                     %></td><%
+                                         %><td style="font-weight:bold; text-align:center" class="auto-style4"><%
+                     Response.Write("Image");
+                     %></td><%
 
                    %></tr><%
                         
@@ -74,7 +80,7 @@
                   {
                     %><tr><%
                     %><td class="auto-style9">
-                        <a href="ProductDetails.aspx?InventoryId=<% Response.Write(MyInventories.InventoryList[Index].InventoryId);%>&Price=<%Response.Write(MyInventories.InventoryList[Index].Price);%>&Name=<% Response.Write(MyInventories.InventoryList[Index].Name);%>&ImagePath=<% Response.Write(MyInventories.InventoryList[Index].ImagePath);%> ">
+                        <a href="ProductDetails.aspx?InventoryId=<% Response.Write(MyInventories.InventoryList[Index].InventoryId);%>&Price=<%Response.Write(MyInventories.InventoryList[Index].Price);%>&Name=<% Response.Write(MyInventories.InventoryList[Index].Name);%>&ImagePath=<% Response.Write(MyInventories.InventoryList[Index].ImagePath);%>;%>&Description=<% Response.Write(MyInventories.InventoryList[Index].Description);%> ">
                             <%   
                      Response.Write("Select Quantity");
                     %></a></td><%
@@ -90,11 +96,12 @@
                                    %><td class="auto-style4"><%
                                  Response.Write(MyInventories.InventoryList[Index].Category);
                                   %></td> <%
-
+                                                %><td class="auto-style4"><%
+                                 Response.Write(MyInventories.InventoryList[Index].Description);
+                                  %></td> <%
                                          %>  <td>
                                    
-                                 
-                                            
+          
                                       <image src='/Catalog/Images/<%Response.Write(MyInventories.InventoryList[Index].ImagePath);%>'
                                       width="100" height="100" border="1" />
                                 </td> <%   

@@ -39,6 +39,7 @@ namespace ClassLibrary
                 //we shall worry about this later
             }
         }
+
         public clsInventory ThisInventory
         {
             get
@@ -79,6 +80,8 @@ namespace ClassLibrary
                     NewInventory.Active = Convert.ToBoolean(dBConnection.DataTable.Rows[Index]["Active"]);
                     //get the Image Path of the Inventory from the query results
                     NewInventory.ImagePath = Convert.ToString(dBConnection.DataTable.Rows[Index]["ImagePath"]);
+                    //get the Description of the Inventory from the query results
+                    NewInventory.Description = Convert.ToString(dBConnection.DataTable.Rows[Index]["Description"]);
                     //increment the index
                     Index++;
                     //add the address to the list
@@ -107,6 +110,8 @@ namespace ClassLibrary
             dBConnection.AddParameter("@Category", mThisInventory.Category);
             dBConnection.AddParameter("@DateAdded", mThisInventory.DateAdded);
             dBConnection.AddParameter("@Active", mThisInventory.Active);
+            dBConnection.AddParameter("@ImagePath", mThisInventory.ImagePath);
+            dBConnection.AddParameter("@Description", mThisInventory.Description);
             //execute the query returning the primary key value
             return dBConnection.Execute("sproc_tblInventory_Insert");
         }
@@ -137,6 +142,8 @@ namespace ClassLibrary
             dBConnection.AddParameter("@Category", mThisInventory.Category);
             dBConnection.AddParameter("@DateAdded", mThisInventory.DateAdded);
             dBConnection.AddParameter("@Active", mThisInventory.Active);
+            dBConnection.AddParameter("@ImagePath", mThisInventory.ImagePath);
+            dBConnection.AddParameter("@Description", mThisInventory.Description);
             //execute the stored procedure
             dBConnection.Execute("sproc_tblInventory_Update");
         }
@@ -179,6 +186,9 @@ namespace ClassLibrary
                 AnInventory.Quantity = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["Quantity"]);
                 AnInventory.Category = Convert.ToString(dBConnection.DataTable.Rows[Index]["Category"]);
                 AnInventory.DateAdded = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["DateAdded"]);
+                AnInventory.ImagePath = Convert.ToString(dBConnection.DataTable.Rows[Index]["ImagePath"]);
+                AnInventory.Description = Convert.ToString(dBConnection.DataTable.Rows[Index]["Description"]);
+
                 //add the record to the private data member
                 mInventoryList.Add(AnInventory);
                 //point at the next record

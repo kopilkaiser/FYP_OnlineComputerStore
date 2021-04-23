@@ -25,19 +25,50 @@ namespace BackEnd
             this.Close();
         }
 
-        private void btnManageCustomer_Click(object sender, EventArgs e)
-        {
-            CustomerManageForm CM = new CustomerManageForm();
-            this.Hide();
-            CM.ShowDialog();
-            this.Close();
-        }
 
         private void btnManageStaff_Click(object sender, EventArgs e)
         {
             StaffManageForm SM = new StaffManageForm();
             this.Hide();
             SM.ShowDialog();
+            this.Close();
+        }
+
+        private void btnReviewManage_Click_1(object sender, EventArgs e)
+        {
+            ReviewManageForm RM = new ReviewManageForm();
+            this.Hide();
+            RM.ShowDialog();
+            this.Close();
+        }
+
+        private void mdiMainMenuForm_Load(object sender, EventArgs e)
+        {
+            // lblTime.Text = DateTime.Now.ToLocalTime().ToString();
+            lblTime.Text = DateTime.Now.AddHours(24).ToShortTimeString();
+            lblDate.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
+        }
+
+
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            MDIParent MDP = new MDIParent();
+            this.Hide();
+            MDP.ShowDialog();
+            this.Close();
+        }
+
+        private void btnManagePayment_Click(object sender, EventArgs e)
+        {
+            PaymentManageForm PM = new PaymentManageForm();
+            this.Hide();
+            PM.ShowDialog();
             this.Close();
         }
     }

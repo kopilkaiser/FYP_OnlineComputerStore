@@ -94,6 +94,30 @@
     <Compile Include="MDIParent.Designer.cs">
       <DependentUpon>MDIParent.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaymentAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentAddForm.Designer.cs">
+      <DependentUpon>PaymentAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentDeleteForm.Designer.cs">
+      <DependentUpon>PaymentDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentManageForm.Designer.cs">
+      <DependentUpon>PaymentManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentUpdateForm.Designer.cs">
+      <DependentUpon>PaymentUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prototype_designs\PrototypeHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,11 +156,53 @@
     <Compile Include="InventoryUpdateForm.Designer.cs">
       <DependentUpon>InventoryUpdateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReviewAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewAddForm.Designer.cs">
+      <DependentUpon>ReviewAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewDeleteForm.Designer.cs">
+      <DependentUpon>ReviewDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewManageForm.Designer.cs">
+      <DependentUpon>ReviewManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewUpdateForm.Designer.cs">
+      <DependentUpon>ReviewUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffAddForm.Designer.cs">
+      <DependentUpon>StaffAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffDeleteForm.Designer.cs">
+      <DependentUpon>StaffDeleteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffManageForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StaffManageForm.Designer.cs">
       <DependentUpon>StaffManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffUpdateForm.Designer.cs">
+      <DependentUpon>StaffUpdateForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="InventoryAddForm.resx">
       <DependentUpon>InventoryAddForm.cs</DependentUpon>
@@ -161,6 +227,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="mdiSignInForm.resx">
       <DependentUpon>mdiSignInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentAddForm.resx">
+      <DependentUpon>PaymentAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentDeleteForm.resx">
+      <DependentUpon>PaymentDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentManageForm.resx">
+      <DependentUpon>PaymentManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentUpdateForm.resx">
+      <DependentUpon>PaymentUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prototype_designs\PrototypeHome.resx">
       <DependentUpon>PrototypeHome.cs</DependentUpon>
@@ -190,8 +268,29 @@
     <EmbeddedResource Include="InventoryUpdateForm.resx">
       <DependentUpon>InventoryUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReviewAddForm.resx">
+      <DependentUpon>ReviewAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewDeleteForm.resx">
+      <DependentUpon>ReviewDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewManageForm.resx">
+      <DependentUpon>ReviewManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewUpdateForm.resx">
+      <DependentUpon>ReviewUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffAddForm.resx">
+      <DependentUpon>StaffAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffDeleteForm.resx">
+      <DependentUpon>StaffDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StaffManageForm.resx">
       <DependentUpon>StaffManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffUpdateForm.resx">
+      <DependentUpon>StaffUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>

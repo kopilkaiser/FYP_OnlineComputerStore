@@ -15,7 +15,7 @@ namespace FrontEnd
         string Name;
         decimal Price;
         string ImagePath;
-    
+        string Description;
         protected void Page_Load(object sender, EventArgs e)
         {
             //upon loading the page you need to read in the cart from the session object
@@ -25,10 +25,13 @@ namespace FrontEnd
             InventoryId = Convert.ToInt32(Request.QueryString["InventoryId"]);
             Name = Convert.ToString(Request.QueryString["Name"]);
             Price = Convert.ToDecimal(Request.QueryString["Price"]);
+            Description = Convert.ToString(Request.QueryString["Description"]);
             ImagePath = Convert.ToString(Request.QueryString["ImagePath"]);
 
             txtName.Text = Convert.ToString(Name);         
             txtPrice.Text = Convert.ToString(Price);
+            txtDescription.Text = Convert.ToString(Description);
+
         }
 
         protected void Page_UnLoad(object sender, EventArgs e)
@@ -50,6 +53,7 @@ namespace FrontEnd
             AnItem.QTY = Convert.ToInt32(txtQuantity.Text);
             AnItem.Price = Convert.ToDecimal(txtPrice.Text);
             AnItem.TotalPrice = Convert.ToDecimal((AnItem.QTY) * (AnItem.Price));
+
             //add the item to the cart's products collection
             MyCart.Products.Add(AnItem);
             //go back to shopping

@@ -12,6 +12,19 @@ namespace ClassLibrary
         private bool mActive;
         private int mInventoryId;
         private string mImagePath;
+        private string mDescription;
+
+        public string Description
+        {
+            get
+            {
+                return mDescription;
+            }
+            set
+            {
+                mDescription = value;
+            }
+        }
 
         public string ImagePath
         {
@@ -244,6 +257,7 @@ namespace ClassLibrary
                 mCategory = Convert.ToString(DB.DataTable.Rows[0]["Category"]);
                 mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
                 mImagePath = Convert.ToString(DB.DataTable.Rows[0]["ImagePath"]);
+                mDescription = Convert.ToString(DB.DataTable.Rows[0]["Description"]);
                 //return that everything worked ok
                 return true;
             }
@@ -260,7 +274,7 @@ namespace ClassLibrary
             get
             {
                 return ("InventoryId:" + InventoryId + "__" + "Name:" + Name + "__" + "Price:" + Price + "__"
-                    + "Quantity:" + Quantity + "__" + "Category:" + Category + "__" + "DateAdded:" + DateTime.Now.Date.ToString("dd/MM/yyyy") + "_" + "Active: " + Active);
+                    + "Quantity:" + Quantity + "__" + "Category:" + Category + "__" + "Description: " + "Click to View more" + "__" + "DateAdded:" + DateAdded.ToString("dd/MM/yyyy") + "_" + "ImagePath:" + ImagePath);
             }
         }
     }
