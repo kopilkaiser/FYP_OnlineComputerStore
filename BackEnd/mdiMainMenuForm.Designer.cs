@@ -44,6 +44,8 @@ namespace BackEnd
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +53,7 @@ namespace BackEnd
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(324, 119);
+            this.label1.Location = new System.Drawing.Point(314, 106);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 31);
@@ -62,7 +64,7 @@ namespace BackEnd
             // 
             this.btnManageInventory.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnManageInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageInventory.Location = new System.Drawing.Point(189, 197);
+            this.btnManageInventory.Location = new System.Drawing.Point(179, 184);
             this.btnManageInventory.Margin = new System.Windows.Forms.Padding(2);
             this.btnManageInventory.Name = "btnManageInventory";
             this.btnManageInventory.Size = new System.Drawing.Size(122, 67);
@@ -74,7 +76,7 @@ namespace BackEnd
             // btnManageStaff
             // 
             this.btnManageStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageStaff.Location = new System.Drawing.Point(334, 197);
+            this.btnManageStaff.Location = new System.Drawing.Point(324, 184);
             this.btnManageStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnManageStaff.Name = "btnManageStaff";
             this.btnManageStaff.Size = new System.Drawing.Size(122, 67);
@@ -87,7 +89,7 @@ namespace BackEnd
             // 
             this.btnManageOrder.Enabled = false;
             this.btnManageOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageOrder.Location = new System.Drawing.Point(479, 197);
+            this.btnManageOrder.Location = new System.Drawing.Point(469, 184);
             this.btnManageOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnManageOrder.Name = "btnManageOrder";
             this.btnManageOrder.Size = new System.Drawing.Size(122, 67);
@@ -98,7 +100,7 @@ namespace BackEnd
             // btnReviewManage
             // 
             this.btnReviewManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReviewManage.Location = new System.Drawing.Point(189, 294);
+            this.btnReviewManage.Location = new System.Drawing.Point(179, 281);
             this.btnReviewManage.Margin = new System.Windows.Forms.Padding(2);
             this.btnReviewManage.Name = "btnReviewManage";
             this.btnReviewManage.Size = new System.Drawing.Size(122, 67);
@@ -121,11 +123,11 @@ namespace BackEnd
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(599, 437);
+            this.label2.Location = new System.Drawing.Point(589, 437);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 17);
+            this.label2.Size = new System.Drawing.Size(188, 17);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Developed by Kopil Kaiser";
+            this.label2.Text = "© Developed by Kopil Kaiser";
             // 
             // lblDate
             // 
@@ -175,7 +177,7 @@ namespace BackEnd
             // btnManagePayment
             // 
             this.btnManagePayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManagePayment.Location = new System.Drawing.Point(334, 294);
+            this.btnManagePayment.Location = new System.Drawing.Point(324, 281);
             this.btnManagePayment.Margin = new System.Windows.Forms.Padding(2);
             this.btnManagePayment.Name = "btnManagePayment";
             this.btnManagePayment.Size = new System.Drawing.Size(122, 67);
@@ -209,23 +211,47 @@ namespace BackEnd
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 12);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(75, 20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 22);
+            this.label5.Size = new System.Drawing.Size(133, 25);
             this.label5.TabIndex = 11;
-            this.label5.Text = "GalaxyTech";
+            this.label5.Text = "GalaxyTech®";
+            // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(469, 281);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 67);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Customer Support Management";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 17);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Company:";
             // 
             // mdiMainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 463);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnManageOrder);
             this.Controls.Add(this.btnManageStaff);
             this.Controls.Add(this.btnReviewManage);
@@ -261,5 +287,7 @@ namespace BackEnd
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
     }
 }
