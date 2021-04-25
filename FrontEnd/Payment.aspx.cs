@@ -41,14 +41,13 @@ namespace FrontEnd
             
             if (Error == "")
             {
-                Add();
-                MyCart.ShippingAddress = txtStreet.Text + ", "+ txtPostCode.Text + ", " + txtCity.Text;
-                MyCart.TotalPrice = Convert.ToDecimal(txtOrderTotal.Text);
-                MyCart.Phonenum = txtPhonenum.Text;
-                MyCart.Checkout();
-
                 if ((txtStreet.Text.Length != 0) && (txtPostCode.Text.Length != 0) && (txtPhonenum.Text.Length != 0) && (txtCity.Text.Length != 0))
                 {
+                    Add();
+                    MyCart.ShippingAddress = txtStreet.Text + ", " + txtPostCode.Text + ", " + txtCity.Text;
+                    MyCart.TotalPrice = Convert.ToDecimal(txtOrderTotal.Text);
+                    MyCart.Phonenum = txtPhonenum.Text;
+                    MyCart.Checkout();
                     Response.Redirect("PaymentComplete.aspx");
                 }
 

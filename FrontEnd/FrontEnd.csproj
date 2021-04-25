@@ -139,9 +139,14 @@
     <Content Include="ViewCart.aspx" />
     <Content Include="RemoveCartItem.aspx" />
     <Content Include="Payment.aspx" />
-    <Content Include="ViewProfile.aspx" />
-    <Content Include="EMailViewer1.aspx" />
     <Content Include="PaymentComplete.aspx" />
+    <Content Include="Review.aspx" />
+    <Content Include="CustomerAddDetails.aspx" />
+    <Content Include="FindCustomer.aspx" />
+    <Content Include="ShowCustomerDetails.aspx" />
+    <Content Include="EditCustomerDetails.aspx" />
+    <Content Include="PaymentHistory.aspx" />
+    <Content Include="OrderHistory.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -311,26 +316,61 @@
     <Compile Include="Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewProfile.aspx.cs">
-      <DependentUpon>ViewProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewProfile.aspx.designer.cs">
-      <DependentUpon>ViewProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EMailViewer1.aspx.cs">
-      <DependentUpon>EMailViewer1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EMailViewer1.aspx.designer.cs">
-      <DependentUpon>EMailViewer1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="PaymentComplete.aspx.cs">
       <DependentUpon>PaymentComplete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PaymentComplete.aspx.designer.cs">
       <DependentUpon>PaymentComplete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Review.aspx.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Review.aspx.designer.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAddDetails.aspx.cs">
+      <DependentUpon>CustomerAddDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerAddDetails.aspx.designer.cs">
+      <DependentUpon>CustomerAddDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FindCustomer.aspx.cs">
+      <DependentUpon>FindCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FindCustomer.aspx.designer.cs">
+      <DependentUpon>FindCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowCustomerDetails.aspx.cs">
+      <DependentUpon>ShowCustomerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowCustomerDetails.aspx.designer.cs">
+      <DependentUpon>ShowCustomerDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditCustomerDetails.aspx.cs">
+      <DependentUpon>EditCustomerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditCustomerDetails.aspx.designer.cs">
+      <DependentUpon>EditCustomerDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentHistory.aspx.cs">
+      <DependentUpon>PaymentHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentHistory.aspx.designer.cs">
+      <DependentUpon>PaymentHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderHistory.aspx.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderHistory.aspx.designer.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

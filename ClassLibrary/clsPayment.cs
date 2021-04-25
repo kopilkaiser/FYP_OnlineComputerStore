@@ -250,7 +250,7 @@ namespace ClassLibrary
         {
             get
             {
-                return ("PaymentId:" + PaymentId + "_" + "PayeeName:" + PayeeName + "_" + "Email" + Email + "_" + "_" +"CardNumber:" + CardNumber + "_" + "Method:" + Method + "_"  
+                return ("PaymentId:" + PaymentId + "_" + "PayeeName:" + PayeeName + "_" + "Email:" + "["+ Email + "]" + "_" +"CardNumber:" + CardNumber + "_" + "Method:" + Method + "_"  
                     + "Amount:" + Amount + "_" + "DatePurchased:" + DateTime.Now.Date.ToString("dd/MM/yyyy")); 
             }
         }

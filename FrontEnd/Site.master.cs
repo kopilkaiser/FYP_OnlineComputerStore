@@ -45,6 +45,7 @@ namespace FrontEnd
             DropDownList2.Visible = Authenticated;
             hypSignOut.Visible = Authenticated;
             hypViewCart.Visible = Authenticated;
+            hypViewReviews.Visible = Authenticated;
 
             txtUserEmail.Visible = Authenticated;
             txtUserEmail.Text = "Welcome " + Sec.UserEMail + "!";

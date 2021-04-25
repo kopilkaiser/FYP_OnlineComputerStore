@@ -11,43 +11,43 @@ namespace FrontEnd
 {
 
 
-    public partial class WebForm7
+    public partial class WebForm8
     {
 
         /// <summary>
-        /// Label1 control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// lblPhonenum control.
+        /// lblRecordCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPhonenum;
+        protected global::System.Web.UI.WebControls.Label lblRecordCount;
 
         /// <summary>
-        /// lblName control.
+        /// btnPaymentHistory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblName;
+        protected global::System.Web.UI.WebControls.Button btnPaymentHistory;
 
         /// <summary>
-        /// lblDateJoined control.
+        /// btnOrderHistory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDateJoined;
+        protected global::System.Web.UI.WebControls.Button btnOrderHistory;
     }
 }

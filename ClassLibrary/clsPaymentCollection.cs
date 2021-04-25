@@ -142,16 +142,18 @@ namespace ClassLibrary
             dBConnection.Execute("sproc_tblPayment_Delete");
         }
 
-        public void ReportByPayeeName(string PayeeName)
+        public void ReportByEmail(string Email)
         {
             //filters the records based on a full or partial post code
             //connect to the database
             //clsDataConnection DB = new clsDataConnection();
             //send the Category parameter to the database
             dBConnection = new clsDataConnection();
-            dBConnection.AddParameter("@PayeeName", PayeeName);
+
+            dBConnection.AddParameter("@Email", Email);
+
             //execute the stored procedure
-            dBConnection.Execute("sproc_tblPayment_FilterByPayeeName");
+            dBConnection.Execute("sproc_tblPayment_FilterByEmail");
             //populate the array list with the data table
             PopulateArray(dBConnection);
         }

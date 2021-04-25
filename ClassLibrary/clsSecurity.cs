@@ -83,7 +83,7 @@ public class clsSecurity
                             //send the activation email
                             SendActivationEMail(EMail);
                             //set the return message
-                            Message = "An email has been sent to your account allowing you to activate the account";
+                            Message = "An email has been sent to your account allowing you to activate the account. Press 'View Email' button";
                         }
                         else
                         {

@@ -76,10 +76,12 @@
                          <nav>   
                               <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink>
                              <asp:HyperLink ID="hypSignOut" runat="server" NavigateUrl="~/SignOut.aspx">Sign Out</asp:HyperLink>
-                        <asp:TextBox ID="txtUserEmail" runat="server" ReadOnly="true" widht="30px"></asp:TextBox>
+                             <asp:HyperLink ID="hypViewReviews" runat="server" NavigateUrl="~/Review.aspx">View Reviews</asp:HyperLink>
+
+                        <asp:TextBox ID="txtUserEmail" runat="server" ReadOnly="true" width="100%"></asp:TextBox>
                         &nbsp<asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropdown" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" AutoPostBack="true" >
-                        <asp:ListItem >Manage Profile</asp:ListItem>
-                        <asp:ListItem Value="~/About.aspx">About</asp:ListItem>
+                        <asp:ListItem style="visibility: hidden">Menu </asp:ListItem>
+                        <asp:ListItem Value="~/FindCustomer.aspx">Manage Profile</asp:ListItem>
                         <asp:ListItem Value="~/Contact.aspx">Contact</asp:ListItem>
                          </asp:DropDownList>
                         </nav>
