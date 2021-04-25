@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-   <div class="jumbotron" style="background-image: url(/Catalog/computer1.jpg); background-size: cover; height: 600px; opacity: 0.9">
+   <div class="jumbotron" style="background-image: url(/Catalog/Images/computer1.jpg); background-size: cover; height: 600px; opacity: 0.9">
         <h1 style="font-style: oblique; color:aliceblue">Exclusive <br />Tech-Products</h1>
         <p style="color:black; font-style:oblique; font-weight: 600; background-color: beige; width: 30%" class="lead">Our products are brand new,<br /> with good service warranty,<br /> the quality is well-built</p>
 
