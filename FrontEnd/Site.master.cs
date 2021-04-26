@@ -46,6 +46,7 @@ namespace FrontEnd
             hypSignOut.Visible = Authenticated;
             hypViewCart.Visible = Authenticated;
             hypViewReviews.Visible = Authenticated;
+            hypBrowseSellerShops.Visible = Authenticated;
 
             txtUserEmail.Visible = Authenticated;
             txtUserEmail.Text = "Welcome " + Sec.UserEMail + "!";

@@ -10,7 +10,7 @@
 
      protected void Page_Load(object sender, EventArgs e)
     {
-          Sec = (clsSecurity)Session["Sec"];
+        Sec = (clsSecurity)Session["Sec"];
         //upon loading the page you need to read in the cart from the session object
         MyCart = (clsCart)Session["MyCart"];
         //if the cart is null then we need to initialise it

@@ -23,7 +23,7 @@ namespace FrontEnd
         clsCart MyCart = new clsCart();
         clsCustomerCollection AllCustomers = new clsCustomerCollection();
         //variables to store the values of the fields being passed from the FindCustomer page
-        Int32 CustomerId;
+        Int32 myCustomerId;
         string email;
         string phonenum;
         string Bio;
@@ -36,7 +36,7 @@ namespace FrontEnd
             Sec = (clsSecurity)Session["Sec"];
             MyCart = (clsCart)Session["MyCart"];
 
-            CustomerId = Convert.ToInt32(Request.QueryString["CustomerId"]);
+           /* CustomerID = Convert.ToInt32(Request.QueryString["CustomerId"]);
             email = Convert.ToString(Request.QueryString["Email"]);
             phonenum = Convert.ToString(Request.QueryString["Phonenum"]);
             AccountBalance = Convert.ToString(Request.QueryString["AccountBalance"]);
@@ -44,13 +44,15 @@ namespace FrontEnd
             dateJoined = Convert.ToDateTime(Request.QueryString["DateJoined"]);
             name = Convert.ToString(Request.QueryString["Name"]);
 
-            txtCustomerId.Text = CustomerId.ToString();
+            txtCustomerId.Text = Session["myCustomerId"].ToString();
+
             txtEmail.Text = "";
             txtAccountBalance.Text = "";
             txtPhonenum.Text = "";
             txtBio.Text = "";
             txtName.Text = "";
             txtDateJoined.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
+           */
         }
 
         protected void Page_UnLoad(object sender, EventArgs e)
@@ -62,6 +64,7 @@ namespace FrontEnd
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             clsCustomerCollection AllCustomers = new clsCustomerCollection();
+            //AllCustomers.ThisCustomer.CustomerId = CustomerId;
             string Error = AllCustomers.ThisCustomer.Valid(txtName.Text, txtPhonenum.Text, txtEmail.Text,txtDateJoined.Text, txtBio.Text, txtAccountBalance.Text);
 
             if(Error == "")
@@ -85,7 +88,7 @@ namespace FrontEnd
             string Error = AllCustomers.ThisCustomer.Valid(txtName.Text, txtPhonenum.Text, txtEmail.Text, DateTime.Now.Date.ToString(), txtBio.Text, txtAccountBalance.Text);
             //if the data is OK then add it to the object
             if (Error == "")
-            {
+            {               
                 //find the record to UPDATE
                 AllCustomers.ThisCustomer.Find(mCustomerId);
                 //get the data entered by the user

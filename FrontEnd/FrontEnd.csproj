@@ -147,6 +147,8 @@
     <Content Include="EditCustomerDetails.aspx" />
     <Content Include="PaymentHistory.aspx" />
     <Content Include="OrderHistory.aspx" />
+    <Content Include="BrowseSellerShops.aspx" />
+    <Content Include="BrowseSellerProducts.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -371,6 +373,20 @@
     </Compile>
     <Compile Include="OrderHistory.aspx.designer.cs">
       <DependentUpon>OrderHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseSellerShops.aspx.cs">
+      <DependentUpon>BrowseSellerShops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BrowseSellerShops.aspx.designer.cs">
+      <DependentUpon>BrowseSellerShops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseSellerProducts.aspx.cs">
+      <DependentUpon>BrowseSellerProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BrowseSellerProducts.aspx.designer.cs">
+      <DependentUpon>BrowseSellerProducts.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

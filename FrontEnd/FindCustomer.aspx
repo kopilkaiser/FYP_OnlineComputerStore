@@ -30,7 +30,7 @@
         //you must also save the cart every time the unload event takes place
         Session["MyCart"]= MyCart;
         Session["Sec"] = Sec;
-        userEmail = "Laptop";
+        userEmail = Sec.UserEMail;
     }
 </script>
 
@@ -41,6 +41,8 @@
             Int32 Index = 0;
             Int32 RecordCount = MyCustomers.Count;
             lblRecordCount.Text = RecordCount.ToString();
+
+            Int32 CustomerId = 0;
         %>
                 
                 <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px">Profile Manage Menu</span><br /><br /></div>
@@ -93,20 +95,24 @@
                             &AccountBalance=<% Response.Write(MyCustomers.CustomerList[Index].AccountBalance);%>">
                             <%Response.Write("Edit my Profile");%>
                            </a>
+                            
                           </td>
 
                           <td class="auto-style4"><%Response.Write(MyCustomers.CustomerList[Index].CustomerId);%></td>
                           <td class="auto-style4"><%Response.Write(MyCustomers.CustomerList[Index].Email);%></td>
                           <td class="auto-style4"><%Response.Write(MyCustomers.CustomerList[Index].Name);%></td>
                           <td class="auto-style4"><%Response.Write("Click 'Show My Profile' to View More");%></td>
+                          <td><%Session["myCustomerId"] = Convert.ToString(MyCustomers.CustomerList[Index].CustomerId); %></td>
                       </tr>
                      <%
                       Index++;
+                            
                     }
+                         
                     %>
 
                   </table>
-
+                        <%Session["myCustomerId"] = CustomerId;%>           
         </div>
     <br />
 

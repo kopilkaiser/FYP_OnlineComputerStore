@@ -7,6 +7,10 @@
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
+		if (MyCart == null)
+        {
+            MyCart = new clsCart();
+        }
 			//upon loading the page you need to read in the cart from the session object
 			MyCart = (clsCart)Session["MyCart"];
 			//display the cart contents
@@ -58,49 +62,40 @@
 						 Response.Write("");
 						 %></td><%
 
-					   %></tr><%
+					   %></tr>
+						  
+						  <%
 						
 					  while(Index<Count)
 					  {
-						%><tr><%
-									%><td class="auto-style10"><%
-						 Response.Write(MyCart.Products[Index].InventoryId);
-						 %></td><% 
+						%>
+						<tr>
 
-						%><td class="auto-style10"><%
-						 Response.Write(MyCart.Products[Index].Name);
-						 %></td><%    
+						<td class="auto-style10"><%Response.Write(MyCart.Products[Index].InventoryId);%></td>
+					    <td class="auto-style10"><%Response.Write(MyCart.Products[Index].Name);%></td>
+					    <td class="auto-style10"><%Response.Write(MyCart.Products[Index].QTY);%></td>
+					    <td class="auto-style10" style="width: 102px"><%Response.Write(MyCart.Products[Index].Price);%></td>
+						<td class="auto-style10" style="width: 96px"><%Response.Write(MyCart.Products[Index].TotalPrice);%></td>
+						<% OrderTotal = OrderTotal + MyCart.Products[Index].TotalPrice;%>
+						
+						<td class="modal-sm" style="width: 78px">
+						<a href="RemoveCartItem.aspx?Index=<% Response.Write(Index);%>">
+						<span class="auto-style7"><%Response.Write("Remove Item");%></span></a>
+						</td>
+						
+						</tr>
 
-									%><td class="auto-style10"><%
-						 Response.Write(MyCart.Products[Index].QTY);
-						 %></td><%  
-
-											   %><td class="auto-style10" style="width: 102px"><%
-						 Response.Write(MyCart.Products[Index].Price);
-						 %></td><%  
-
-											   %><td class="auto-style10" style="width: 96px"><%
-						 Response.Write(MyCart.Products[Index].TotalPrice);
-						 %></td><%  
-						 OrderTotal = OrderTotal + MyCart.Products[Index].TotalPrice;
-
-							%><td class="modal-sm" style="width: 78px">
-							<a href="RemoveCartItem.aspx?Index=<% Response.Write(Index);%>">
-								  <span class="auto-style7">
-								<%   
-						 Response.Write("Remove Item");
-						%></span></a></td><%
-
-						 %> </tr><%
+						<%
 						  Index++;
 						}
 
-						%></table><%
+						%></table>
+			
+						<%
+							Session["Ordertotal"] = OrderTotal;
+							txtOrderTotal.Text = OrderTotal.ToString();
+						%>
 
-									   Session["Ordertotal"] = OrderTotal;
-									  txtOrderTotal.Text = OrderTotal.ToString();
-
-					  %>
 			<br />
 			<div style="float:right;">
 			  <asp:Label runat="server" style="font-weight:700; font-size:medium;">SubTotal: </asp:Label><asp:TextBox ID="txtOrderTotal" runat="server" ReadOnly="True" CssClass="auto-style13" BackColor="#333333" ForeColor="White"></asp:TextBox>

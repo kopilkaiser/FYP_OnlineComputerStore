@@ -133,7 +133,7 @@ namespace BackEnd
         Int32 DisplayPayments(string EmailFilter)
         {
             clsPaymentCollection AllPayments = new clsPaymentCollection();
-            AllPayments.ReportByPayeeName(EmailFilter);
+            AllPayments.ReportByEmail(EmailFilter);
             //set the data source to the list of Inventories in the collection
             lstPayments.DataSource = AllPayments.PaymentList;
             //set the name of the primary Key

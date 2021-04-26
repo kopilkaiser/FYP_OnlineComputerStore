@@ -57,6 +57,10 @@
     <Compile Include="clsReview.cs" />
     <Compile Include="clsReviewCollection.cs" />
     <Compile Include="clsSecurity.cs" />
+    <Compile Include="clsSellerShop.cs" />
+    <Compile Include="clsSellerShopCollection.cs" />
+    <Compile Include="clsSellerShopLine.cs" />
+    <Compile Include="clsSellerShopLineCollection.cs" />
     <Compile Include="clsStaff.cs" />
     <Compile Include="clsStaffCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

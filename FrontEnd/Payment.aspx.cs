@@ -31,7 +31,7 @@ namespace FrontEnd
         protected void Page_UnLoad(object sender, EventArgs e)
         {
             //you must also save the cart every time the unload event takes place 
-            Session["MyCart"] = MyCart;
+           Session["MyCart"] = MyCart;
             //update the security state in the session
             Session["Sec"] = Sec;
         }

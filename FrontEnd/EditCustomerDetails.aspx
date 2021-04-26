@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditCustomerDetails.aspx.cs" Inherits="FrontEnd.WebForm7" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+          <%@ Import Namespace="ClassLibrary"%> 
+
+
 
                 <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px">Edit Profile</span><br /><br /></div>
         <table class="nav-justified">
@@ -13,9 +16,10 @@
             </td>
         </tr>
         <tr>
-            <td class="text-left" style="width: 206px">Your Profile Id</td>
-            <td class="text-left">
+            <td class="text-left" style="width: 206px; height: 22px;">Your Profile Id</td>
+            <td class="text-left" style="height: 22px">
                 <asp:TextBox ID="txtCustomerId" runat="server"></asp:TextBox>
+                <asp:Label ID="lblCustomerId" runat="server" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -71,7 +75,7 @@
             <td class="text-left" style="width: 206px">&nbsp;</td>
             <td class="text-left"> 
                         
-                           <asp:Button ID="btnUpdate" runat="server" Text="Update My Profile" OnClick="btnUpdate_Click" />
+               <asp:Button ID="btnUpdate" runat="server" Text="Update My Profile" OnClick="btnUpdate_Click" />
             </td>
         </tr>
     </table>

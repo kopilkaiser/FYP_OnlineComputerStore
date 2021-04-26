@@ -77,6 +77,7 @@
                               <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink>
                              <asp:HyperLink ID="hypSignOut" runat="server" NavigateUrl="~/SignOut.aspx">Sign Out</asp:HyperLink>
                              <asp:HyperLink ID="hypViewReviews" runat="server" NavigateUrl="~/Review.aspx">View Reviews</asp:HyperLink>
+                             <asp:HyperLink ID="hypBrowseSellerShops" runat="server" NavigateUrl="~/BrowseSellerShops.aspx">Browse Seller Shops</asp:HyperLink>
 
                         <asp:TextBox ID="txtUserEmail" runat="server" ReadOnly="true" width="100%"></asp:TextBox>
                         &nbsp<asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropdown" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" AutoPostBack="true" >
