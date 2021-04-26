@@ -7,13 +7,13 @@
             <td style="width: 508px">&nbsp;</td>
         </tr>
         <tr>
-            <td class="text-center" colspan="4">Payment Process&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
+            <td class="text-center" colspan="4"><span style="font-family: Arial; font-size: xx-large; border-left-color: #A0A0A0; border-right-color: #C0C0C0; border-top-color: #A0A0A0; border-bottom-color: #C0C0C0">Payment Process&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td style="width: 402px">&nbsp;</td>
-            <td style="width: 508px">Enter Shipping Details here:<br />
+            <td style="width: 508px"><br /><strong>Enter Shipping Details here:</strong><br />
             </td>
         </tr>
         <tr>
@@ -42,6 +42,22 @@
                 <br />
                 <br />
             </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="text-center" colspan="2" style="text-decoration: underline">
+                <strong>Enter Your Payment Details Below:</strong></td>
+            <td style="width: 508px; border-style: double; border-width: 3px">&nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="text-center" colspan="2" style="text-decoration: underline">
+                &nbsp;</td>
+            <td style="width: 508px; border-style: double; border-width: 3px">&nbsp;</td>
+            <td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
