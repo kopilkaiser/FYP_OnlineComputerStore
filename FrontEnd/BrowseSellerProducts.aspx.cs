@@ -41,5 +41,10 @@ namespace FrontEnd
         {
             Response.Redirect("BrowseSellerShops.aspx");
         }
+
+        protected void btnBrowseMyShop_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("BrowseMyShop.aspx");
+        }
     }
 }

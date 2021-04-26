@@ -11,7 +11,7 @@ namespace FrontEnd
 {
 
 
-    public partial class WebForm12
+    public partial class WebForm14
     {
 
         /// <summary>
@@ -51,21 +51,21 @@ namespace FrontEnd
         protected global::System.Web.UI.WebControls.Label lblRecordCount;
 
         /// <summary>
-        /// btnBrowseSellerShops control.
+        /// btnBrowseAllProducts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBrowseSellerShops;
+        protected global::System.Web.UI.WebControls.Button btnBrowseAllProducts;
 
         /// <summary>
-        /// btnBrowseMyShop control.
+        /// btnAddProductToShop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBrowseMyShop;
+        protected global::System.Web.UI.WebControls.Button btnAddProductToShop;
     }
 }

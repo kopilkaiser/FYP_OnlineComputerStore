@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BrowseSellerProducts.aspx.cs" Inherits="FrontEnd.WebForm12" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BrowseMyShop.aspx.cs" Inherits="FrontEnd.WebForm14" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <%@ Import Namespace="ClassLibrary"%> 
 
@@ -20,7 +20,7 @@
             }
             //then you can display how many items are in your cart
 
-            //userEmail = Convert.ToString(Request.QueryString["Email"]);
+            userEmail = Sec.UserEMail;
         }
        
         protected void Page_UnLoad(object sender, EventArgs e)
@@ -37,14 +37,13 @@
         <div class="text-left">
        <% 
             clsSellerShopLineCollection AllSellerShopLines = new clsSellerShopLineCollection();          
-            AllSellerShopLines.ReportByEmail("");
+            AllSellerShopLines.ReportByEmail(userEmail);
             Int32 Index = 0;
             Int32 RecordCount = AllSellerShopLines.Count;
             lblRecordCount.Text = RecordCount.ToString();
        %>
                 
-                <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px">Browse <asp:Label ID="lblSellerName" runat="server" Text=""></asp:Label> &nbsp;Shop<br />
-                    ALL Seller Products in Market<br />
+                <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px">Browse <asp:Label ID="lblSellerName" runat="server" Text=""></asp:Label> Shop<br />
                     </span>
                     <span>Shop Name: </span><asp:Label ID="lblShopName" runat="server" Text=""></asp:Label>
                     <br /><br /></div>
@@ -70,8 +69,6 @@
                   {
                     %>
                       <tr>
-
-
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%></td>
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Email);%></td>
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Price);%></td>
@@ -92,9 +89,8 @@
     <br />
 
     <div>
-        <asp:Button ID="btnBrowseSellerShops" runat="server" Text="Browse Seller Shops" OnClick="btnBrowseSellerShops_Click"/>
-        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-        <asp:Button ID="btnBrowseMyShop" runat="server" Text="Browse My Shop" OnClick="btnBrowseMyShop_Click"/>
+        <asp:Button ID="btnBrowseAllProducts" runat="server" Text="Browse All Seller Products" OnClick="btnBrowseAllProducts_Click"/>
+         <asp:Button ID="btnAddProductToShop" runat="server" Text="Add new Product To Shop" OnClick="btnAddProductToShop_Click"/>
 
         </div>
 </asp:Content>

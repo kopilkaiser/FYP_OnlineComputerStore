@@ -140,7 +140,7 @@
     <Content Include="RemoveCartItem.aspx" />
     <Content Include="Payment.aspx" />
     <Content Include="PaymentComplete.aspx" />
-    <Content Include="Review.aspx" />
+    <Content Include="BrowseAllReviews.aspx" />
     <Content Include="CustomerAddDetails.aspx" />
     <Content Include="FindCustomer.aspx" />
     <Content Include="ShowCustomerDetails.aspx" />
@@ -149,6 +149,10 @@
     <Content Include="OrderHistory.aspx" />
     <Content Include="BrowseSellerShops.aspx" />
     <Content Include="BrowseSellerProducts.aspx" />
+    <Content Include="AddSellerProduct.aspx" />
+    <Content Include="BrowseMyShop.aspx" />
+    <Content Include="AddNewReview.aspx" />
+    <Content Include="ViewAReview.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -325,12 +329,12 @@
     <Compile Include="PaymentComplete.aspx.designer.cs">
       <DependentUpon>PaymentComplete.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Review.aspx.cs">
-      <DependentUpon>Review.aspx</DependentUpon>
+    <Compile Include="BrowseAllReviews.aspx.cs">
+      <DependentUpon>BrowseAllReviews.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Review.aspx.designer.cs">
-      <DependentUpon>Review.aspx</DependentUpon>
+    <Compile Include="BrowseAllReviews.aspx.designer.cs">
+      <DependentUpon>BrowseAllReviews.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerAddDetails.aspx.cs">
       <DependentUpon>CustomerAddDetails.aspx</DependentUpon>
@@ -387,6 +391,34 @@
     </Compile>
     <Compile Include="BrowseSellerProducts.aspx.designer.cs">
       <DependentUpon>BrowseSellerProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddSellerProduct.aspx.cs">
+      <DependentUpon>AddSellerProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddSellerProduct.aspx.designer.cs">
+      <DependentUpon>AddSellerProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseMyShop.aspx.cs">
+      <DependentUpon>BrowseMyShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BrowseMyShop.aspx.designer.cs">
+      <DependentUpon>BrowseMyShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewReview.aspx.cs">
+      <DependentUpon>AddNewReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddNewReview.aspx.designer.cs">
+      <DependentUpon>AddNewReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAReview.aspx.cs">
+      <DependentUpon>ViewAReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAReview.aspx.designer.cs">
+      <DependentUpon>ViewAReview.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

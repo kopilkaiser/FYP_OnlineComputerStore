@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Review.aspx.cs" Inherits="FrontEnd.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BrowseAllReviews.aspx.cs" Inherits="FrontEnd.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <%@ Import Namespace="ClassLibrary"%> 
 
@@ -19,7 +19,6 @@
                 MyCart = new clsCart();
             }
             //then you can display how many items are in your cart
-            lblCartCount.Text = MyCart.Products.Count.ToString();
 
             userEmail = Sec.UserEMail;
         }
@@ -36,10 +35,10 @@
          
         <h2>Browse Reviews here. </h2>
 
-        <p style="font-size: 16px"> You have&nbsp;Total <asp:Label ID="lblCartCount" runat="server" ForeColor="Red" ></asp:Label>&nbsp;items</p>
+        <p style="font-size: 16px"> &nbsp;</p>
 
-         <p style="font-size:16px; font-weight:600 ">Please Sign In to <span style="font-style:italic; font-size:22px; font-weight:800; color:red;">"View the Cart"</span> option.</p>
-          <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink> &nbsp;
+         <p style="font-size:16px; font-weight:600 ">&nbsp;</p>
+         &nbsp;
             
         &nbsp;
          <br />
@@ -81,12 +80,12 @@
                   {
                     %><tr><%
                     %><td class="auto-style9">
-                        <a href="ProductDetails.aspx?InventoryId=<% Response.Write(AllReviews.ReviewList[Index].ReviewId);%>
+                        <a href="ViewAReview.aspx?ReviewId=<% Response.Write(AllReviews.ReviewList[Index].ReviewId);%>
                             &Email=<%Response.Write(AllReviews.ReviewList[Index].Email);%>
                             &Description=<% Response.Write(AllReviews.ReviewList[Index].Description);%>
                             &Rating=<% Response.Write(AllReviews.ReviewList[Index].Rating);%>
                             &ProductId=<% Response.Write(AllReviews.ReviewList[Index].ProductId);%>
-                            &DateReviewed=<% Response.Write(AllReviews.ReviewList[Index].DateReviewed);%> ">
+                            &DateReviewed=<% Response.Write(AllReviews.ReviewList[Index].DateReviewed.ToString("dd/MM/yyyy"));%> ">
                             <%   
                      Response.Write("View Full Review");
                     %></a></td><%
@@ -106,7 +105,7 @@
                                  Response.Write(AllReviews.ReviewList[Index].Rating);
                                   %></td> <%
 
-                                %><td class="auto-style4"><%Response.Write(AllReviews.ReviewList[Index].DateReviewed);%></td> <%
+                                %><td class="auto-style4"><%Response.Write(AllReviews.ReviewList[Index].DateReviewed.ToString("dd/MM/yyyy"));%></td> <%
                                 %><td class="auto-style4"><%Response.Write("Click to View More");%></td><%
 
                      %> </tr><%
@@ -117,5 +116,10 @@
            
                   %>
         </div>
+    <div>
+        <br />
+        <br />
+        <asp:Button ID="btnAddMyReview" runat="server" Text="Write My Review" OnClick="btnAddMyReview_Click" />
 
+    </div>
 </asp:Content>

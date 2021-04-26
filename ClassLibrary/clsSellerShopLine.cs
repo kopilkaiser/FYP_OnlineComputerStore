@@ -123,9 +123,9 @@ namespace ClassLibrary
                 Error = Error + "The Description cannot be blank : ";
             }
 
-            if (description.Length > 50)
+            if (description.Length > 300)
             {
-                Error = Error + "The Description cannot exceed 50 characters : ";
+                Error = Error + "The Description cannot exceed 300 characters : ";
             }
 
 

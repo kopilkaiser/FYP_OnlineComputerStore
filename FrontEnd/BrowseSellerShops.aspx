@@ -42,7 +42,7 @@
             lblRecordCount.Text = RecordCount.ToString();
         %>
                 
-                <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px">All Seller Shops</span><br /><br /></div>
+                <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px">All Seller Shops In Market</span><br /><br /></div>
 
                  <asp:Label ID="Label2" runat="server" Text="Label">Total Shops:</asp:Label>
 
