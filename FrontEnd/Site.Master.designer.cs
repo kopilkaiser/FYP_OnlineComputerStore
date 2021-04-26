@@ -15,24 +15,6 @@ namespace FrontEnd
     {
 
         /// <summary>
-        /// hypViewCart control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hypViewCart;
-
-        /// <summary>
-        /// hypSignOut control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hypSignOut;
-
-        /// <summary>
         /// hypViewReviews control.
         /// </summary>
         /// <remarks>
@@ -58,6 +40,24 @@ namespace FrontEnd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hypBrowseSellerProducts;
+
+        /// <summary>
+        /// hypViewCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hypViewCart;
+
+        /// <summary>
+        /// hypSignOut control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hypSignOut;
 
         /// <summary>
         /// txtUserEmail control.
