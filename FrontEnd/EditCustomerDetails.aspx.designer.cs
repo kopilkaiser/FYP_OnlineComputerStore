@@ -42,13 +42,13 @@ namespace FrontEnd
         protected global::System.Web.UI.WebControls.TextBox txtCustomerId;
 
         /// <summary>
-        /// lblCustomerId control.
+        /// txtNewName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCustomerId;
+        protected global::System.Web.UI.WebControls.TextBox txtNewName;
 
         /// <summary>
         /// txtPhonenum control.
@@ -112,5 +112,14 @@ namespace FrontEnd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdate;
+
+        /// <summary>
+        /// btnViewProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnViewProfile;
     }
 }

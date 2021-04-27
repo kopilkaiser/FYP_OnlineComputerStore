@@ -52,12 +52,15 @@
             <td class="text-left" style="width: 206px">Your Account Balance: </td>
             <td class="text-left">
                 <asp:TextBox ID="txtAccountBalance" runat="server" ReadOnly="True" style="margin-left: 0"></asp:TextBox>
+                <br />
             </td>
         </tr>
         <tr>
-            <td class="text-left" style="width: 206px">Bio</td>
+            <td class="text-left" style="width: 206px">&nbsp;</td>
             <td class="text-left">
-                <asp:TextBox ID="txtBio" runat="server" ReadOnly="True" style="margin-left: 0; resize: none" TextMode="MultiLine"></asp:TextBox>
+                Your Bio Description<br />
+                <br />
+                <asp:TextBox ID="txtBio" runat="server" ReadOnly="True" style="margin-left: 0; resize: none" TextMode="MultiLine" Height="100px" Width="287px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -68,7 +71,7 @@
             <td class="text-left" style="width: 206px">&nbsp;</td>
             <td class="text-left"> 
                         
-                           <asp:Button ID="btnBack" runat="server" OnClick="btnBack_Click" Text="Go back to Manage Menu" />
+                           <asp:Button ID="btnBack" runat="server" OnClick="btnBack_Click" Text="Go back to Profile Manage Menu" />
             </td>
         </tr>
     </table>

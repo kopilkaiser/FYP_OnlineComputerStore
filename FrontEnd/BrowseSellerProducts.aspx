@@ -21,7 +21,7 @@
         }
         //then you can display how many items are in your cart
 
-        userEmail = Convert.ToString(Request.QueryString["ShopName"]);
+        userEmail = Convert.ToString(Request.QueryString["Email"].Trim());
         sellerName = Convert.ToString(Request.QueryString["SellerName"]);
 
         lblSellerName.Text = Convert.ToString(sellerName);
@@ -42,7 +42,7 @@
         <div class="text-left">
        <% 
             clsSellerShopLineCollection AllSellerShopLines = new clsSellerShopLineCollection();          
-            AllSellerShopLines.ReportByEmail("");
+            AllSellerShopLines.ReportByEmail(userEmail);
             Int32 Index = 0;
             Int32 RecordCount = AllSellerShopLines.Count;
             lblRecordCount.Text = RecordCount.ToString();

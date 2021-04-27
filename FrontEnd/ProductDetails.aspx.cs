@@ -23,6 +23,7 @@ namespace FrontEnd
 
             //you also need to get the product id from the query string
             InventoryId = Convert.ToInt32(Request.QueryString["InventoryId"]);
+
             Name = Convert.ToString(Request.QueryString["Name"]);
             Price = Convert.ToDecimal(Request.QueryString["Price"]);
             Description = Convert.ToString(Request.QueryString["Description"]);

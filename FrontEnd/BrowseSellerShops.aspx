@@ -68,11 +68,7 @@
                     %>
                       <tr>
                           <td class="auto-style9">
-                           <a href="BrowseSellerProducts.aspx?
-                            ShopId=<%Response.Write(AllSellerShops.SellerShopList[Index].ShopId);%>
-                            &ShopName=<%Response.Write(AllSellerShops.SellerShopList[Index].ShopName);%>
-                            &SellerName=<%Response.Write(AllSellerShops.SellerShopList[Index].SellerName);%>
-                            &Email=<%Response.Write(AllSellerShops.SellerShopList[Index].Email);%>
+                           <a href="BrowseSellerProducts.aspx?ShopId=<%Response.Write(AllSellerShops.SellerShopList[Index].ShopId);%>&ShopName=<%Response.Write(AllSellerShops.SellerShopList[Index].ShopName);%>&SellerName=<%Response.Write(AllSellerShops.SellerShopList[Index].SellerName);%>&Email=<%Response.Write(AllSellerShops.SellerShopList[Index].Email);%>
                             &Rating=<%Response.Write(AllSellerShops.SellerShopList[Index].Rating);%>
                             &DateJoined=<%Response.Write(AllSellerShops.SellerShopList[Index].DateOpened);%>">
                             <%Response.Write("Browse the Shop");%>

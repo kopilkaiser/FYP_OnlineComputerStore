@@ -72,9 +72,7 @@
                     %>
                       <tr>
                           <td class="auto-style9">
-                           <a href="ShowCustomerDetails.aspx?
-                            CustomerID=<%Response.Write(MyCustomers.CustomerList[Index].CustomerId);%>
-                            &Name=<%Response.Write(MyCustomers.CustomerList[Index].Name);%>
+                           <a href="ShowCustomerDetails.aspx?CustomerId=<%Response.Write(MyCustomers.CustomerList[Index].CustomerId);%>&Name=<%Response.Write(MyCustomers.CustomerList[Index].Name);%>
                             &Phonenum=<% Response.Write(MyCustomers.CustomerList[Index].Phonenum);%>
                             &Email=<% Response.Write(MyCustomers.CustomerList[Index].Email);%>
                             &DateJoined=<% Response.Write(MyCustomers.CustomerList[Index].DateJoined);%>
@@ -85,8 +83,7 @@
                           </td>
 
                           <td class="auto-style9">
-                           <a href="EditCustomerDetails.aspx?
-                            CustomerId=<%Response.Write(MyCustomers.CustomerList[Index].CustomerId);%>
+                           <a href="EditCustomerDetails.aspx?CustomerId=<%Response.Write(MyCustomers.CustomerList[Index].CustomerId);%>
                             &Name=<%Response.Write(MyCustomers.CustomerList[Index].Name);%>
                             &Phonenum=<% Response.Write(MyCustomers.CustomerList[Index].Phonenum);%>
                             &Email=<% Response.Write(MyCustomers.CustomerList[Index].Email);%>
@@ -102,7 +99,7 @@
                           <td class="auto-style4"><%Response.Write(MyCustomers.CustomerList[Index].Email);%></td>
                           <td class="auto-style4"><%Response.Write(MyCustomers.CustomerList[Index].Name);%></td>
                           <td class="auto-style4"><%Response.Write("Click 'Show My Profile' to View More");%></td>
-                          <td><%Session["myCustomerId"] = Convert.ToString(MyCustomers.CustomerList[Index].CustomerId); %></td>
+                        
                       </tr>
                      <%
                       Index++;
@@ -112,7 +109,7 @@
                     %>
 
                   </table>
-                        <%Session["myCustomerId"] = CustomerId;%>           
+                             
         </div>
     <br />
 

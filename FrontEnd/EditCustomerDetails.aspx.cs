@@ -36,23 +36,25 @@ namespace FrontEnd
             Sec = (clsSecurity)Session["Sec"];
             MyCart = (clsCart)Session["MyCart"];
 
-           /* CustomerID = Convert.ToInt32(Request.QueryString["CustomerId"]);
-            email = Convert.ToString(Request.QueryString["Email"]);
+            CustomerID = Convert.ToInt32(Request.QueryString["CustomerId"].Trim());
+            email = Convert.ToString(Request.QueryString["Email"].Trim());
             phonenum = Convert.ToString(Request.QueryString["Phonenum"]);
-            AccountBalance = Convert.ToString(Request.QueryString["AccountBalance"]);
-            Bio = Convert.ToString(Request.QueryString["Bio"]);
-            dateJoined = Convert.ToDateTime(Request.QueryString["DateJoined"]);
-            name = Convert.ToString(Request.QueryString["Name"]);
+            AccountBalance = Convert.ToString(Request.QueryString["AccountBalance"].Trim());
+            Bio = Convert.ToString(Request.QueryString["Bio"].Trim());
+            dateJoined = Convert.ToDateTime(Request.QueryString["DateJoined"].Trim());
+            name = Convert.ToString(Request.QueryString["Name"].Trim());
 
-            txtCustomerId.Text = Session["myCustomerId"].ToString();
+            txtCustomerId.Text = mCustomerId.ToString();
 
-            txtEmail.Text = "";
-            txtAccountBalance.Text = "";
-            txtPhonenum.Text = "";
-            txtBio.Text = "";
-            txtName.Text = "";
+
+            txtEmail.Text = email;
+            txtName.Text = name;
+            txtAccountBalance.Text = AccountBalance;
             txtDateJoined.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
-           */
+            //txtPhonenum.Text = "";
+            //txtBio.Text = "";
+
+
         }
 
         protected void Page_UnLoad(object sender, EventArgs e)
@@ -65,7 +67,8 @@ namespace FrontEnd
         {
             clsCustomerCollection AllCustomers = new clsCustomerCollection();
             //AllCustomers.ThisCustomer.CustomerId = CustomerId;
-            string Error = AllCustomers.ThisCustomer.Valid(txtName.Text, txtPhonenum.Text, txtEmail.Text,txtDateJoined.Text, txtBio.Text, txtAccountBalance.Text);
+
+            string Error = AllCustomers.ThisCustomer.Valid(txtName.Text, txtPhonenum.Text, txtEmail.Text, txtDateJoined.Text, txtBio.Text, txtAccountBalance.Text);
 
             if(Error == "")
             {
@@ -85,7 +88,7 @@ namespace FrontEnd
             //create an instance of the Inventory Collection
             clsCustomerCollection AllCustomers = new clsCustomerCollection();
             //validate the data on the Windows Form
-            string Error = AllCustomers.ThisCustomer.Valid(txtName.Text, txtPhonenum.Text, txtEmail.Text, DateTime.Now.Date.ToString(), txtBio.Text, txtAccountBalance.Text);
+            string Error = AllCustomers.ThisCustomer.Valid(txtNewName.Text, txtPhonenum.Text, txtEmail.Text, DateTime.Now.Date.ToString(), txtBio.Text, txtAccountBalance.Text);
             //if the data is OK then add it to the object
             if (Error == "")
             {               
@@ -93,7 +96,7 @@ namespace FrontEnd
                 AllCustomers.ThisCustomer.Find(mCustomerId);
                 //get the data entered by the user
 
-                AllCustomers.ThisCustomer.Name = txtName.Text;
+                AllCustomers.ThisCustomer.Name = txtNewName.Text;
                 AllCustomers.ThisCustomer.Email = txtEmail.Text;
                 AllCustomers.ThisCustomer.AccountBalance = Convert.ToDecimal(txtAccountBalance.Text);
                 AllCustomers.ThisCustomer.Bio = Convert.ToString(txtBio.Text);
@@ -113,5 +116,9 @@ namespace FrontEnd
 
         }
 
+        protected void btnViewProfile_Click(object sender, EventArgs e)
+        {   
+            Response.Redirect("FindCustomer.aspx");
+        }
     }
 }
