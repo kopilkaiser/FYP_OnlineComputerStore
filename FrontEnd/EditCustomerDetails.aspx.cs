@@ -23,7 +23,7 @@ namespace FrontEnd
         clsCart MyCart = new clsCart();
         clsCustomerCollection AllCustomers = new clsCustomerCollection();
         //variables to store the values of the fields being passed from the FindCustomer page
-        Int32 myCustomerId;
+
         string email;
         string phonenum;
         string Bio;

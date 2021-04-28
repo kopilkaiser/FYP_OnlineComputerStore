@@ -11,35 +11,8 @@ namespace FrontEnd
 {
 
 
-    public partial class WebForm12
+    public partial class WebForm17
     {
-
-        /// <summary>
-        /// lblSellerName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSellerName;
-
-        /// <summary>
-        /// lblShopName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblShopName;
-
-        /// <summary>
-        /// lblRating control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRating;
 
         /// <summary>
         /// Label2 control.

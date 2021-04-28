@@ -77,7 +77,7 @@
 
                              <asp:HyperLink ID="hypViewReviews" runat="server" NavigateUrl="~/BrowseAllReviews.aspx">View Reviews</asp:HyperLink>
                              <asp:HyperLink ID="hypBrowseSellerShops" runat="server" NavigateUrl="~/BrowseSellerShops.aspx">Browse By Seller Shops</asp:HyperLink>
-                             <asp:HyperLink ID="hypBrowseSellerProducts" runat="server" NavigateUrl="~/BrowseSellerProducts.aspx">Browse All Seller Products</asp:HyperLink>
+                             <asp:HyperLink ID="hypBrowseAllSellerProducts" runat="server" NavigateUrl="~/BrowseAllSellerProducts.aspx">Browse All Seller Products</asp:HyperLink>
                              <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink>
                              <asp:HyperLink ID="hypSignOut" runat="server" NavigateUrl="~/SignOut.aspx">Sign Out</asp:HyperLink>
 

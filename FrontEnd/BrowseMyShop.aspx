@@ -43,10 +43,8 @@
             lblRecordCount.Text = RecordCount.ToString();
        %>
                 
-                <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px">Browse <asp:Label ID="lblSellerName" runat="server" Text=""></asp:Label> Shop<br />
-                    </span>
-                    <span>Shop Name: </span><asp:Label ID="lblShopName" runat="server" Text=""></asp:Label>
-                    <br /><br /></div>
+                <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px">Browsing My Shop<br />
+                    </span><br /></div>
                 
                  <asp:Label ID="Label2" runat="server" Text="Label">Total Products:</asp:Label>
 
@@ -56,6 +54,9 @@
          
                   <table border="1" class="auto-style8" style="font-size:large; width: 100%; text-align:center;">
                      <tr>
+                          
+                          <td style="font-weight:bold" class="auto-style9"><%Response.Write("");%></td>
+                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("Product Id");%></td>
                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("Product Name");%></td>
                           <td style="font-weight:bold; text-align:center" class="auto-style4"><%Response.Write("Email");%></td>                         
                           <td style="font-weight:bold; text-align:center" class="auto-style4"><%Response.Write("Price");%></td>
@@ -69,6 +70,13 @@
                   {
                     %>
                       <tr>
+                           <td class="auto-style9">
+                           <a href="DeleteSellerProduct.aspx?SellerShopLineId=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].SellerShopLineId);%>&ProductName=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%>&Price=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Price);%>&Email=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Email);%>
+                            &Description=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Description);%>">
+                            <%Response.Write("Delete");%>
+                           </a>
+                          </td>
+                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].SellerShopLineId);%></td>
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%></td>
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Email);%></td>
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Price);%></td>

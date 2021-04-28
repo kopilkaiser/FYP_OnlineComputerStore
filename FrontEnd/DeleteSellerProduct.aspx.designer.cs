@@ -11,43 +11,34 @@ namespace FrontEnd
 {
 
 
-    public partial class WebForm14
+    public partial class WebForm18
     {
 
         /// <summary>
-        /// Label2 control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblName;
 
         /// <summary>
-        /// lblRecordCount control.
+        /// btnBackToShop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRecordCount;
+        protected global::System.Web.UI.WebControls.Button btnBackToShop;
 
         /// <summary>
-        /// btnBrowseAllProducts control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBrowseAllProducts;
-
-        /// <summary>
-        /// btnAddProductToShop control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddProductToShop;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
     }
 }

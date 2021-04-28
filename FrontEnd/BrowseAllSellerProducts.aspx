@@ -1,15 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BrowseSellerProducts.aspx.cs" Inherits="FrontEnd.WebForm12" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BrowseAllSellerProducts.aspx.cs" Inherits="FrontEnd.WebForm17" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <%@ Import Namespace="ClassLibrary"%> 
+        <%@ Import Namespace="ClassLibrary"%> 
 
 <script runat="server">
 
     clsCart MyCart = new clsCart();
     clsSecurity Sec;
-    string userEmail;
-    string sellerName;
-    string shopName;
-    string rating;
+
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -22,17 +19,7 @@
             MyCart = new clsCart();
         }
         //then you can display how many items are in your cart
-
-        userEmail = Convert.ToString(Request.QueryString["Email"].Trim());
-        sellerName = Convert.ToString(Request.QueryString["SellerName"].Trim());
-        shopName = Convert.ToString(Request.QueryString["ShopName"].Trim());
-        rating = Convert.ToString(Request.QueryString["Rating"].Trim());
-
-
-        lblSellerName.Text = Convert.ToString(sellerName);
-        lblShopName.Text = Convert.ToString(shopName);
-        lblRating.Text = Convert.ToString(rating);
-
+      
     }
 
     protected void Page_UnLoad(object sender, EventArgs e)
@@ -49,21 +36,15 @@
         <div class="text-left">
        <% 
             clsSellerShopLineCollection AllSellerShopLines = new clsSellerShopLineCollection();          
-            AllSellerShopLines.ReportByEmail(userEmail);
+            AllSellerShopLines.ReportByEmail("");
             Int32 Index = 0;
             Int32 RecordCount = AllSellerShopLines.Count;
             lblRecordCount.Text = RecordCount.ToString();
        %>
                 
-                <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: x-large; text-transform: uppercase; letter-spacing: 3px">Browsing <strong> <asp:Label ID="lblSellerName" runat="server" style="color: #800000"></asp:Label> </strong>&#39;s&nbsp;Shop</span><span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px"><br />
-                    </span><span style="font-family: Arial; font-size: x-large">
-                    <span>Shop Name: </span><strong><asp:Label ID="lblShopName" runat="server" Text=""></asp:Label>
-                    </strong>&nbsp;|  
-                    </span>
-                    <span style="font-family: Arial; font-size: large">
-                    Rating: <asp:Label ID="lblRating" runat="server" Text=""></asp:Label> 
-                    </span>
-                    <br /><br /></div>
+                <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px"><br />
+                    ALL Seller Products in Market<br />
+                    </span><br /></div>
                 
                  <asp:Label ID="Label2" runat="server" Text="Label">Total Products:</asp:Label>
 

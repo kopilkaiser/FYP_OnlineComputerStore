@@ -153,6 +153,8 @@
     <Content Include="BrowseMyShop.aspx" />
     <Content Include="AddNewReview.aspx" />
     <Content Include="ViewAReview.aspx" />
+    <Content Include="BrowseAllSellerProducts.aspx" />
+    <Content Include="DeleteSellerProduct.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -190,6 +192,7 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\MessageBox.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -419,6 +422,20 @@
     </Compile>
     <Compile Include="ViewAReview.aspx.designer.cs">
       <DependentUpon>ViewAReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseAllSellerProducts.aspx.cs">
+      <DependentUpon>BrowseAllSellerProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BrowseAllSellerProducts.aspx.designer.cs">
+      <DependentUpon>BrowseAllSellerProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteSellerProduct.aspx.cs">
+      <DependentUpon>DeleteSellerProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteSellerProduct.aspx.designer.cs">
+      <DependentUpon>DeleteSellerProduct.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

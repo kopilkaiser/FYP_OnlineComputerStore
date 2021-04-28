@@ -22,7 +22,7 @@ namespace FrontEnd
 
         protected void btnBrowseAllProducts_Click(object sender, EventArgs e)
         {
-            Response.Redirect("BrowseSellerProducts.aspx");
+            Response.Redirect("BrowseAllSellerProducts.aspx");
 
         }
     }
