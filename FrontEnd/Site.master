@@ -87,7 +87,7 @@
                         
                         <asp:ListItem Value="~/FindCustomer.aspx">Manage My Profile</asp:ListItem>
                         <asp:ListItem Value="~/AddSellerProduct.aspx">Add My Product to Market</asp:ListItem>
-                        <asp:ListItem Value="~/BrowseMyShop.aspx">Browse My Shop</asp:ListItem>
+                        <asp:ListItem Value="~/ManageMyShop.aspx">Manage My Shop</asp:ListItem>
                         <asp:ListItem Value="~/AddNewReview.aspx">Write a Review on Product</asp:ListItem>
 
                          </asp:DropDownList>

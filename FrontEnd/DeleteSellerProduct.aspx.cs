@@ -34,6 +34,8 @@ namespace FrontEnd
            SellerShopLineID = Convert.ToInt32(Request.QueryString["SellerShopLineId"].Trim());
            productName = Convert.ToString(Request.QueryString["ProductName"].Trim());
 
+          lblProductName.Text = Convert.ToString(productName);
+
         }
 
         protected void Page_UnLoad(object sender, EventArgs e)
@@ -59,7 +61,8 @@ namespace FrontEnd
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             DeleteSellerShopLine();
-            Response.Write("<script>alert('Product Deletion Successful.Please click on -Go Back to Shop- Button');</script>");
+            lblError.Text = "The Product has been Deleted successfully. Please click on 'Go Back To Shop1' button";
+            //Response.Write("<script>alert('Product Deletion Successful.Please click on -Go Back to Shop- Button');</script>");
             
         }
 

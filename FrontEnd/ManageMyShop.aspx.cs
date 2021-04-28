@@ -25,5 +25,10 @@ namespace FrontEnd
             Response.Redirect("BrowseAllSellerProducts.aspx");
 
         }
+
+        protected void btnCreateShop_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CreateSellerShop.aspx");
+        }
     }
 }

@@ -102,7 +102,7 @@
     <div>
         <asp:Button ID="btnBrowseSellerShops" runat="server" Text="Browse Seller Shops" OnClick="btnBrowseSellerShops_Click"/>
         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-        <asp:Button ID="btnBrowseMyShop" runat="server" Text="Browse My Shop" OnClick="btnBrowseMyShop_Click"/>
+        <asp:Button ID="btnBrowseMyShop" runat="server" Text="Manage My Shop" OnClick="btnBrowseMyShop_Click"/>
 
         </div>
 </asp:Content>

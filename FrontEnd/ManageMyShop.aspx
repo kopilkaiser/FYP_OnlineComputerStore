@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BrowseMyShop.aspx.cs" Inherits="FrontEnd.WebForm14" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ManageMyShop.aspx.cs" Inherits="FrontEnd.WebForm14" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <%@ Import Namespace="ClassLibrary"%> 
 
@@ -46,16 +46,20 @@
                 <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px">Browsing My Shop<br />
                     </span><br /></div>
                 
+            <br />
+            <br />
                  <asp:Label ID="Label2" runat="server" Text="Label">Total Products:</asp:Label>
 
                  <asp:Label ID="lblRecordCount" runat="server" Text="Label"></asp:Label>
          
                   </div>
+
          
                   <table border="1" class="auto-style8" style="font-size:large; width: 100%; text-align:center;">
                      <tr>
                           
                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("");%></td>
+                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("");%></td>
                            <td style="font-weight:bold" class="auto-style9"><%Response.Write("Product Id");%></td>
                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("Product Name");%></td>
                           <td style="font-weight:bold; text-align:center" class="auto-style4"><%Response.Write("Email");%></td>                         
@@ -70,12 +74,21 @@
                   {
                     %>
                       <tr>
+
+                           <td class="auto-style9">
+                           <a href="UpdateSellerProduct.aspx?SellerShopLineId=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].SellerShopLineId);%>&ProductName=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%>&Price=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Price);%>&Email=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Email);%>
+                            &Description=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Description);%>&Quantity=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Description);%>">
+                            <%Response.Write("Update");%>
+                           </a>
+                          </td>
                            <td class="auto-style9">
                            <a href="DeleteSellerProduct.aspx?SellerShopLineId=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].SellerShopLineId);%>&ProductName=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%>&Price=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Price);%>&Email=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Email);%>
                             &Description=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Description);%>">
                             <%Response.Write("Delete");%>
                            </a>
                           </td>
+
+ 
                            <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].SellerShopLineId);%></td>
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%></td>
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Email);%></td>
@@ -85,20 +98,37 @@
 
                       </tr>
                      <%
-                      Index++;
-                            
-                    }
-                         
+                             Index++;
+
+                         }
+
                     %>
 
+                      <%
+                          //Make 
+                          if (RecordCount == 0)
+                          {
+                              btnCreateShop.Visible = true;
+                              
+                          }
+                          else
+                          {
+                              btnAddProductToShop.Visible = true;
+                          }
+                        %>
                   </table>
                               
         </div>
     <br />
 
     <div>
-        <asp:Button ID="btnBrowseAllProducts" runat="server" Text="Browse All Seller Products" OnClick="btnBrowseAllProducts_Click"/>
-         <asp:Button ID="btnAddProductToShop" runat="server" Text="Add new Product To Shop" OnClick="btnAddProductToShop_Click"/>
+
+        <asp:Button ID="btnCreateShop" runat="server" Text="Create My Shop" Visible="False" OnClick="btnCreateShop_Click" />
+                <asp:Button ID="btnAddProductToShop" runat="server" Text="Add new Product To Shop" OnClick="btnAddProductToShop_Click" Visible="False"/> 
+                        <asp:Button ID="Button1" runat="server" Text="Button" Visible="False" />
 
         </div>
+    <div>            <br /><asp:Button ID="btnBrowseAllProducts" runat="server" Text="Browse All Seller Products" OnClick="btnBrowseAllProducts_Click"/>
+</div>
+
 </asp:Content>

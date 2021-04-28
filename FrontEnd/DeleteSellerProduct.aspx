@@ -19,9 +19,18 @@
         </tr>
         <tr>
             <td style="width: 655px">Product Name:
-                <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblProductName" runat="server"></asp:Label>
             </td>
             <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 655px">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:Label ID="lblError" runat="server"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td style="width: 655px">&nbsp;</td>

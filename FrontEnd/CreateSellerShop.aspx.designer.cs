@@ -11,61 +11,79 @@ namespace FrontEnd
 {
 
 
-    public partial class WebForm12
+    public partial class WebForm20
     {
 
         /// <summary>
-        /// lblSellerName control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSellerName;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// lblShopName control.
+        /// txtSellerName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblShopName;
+        protected global::System.Web.UI.WebControls.TextBox txtSellerName;
 
         /// <summary>
-        /// lblRating control.
+        /// txtShopName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRating;
+        protected global::System.Web.UI.WebControls.TextBox txtShopName;
 
         /// <summary>
-        /// Label2 control.
+        /// DDListProductName0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.DropDownList DDListProductName0;
 
         /// <summary>
-        /// lblRecordCount control.
+        /// txtDateOpened control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRecordCount;
+        protected global::System.Web.UI.WebControls.TextBox txtDateOpened;
 
         /// <summary>
-        /// btnBrowseSellerShops control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBrowseSellerShops;
+        protected global::System.Web.UI.WebControls.Label lblError;
+
+        /// <summary>
+        /// btnCreateShop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCreateShop;
+
+        /// <summary>
+        /// btnAddSellerProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddSellerProduct;
     }
 }

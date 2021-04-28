@@ -70,7 +70,7 @@ namespace FrontEnd
             {
 
                 Add();
-                Response.Redirect("BrowseMyShop.aspx");
+                Response.Redirect("ManageMyShop.aspx");
 
             }
             else
