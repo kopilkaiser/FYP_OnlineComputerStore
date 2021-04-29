@@ -25,16 +25,8 @@ namespace FrontEnd
                 //update the session
                 Session["Sec"] = Sec;
 
-                hypSignIn.Visible = true;
-                hypSignUp.Visible = true;
-
             }
 
-            else
-            {
-                hypSignIn.Visible = false;
-                hypSignUp.Visible = false;
-            }
             //set the state of the link based on the current state of authentication
             SetLinks(Sec.Authenticated);
 

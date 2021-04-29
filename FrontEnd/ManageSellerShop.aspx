@@ -83,7 +83,7 @@
 
                            <td class="auto-style9">
                            <a href="UpdateSellerShop.aspx?ShopId=<%Response.Write(AllSellerShops.SellerShopList[Index].ShopId);%>&ShopName=<%Response.Write(AllSellerShops.SellerShopList[Index].ShopName);%>&Rating=<%Response.Write(AllSellerShops.SellerShopList[Index].Rating);%>&Email=<%Response.Write(AllSellerShops.SellerShopList[Index].Email);%>
-                            &SellerName=<%Response.Write(AllSellerShops.SellerShopList[Index].SellerName);%>">
+                            &SellerName=<%Response.Write(AllSellerShops.SellerShopList[Index].SellerName);%>&DateOpened=<%Response.Write(AllSellerShops.SellerShopList[Index].DateOpened);%>">
                             <%Response.Write("Update");%>
                            </a>
                           </td>

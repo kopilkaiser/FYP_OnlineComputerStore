@@ -15,15 +15,6 @@ namespace FrontEnd
     {
 
         /// <summary>
-        /// hypStoreProducts control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hypStoreProducts;
-
-        /// <summary>
         /// hypViewReviews control.
         /// </summary>
         /// <remarks>
@@ -31,6 +22,15 @@ namespace FrontEnd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hypViewReviews;
+
+        /// <summary>
+        /// hypStoreProducts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hypStoreProducts;
 
         /// <summary>
         /// hypBrowseSellerShops control.
@@ -67,24 +67,6 @@ namespace FrontEnd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hypSignOut;
-
-        /// <summary>
-        /// hypSignIn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hypSignIn;
-
-        /// <summary>
-        /// hypSignUp control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hypSignUp;
 
         /// <summary>
         /// txtUserEmail control.
