@@ -147,9 +147,9 @@ namespace ClassLibrary
             //clsDataConnection DB = new clsDataConnection();
             //send the Category parameter to the database
             dBConnection = new clsDataConnection();
-            //dBConnection.AddParameter("@Email", Email);
+            dBConnection.AddParameter("@Email", Email);
             //execute the stored procedure
-            dBConnection.Execute("Kopil");
+            dBConnection.Execute("sproc_tblSellerShopLine_FilterByEmail");
             //populate the array list with the data table
             PopulateArray(dBConnection);
         }

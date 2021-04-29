@@ -61,7 +61,8 @@ namespace FrontEnd
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             DeleteSellerShopLine();
-            lblError.Text = "The Product has been Deleted successfully. Please click on 'Go Back To Shop1' button";
+            lblError.Text = "The Product has been Deleted successfully. Please click on 'Go Back To Shop' button";
+            btnDelete.Visible = false;
             //Response.Write("<script>alert('Product Deletion Successful.Please click on -Go Back to Shop- Button');</script>");
             
         }

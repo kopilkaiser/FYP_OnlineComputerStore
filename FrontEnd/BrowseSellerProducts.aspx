@@ -73,7 +73,7 @@
          
                   <table border="1" class="auto-style8" style="font-size:large; width: 100%; text-align:center;">
                      <tr>
-
+                          <td style="font-weight:bold" class="auto-style9"><%Response.Write("");%></td>
                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("");%></td>
                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("Product Name");%></td>
                           <td style="font-weight:bold; text-align:center" class="auto-style4"><%Response.Write("Email");%></td>                         
@@ -98,6 +98,14 @@
                             <%Response.Write("Select Quantity");%>
                            </a>
                           </td>
+
+                           <td class="auto-style9">
+                           <a href="AddReviewForProduct.aspx?InventoryId=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].SellerShopLineId);%>
+                            &ProductName=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%>">
+                            <%Response.Write("Write Review");%>
+                           </a>
+                          </td>
+
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%></td>
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Email);%></td>
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Price);%></td>

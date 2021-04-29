@@ -119,7 +119,6 @@
     <div>
         <br />
         <br />
-        <asp:Button ID="btnAddMyReview" runat="server" Text="Write My Review" OnClick="btnAddMyReview_Click" />
 
     </div>
 </asp:Content>

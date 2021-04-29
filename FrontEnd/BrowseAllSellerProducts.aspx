@@ -58,7 +58,7 @@
                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("");%></td>
                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("");%></td>
                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("Product Name");%></td>
-                          <td style="font-weight:bold; text-align:center" class="auto-style4"><%Response.Write("Email");%></td>                         
+                          <td style="font-weight:bold; text-align:center" class="auto-style4"><%Response.Write("Seller Email");%></td>                         
                           <td style="font-weight:bold; text-align:center" class="auto-style4"><%Response.Write("Price");%></td>
                           <td style="font-weight:bold; text-align:center" class="auto-style4"><% Response.Write("Description");%></td>
                           <td style="font-weight:bold; text-align:center" class="auto-style4"><%Response.Write("Quantity");%></td>

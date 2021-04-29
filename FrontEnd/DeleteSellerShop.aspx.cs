@@ -63,6 +63,7 @@ namespace FrontEnd
         {
             DeleteSellerShopLine();
             lblError.Text = "The Shop has been Deleted successfully. Please click on 'Back To Manage Shop' button";
+            btnDelete.Visible = false;
             //Response.Write("<script>alert('Product Deletion Successful.Please click on -Go Back to Shop- Button');</script>");
 
         }

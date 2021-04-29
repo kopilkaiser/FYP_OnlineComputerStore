@@ -14,9 +14,5 @@ namespace FrontEnd
 
         }
 
-        protected void btnAddMyReview_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AddNewReview.aspx");
-        }
     }
 }
