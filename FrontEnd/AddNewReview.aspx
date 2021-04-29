@@ -18,8 +18,16 @@
             <tr>
                 <td style="width: 386px" class="text-right">Email</td>
                 <td>
-            &nbsp;<asp:TextBox ID="txtEmail" runat="server" ReadOnly="True"></asp:TextBox>
+            &nbsp; <asp:TextBox ID="txtEmail" runat="server" ReadOnly="True" Width="145px"></asp:TextBox>
                     <br />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td style="width: 386px" class="text-right">ProductId</td>
+                <td>
+            &nbsp; <asp:TextBox ID="txtProductId" runat="server" Width="72px"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -39,11 +47,10 @@
             <tr>
                 <td style="height: 45px; width: 386px;" class="text-right">
                     <br />
-                    ProductId</td>
+                    </td>
                 <td style="height: 45px">
                     <br />
-            &nbsp;<asp:TextBox ID="txtProductId" runat="server"></asp:TextBox>
-                </td>
+            &nbsp;</td>
                 <td style="height: 45px"></td>
             </tr>
             <tr>
@@ -52,7 +59,7 @@
                     Review Date</td>
                 <td>
                     <br />
-            &nbsp;<asp:TextBox ID="txtDateReviewed" runat="server"></asp:TextBox>
+            &nbsp;<asp:TextBox ID="txtDateReviewed" runat="server" ReadOnly="True"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
             </tr>

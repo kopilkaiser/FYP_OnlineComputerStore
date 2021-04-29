@@ -48,6 +48,7 @@ namespace BackEnd
             // btnNo
             // 
             this.btnNo.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnNo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNo.Location = new System.Drawing.Point(172, 108);
             this.btnNo.Margin = new System.Windows.Forms.Padding(2);
@@ -78,6 +79,7 @@ namespace BackEnd
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnNo;
             this.ClientSize = new System.Drawing.Size(334, 204);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnYes);

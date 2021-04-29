@@ -100,7 +100,7 @@ namespace FrontEnd
 
         protected void btnGoBackShop_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ManageMyShop.aspx");
+            Response.Redirect("ManageSellerProduct.aspx");
         }
     }
 }

@@ -87,7 +87,7 @@ namespace ClassLibrary
             }
         }
 
-        public string Valid(string shopName, string sellerName, string email, string rating, string dateOpened)
+        public string Valid(string shopName, string sellerName, string email, string rating)
         {
             string Error = "";
 
@@ -152,30 +152,7 @@ namespace ClassLibrary
             }
 
             //if date entered is a valid date
-            try
-            {
-                // convert the string value to DateTime
-                //& then copy the value of dateAdded to DateTemp variable
-                DateTemp = Convert.ToDateTime(dateOpened);
-                //if date value is less than today's date
-                if (DateTemp < DateTime.Now.Date)
-                {
-                    //record the error
-                    Error = Error + "Date cannot be in the past : ";
-                }
-                //if date value is more than today's date
-                if (DateTemp > DateTime.Now.Date)
-                {
-                    //record the error
-                    Error = Error + "Date cannot be in the future : ";
-                }
-            }
-            //if date entered is an invalid date
-            catch
-            {
-                //record the error
-                Error = Error + "Date entered is invalid date : ";
-            }
+
 
             return Error;
         }
@@ -187,7 +164,7 @@ namespace ClassLibrary
             //add the parameter for the Inventory id to search for
             DB.AddParameter("@ShopId", ShopId);
             //execute the stored procedure
-            DB.Execute("sproc_tblShop_FilterByShopId");
+            DB.Execute("sproc_tblSellerShop_FilterByShopId");
             //if one record is found (there should be either one or zero!)
             if (DB.Count == 1)
             {

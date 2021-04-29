@@ -2,6 +2,16 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <br />
+    <div>
+      <h2 style="text-align:center; font-family: 'Bahnschrift Light Condensed';">  <i>Please Sign In to use our Website Full Features  </i>  </h2>   
+
+    </div>
+
+        <br />
+        <br />
+        <br />
+
    <div class="jumbotron" style="background-image: url(/Catalog/Images/computer1.jpg); background-size: cover; height: 600px; opacity: 0.9">
         <h1 style="font-style: oblique; color:aliceblue">Exclusive <br />Tech-Products</h1>
         <p style="color:black; font-style:oblique; font-weight: 600; background-color: beige; width: 30%" class="lead">Our products are brand new,<br /> with good service warranty,<br /> the quality is well-built</p>
@@ -9,35 +19,5 @@
         <p><a href="Product.aspx" class="btn btn-primary btn-lg">Browse All Products &raquo;</a></p>
     </div>
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
 
 </asp:Content>

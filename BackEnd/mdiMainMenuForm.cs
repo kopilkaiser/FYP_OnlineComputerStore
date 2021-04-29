@@ -71,5 +71,21 @@ namespace BackEnd
             PM.ShowDialog();
             this.Close();
         }
+
+        private void btnManageOrder_Click(object sender, EventArgs e)
+        {
+            OrderManageForm OM = new OrderManageForm();
+            this.Hide();
+            OM.ShowDialog();
+            this.Close();
+        }
+
+        private void btnSellerShop_Click(object sender, EventArgs e)
+        {
+            SellerShopManageForm SSM = new SellerShopManageForm();
+            this.Hide();
+            SSM.ShowDialog();
+            this.Close();
+        }
     }
 }

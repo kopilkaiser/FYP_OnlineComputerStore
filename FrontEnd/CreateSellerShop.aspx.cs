@@ -40,7 +40,7 @@ namespace FrontEnd
             //create an instance of the Payment Collenction
             clsSellerShopCollection AllSellerShops = new clsSellerShopCollection();
             //validate the data on the web form
-            string Error = AllSellerShops.ThisSellerShop.Valid(txtShopName.Text, txtSellerName.Text, txtEmail.Text, Convert.ToString(DDListProductName0.SelectedValue), txtDateOpened.Text);
+            string Error = AllSellerShops.ThisSellerShop.Valid(txtShopName.Text, txtSellerName.Text, txtEmail.Text, Convert.ToString(DDListProductName0.SelectedValue));
             //if the data is OK then add it to the object
             if (Error == "")
             {
@@ -64,7 +64,7 @@ namespace FrontEnd
 
         protected void btnCreateShop_Click(object sender, EventArgs e)
         {
-            string Error = AllSellerShops.ThisSellerShop.Valid(txtShopName.Text, txtSellerName.Text, txtEmail.Text, Convert.ToString(DDListProductName0.SelectedValue), txtDateOpened.Text);
+            string Error = AllSellerShops.ThisSellerShop.Valid(txtShopName.Text, txtSellerName.Text, txtEmail.Text, Convert.ToString(DDListProductName0.SelectedValue));
 
             if (Error == "")
             {

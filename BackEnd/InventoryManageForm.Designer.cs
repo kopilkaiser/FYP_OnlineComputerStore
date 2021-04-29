@@ -51,7 +51,7 @@ namespace BackEnd
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(529, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(478, 48);
+            this.label1.Size = new System.Drawing.Size(394, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Inventory Management ";
             // 
@@ -68,10 +68,10 @@ namespace BackEnd
             // 
             this.lstInventories.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.lstInventories.FormattingEnabled = true;
-            this.lstInventories.ItemHeight = 26;
+            this.lstInventories.ItemHeight = 20;
             this.lstInventories.Location = new System.Drawing.Point(46, 117);
             this.lstInventories.Name = "lstInventories";
-            this.lstInventories.Size = new System.Drawing.Size(1450, 316);
+            this.lstInventories.Size = new System.Drawing.Size(1450, 304);
             this.lstInventories.TabIndex = 2;
             // 
             // label2
@@ -80,9 +80,9 @@ namespace BackEnd
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(49, 515);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(408, 17);
+            this.label2.Size = new System.Drawing.Size(276, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Please Enter a Category of Item to Filter the above List";
+            this.label2.Text = "Please Enter a Category to Filter the above List";
             // 
             // btnApply
             // 
@@ -167,7 +167,7 @@ namespace BackEnd
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(676, 525);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(319, 20);
+            this.label3.Size = new System.Drawing.Size(269, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "ADD, UPDATE and DELETE Buttons";
             // 
@@ -192,7 +192,7 @@ namespace BackEnd
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(58, 458);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 18);
+            this.lblError.Size = new System.Drawing.Size(0, 15);
             this.lblError.TabIndex = 8;
             // 
             // InventoryManageForm

@@ -55,7 +55,7 @@
         
                   <table border="1" class="auto-style8" style="font-size:large; width: 100%; text-align:center;">
                      <tr>
-
+                          <td style="font-weight:bold" class="auto-style9"><%Response.Write("");%></td>
                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("");%></td>
                           <td style="font-weight:bold; text-align:center" class="auto-style4"><%Response.Write("Name");%></td>                         
                           <td style="font-weight:bold; text-align:center" class="auto-style4"><%Response.Write("Price Per Item");%></td>
@@ -71,13 +71,23 @@
                     %>
                       <tr>
                           <td class="auto-style9">
-                           <a href="ProductDetails.aspx?
-                            InventoryId=<%Response.Write(MyInventories.InventoryList[Index].InventoryId);%>
+                           <a href="ProductDetails.aspx?InventoryId=<%Response.Write(MyInventories.InventoryList[Index].InventoryId);%>
                             &Price=<%Response.Write(MyInventories.InventoryList[Index].Price);%>
                             &Name=<% Response.Write(MyInventories.InventoryList[Index].Name);%>
                             &ImagePath=<% Response.Write(MyInventories.InventoryList[Index].ImagePath);%>
                             &Description=<% Response.Write(MyInventories.InventoryList[Index].Description);%>">
                             <%Response.Write("Select Quantity");%>
+
+                           </a>
+                          </td>
+
+                           <td class="auto-style9">
+                           <a href="AddReviewForProduct.aspx?InventoryId=<%Response.Write(MyInventories.InventoryList[Index].InventoryId);%>
+                            &Price=<%Response.Write(MyInventories.InventoryList[Index].Price);%>
+                            &Name=<% Response.Write(MyInventories.InventoryList[Index].Name);%>
+                            &ImagePath=<% Response.Write(MyInventories.InventoryList[Index].ImagePath);%>
+                            &Description=<% Response.Write(MyInventories.InventoryList[Index].Description);%>">
+                            <%Response.Write("Write Review");%>
                            </a>
                           </td>
                           

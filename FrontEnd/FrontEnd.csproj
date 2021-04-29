@@ -150,13 +150,17 @@
     <Content Include="BrowseSellerShops.aspx" />
     <Content Include="BrowseSellerProducts.aspx" />
     <Content Include="AddSellerProduct.aspx" />
-    <Content Include="ManageMyShop.aspx" />
+    <Content Include="ManageSellerProducts.aspx" />
     <Content Include="AddNewReview.aspx" />
     <Content Include="ViewAReview.aspx" />
     <Content Include="BrowseAllSellerProducts.aspx" />
     <Content Include="DeleteSellerProduct.aspx" />
     <Content Include="UpdateSellerProduct.aspx" />
     <Content Include="CreateSellerShop.aspx" />
+    <Content Include="ManageSellerShop.aspx" />
+    <Content Include="UpdateSellerShop.aspx" />
+    <Content Include="DeleteSellerShop.aspx" />
+    <Content Include="AddReviewForProduct.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -207,6 +211,34 @@
     </Compile>
     <Compile Include="CreateSellerShop.aspx.designer.cs">
       <DependentUpon>CreateSellerShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSellerShop.aspx.cs">
+      <DependentUpon>ManageSellerShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageSellerShop.aspx.designer.cs">
+      <DependentUpon>ManageSellerShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSellerShop.aspx.cs">
+      <DependentUpon>UpdateSellerShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateSellerShop.aspx.designer.cs">
+      <DependentUpon>UpdateSellerShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteSellerShop.aspx.cs">
+      <DependentUpon>DeleteSellerShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteSellerShop.aspx.designer.cs">
+      <DependentUpon>DeleteSellerShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddReviewForProduct.aspx.cs">
+      <DependentUpon>AddReviewForProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddReviewForProduct.aspx.designer.cs">
+      <DependentUpon>AddReviewForProduct.aspx</DependentUpon>
     </Compile>
     <Content Include="App_Code\MessageBox.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -418,12 +450,12 @@
     <Compile Include="AddSellerProduct.aspx.designer.cs">
       <DependentUpon>AddSellerProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ManageMyShop.aspx.cs">
-      <DependentUpon>ManageMyShop.aspx</DependentUpon>
+    <Compile Include="ManageSellerProducts.aspx.cs">
+      <DependentUpon>ManageSellerProducts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ManageMyShop.aspx.designer.cs">
-      <DependentUpon>ManageMyShop.aspx</DependentUpon>
+    <Compile Include="ManageSellerProducts.aspx.designer.cs">
+      <DependentUpon>ManageSellerProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddNewReview.aspx.cs">
       <DependentUpon>AddNewReview.aspx</DependentUpon>

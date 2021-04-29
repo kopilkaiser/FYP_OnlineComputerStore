@@ -47,7 +47,7 @@ namespace BackEnd
             InventoryAddForm IF = new InventoryAddForm();
             this.Hide();
             IF.ShowDialog();
-
+            this.Close();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

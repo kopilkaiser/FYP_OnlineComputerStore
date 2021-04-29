@@ -56,6 +56,7 @@
                      <tr>
 
                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("");%></td>
+                          <td style="font-weight:bold" class="auto-style9"><%Response.Write("");%></td>
                           <td style="font-weight:bold" class="auto-style9"><%Response.Write("Product Name");%></td>
                           <td style="font-weight:bold; text-align:center" class="auto-style4"><%Response.Write("Email");%></td>                         
                           <td style="font-weight:bold; text-align:center" class="auto-style4"><%Response.Write("Price");%></td>
@@ -71,14 +72,21 @@
                       <tr>
 
                           <td class="auto-style9">
-                           <a href="ProductDetails.aspx?
-                            InventoryId=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].SellerShopLineId);%>
+                           <a href="ProductDetails.aspx?InventoryId=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].SellerShopLineId);%>
                             &Price=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Price);%>
                             &Name=<% Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%>
                             &Description=<% Response.Write(AllSellerShopLines.SellerShopLineList[Index].Description);%>">
                             <%Response.Write("Select Quantity");%>
                            </a>
                           </td>
+
+                           <td class="auto-style9">
+                           <a href="AddReviewForProduct.aspx?InventoryId=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].SellerShopLineId);%>
+                            &ProductName=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%>">
+                            <%Response.Write("Write Review");%>
+                           </a>
+                          </td>
+
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%></td>
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Email);%></td>
                           <td class="auto-style4"><%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Price);%></td>

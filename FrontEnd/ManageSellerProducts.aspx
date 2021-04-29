@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ManageMyShop.aspx.cs" Inherits="FrontEnd.WebForm14" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ManageSellerProducts.aspx.cs" Inherits="FrontEnd.WebForm14" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <%@ Import Namespace="ClassLibrary"%> 
 
@@ -43,17 +43,19 @@
             lblRecordCount.Text = RecordCount.ToString();
        %>
                 
-                <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px">Browsing My Shop<br />
+                <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px">Shop Product Management<br />
                     </span><br /></div>
                 
             <br />
             <br />
+            <asp:Button ID="btnBrowseAllProducts" runat="server" Text="Browse All Seller Products" OnClick="btnBrowseAllProducts_Click"/>
+            <br />
+            <br />
                  <asp:Label ID="Label2" runat="server" Text="Label">Total Products:</asp:Label>
 
-                 <asp:Label ID="lblRecordCount" runat="server" Text="Label"></asp:Label>
+                 <asp:Label ID="lblRecordCount" runat="server" Text=""></asp:Label>
          
                   </div>
-
          
                   <table border="1" class="auto-style8" style="font-size:large; width: 100%; text-align:center;">
                      <tr>
@@ -104,31 +106,22 @@
 
                     %>
 
-                      <%
-                          //Make 
-                          if (RecordCount == 0)
-                          {
-                              btnCreateShop.Visible = true;
-                              
-                          }
-                          else
-                          {
-                              btnAddProductToShop.Visible = true;
-                          }
-                        %>
                   </table>
                               
         </div>
-    <br />
-
     <div>
 
-        <asp:Button ID="btnCreateShop" runat="server" Text="Create My Shop" Visible="False" OnClick="btnCreateShop_Click" />
-                <asp:Button ID="btnAddProductToShop" runat="server" Text="Add new Product To Shop" OnClick="btnAddProductToShop_Click" Visible="False"/> 
-                        <asp:Button ID="Button1" runat="server" Text="Button" Visible="False" />
+        <br />
+&nbsp;&nbsp;&nbsp;
+
+       <asp:Button ID="btnAddProductToShop" runat="server" Text="Add new Product To Shop" OnClick="btnAddProductToShop_Click" Font-Bold="True" Height="37px" Width="224px" BackColor="#00CC00"/> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <asp:Button ID="btnBackToManageShop" runat="server" Text="Back To Shop Management" Height="31px" OnClick="btnBackToManageShop_Click1" Width="189px" />
 
         </div>
-    <div>            <br /><asp:Button ID="btnBrowseAllProducts" runat="server" Text="Browse All Seller Products" OnClick="btnBrowseAllProducts_Click"/>
-</div>
+
 
 </asp:Content>

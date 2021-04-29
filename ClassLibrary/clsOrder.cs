@@ -221,7 +221,7 @@ namespace ClassLibrary
             get
             {
                 return ("OrderId:" + OrderId + "_" + "Email:" + Email + "_" + "TotalPrice:" + TotalPrice + "_" + 
-                    "ShippingAddress:" + ShippingAddress + "Phonenum:" + Phonenum + "DateOrdered:" + DateOrdered.ToString("dd/MM/yyyy"));
+                    "ShippingAddress:" + ShippingAddress + "_" + "Phonenum:" + Phonenum + "_" + "DateOrdered:" + DateOrdered.ToString("dd/MM/yyyy"));
             }
         }
 

@@ -94,6 +94,30 @@
     <Compile Include="MDIParent.Designer.cs">
       <DependentUpon>MDIParent.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderAddForm.Designer.cs">
+      <DependentUpon>OrderAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDeleteForm.Designer.cs">
+      <DependentUpon>OrderDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderManageForm.Designer.cs">
+      <DependentUpon>OrderManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderUpdateForm.Designer.cs">
+      <DependentUpon>OrderUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaymentAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +204,30 @@
     <Compile Include="ReviewUpdateForm.Designer.cs">
       <DependentUpon>ReviewUpdateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SellerShopAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerShopAddForm.Designer.cs">
+      <DependentUpon>SellerShopAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellerShopDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerShopDeleteForm.Designer.cs">
+      <DependentUpon>SellerShopDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellerShopManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerShopManageForm.Designer.cs">
+      <DependentUpon>SellerShopManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellerShopUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerShopUpdateForm.Designer.cs">
+      <DependentUpon>SellerShopUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +275,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="mdiSignInForm.resx">
       <DependentUpon>mdiSignInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderAddForm.resx">
+      <DependentUpon>OrderAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDeleteForm.resx">
+      <DependentUpon>OrderDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderManageForm.resx">
+      <DependentUpon>OrderManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderUpdateForm.resx">
+      <DependentUpon>OrderUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentAddForm.resx">
       <DependentUpon>PaymentAddForm.cs</DependentUpon>
@@ -279,6 +339,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReviewUpdateForm.resx">
       <DependentUpon>ReviewUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerShopAddForm.resx">
+      <DependentUpon>SellerShopAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerShopDeleteForm.resx">
+      <DependentUpon>SellerShopDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerShopManageForm.resx">
+      <DependentUpon>SellerShopManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerShopUpdateForm.resx">
+      <DependentUpon>SellerShopUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffAddForm.resx">
       <DependentUpon>StaffAddForm.cs</DependentUpon>

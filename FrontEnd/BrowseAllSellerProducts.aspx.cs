@@ -16,7 +16,7 @@ namespace FrontEnd
 
         protected void btnBrowseMyShop_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ManageMyShop.aspx");
+            Response.Redirect("ManageSellerShop.aspx");
         }
 
         protected void btnBrowseSellerShops_Click(object sender, EventArgs e)

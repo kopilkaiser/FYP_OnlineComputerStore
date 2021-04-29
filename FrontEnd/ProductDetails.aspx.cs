@@ -10,6 +10,7 @@ namespace FrontEnd
 {
     public partial class ProductDetails : System.Web.UI.Page
     {
+        clsSecurity Sec;
         clsCart MyCart = new clsCart();
         Int32 InventoryId;
         string Name;
@@ -18,16 +19,17 @@ namespace FrontEnd
         string Description;
         protected void Page_Load(object sender, EventArgs e)
         {
+            Sec = (clsSecurity)Session["Sec"];
             //upon loading the page you need to read in the cart from the session object
             MyCart = (clsCart)Session["MyCart"];
 
             //you also need to get the product id from the query string
-            InventoryId = Convert.ToInt32(Request.QueryString["InventoryId"]);
+            InventoryId = Convert.ToInt32(Request.QueryString["InventoryId"].Trim());
 
-            Name = Convert.ToString(Request.QueryString["Name"]);
-            Price = Convert.ToDecimal(Request.QueryString["Price"]);
-            Description = Convert.ToString(Request.QueryString["Description"]);
-            ImagePath = Convert.ToString(Request.QueryString["ImagePath"]);
+            Name = Convert.ToString(Request.QueryString["Name"].Trim());
+            Price = Convert.ToDecimal(Request.QueryString["Price"].Trim());
+            Description = Convert.ToString(Request.QueryString["Description"].Trim());
+            //ImagePath = Convert.ToString(Request.QueryString["ImagePath"].Trim());
 
             txtName.Text = Convert.ToString(Name);         
             txtPrice.Text = Convert.ToString(Price);
