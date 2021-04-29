@@ -24,7 +24,9 @@ namespace FrontEnd
                 Sec = new clsSecurity();
                 //update the session
                 Session["Sec"] = Sec;
+
             }
+
             //set the state of the link based on the current state of authentication
             SetLinks(Sec.Authenticated);
 
@@ -48,6 +50,7 @@ namespace FrontEnd
             hypViewReviews.Visible = Authenticated;
             hypBrowseSellerShops.Visible = Authenticated;
             hypBrowseAllSellerProducts.Visible = Authenticated;
+            hypStoreProducts.Visible = Authenticated;
 
             txtUserEmail.Visible = Authenticated;
             txtUserEmail.Text = "Welcome " + Sec.UserEMail + "!";
