@@ -24,7 +24,7 @@ namespace BackEnd
             //create an instance of the Inventory Collenction
             clsStaffCollection AllStaffs = new clsStaffCollection();
             //validate the data on the web form
-            string Error = AllStaffs.ThisStaff.Valid(txtName.Text, txtPhonenum.Text, txtSalary.Text, txtDateJoined.Text, txtAccountNo.Text);
+            string Error = AllStaffs.ThisStaff.Valid(txtName.Text, txtPhonenum.Text, txtSalary.Text, txtDateJoined.Text);
             //if the data is OK then add it to the object
             if (Error == "")
             {
@@ -34,7 +34,6 @@ namespace BackEnd
                 AllStaffs.ThisStaff.Salary = Convert.ToDecimal(txtSalary.Text);
                 AllStaffs.ThisStaff.DateJoined = Convert.ToDateTime(txtDateJoined.Text);
                 AllStaffs.ThisStaff.Active = chkActive.Checked;
-                AllStaffs.ThisStaff.AccountNo = Convert.ToInt32(txtAccountNo.Text);
       
                 //add the record
                 AllStaffs.Add();
@@ -54,7 +53,7 @@ namespace BackEnd
         private void btnOK_Click(object sender, EventArgs e)
         {
             clsStaffCollection AllStaffs = new clsStaffCollection();
-            string Error = AllStaffs.ThisStaff.Valid(txtName.Text, txtPhonenum.Text, txtSalary.Text, txtDateJoined.Text, txtAccountNo.Text);
+            string Error = AllStaffs.ThisStaff.Valid(txtName.Text, txtPhonenum.Text, txtSalary.Text, txtDateJoined.Text);
             string message = "Are you sure to Add the new Staff to the Database?";
             string caption = "User Confirmation!";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
