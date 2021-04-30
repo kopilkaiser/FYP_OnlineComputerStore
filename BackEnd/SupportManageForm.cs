@@ -138,7 +138,7 @@ namespace BackEnd
             //set the data source to the list of Inventories in the collection
             lstSupports.DataSource = AllSupports.SupportList;
             //set the name of the primary Key
-            lstSupports.ValueMember = "OrderId";
+            lstSupports.ValueMember = "SupportId";
             //set the data field to display
             lstSupports.DisplayMember = "AllDetails";
 
