@@ -31,6 +31,7 @@ namespace TestFramework
             TestInventory.Category = "Electronics";
             TestInventory.DateAdded = DateTime.Now.Date;
             TestInventory.Active = true;
+            TestInventory.ImagePath = "computer6.png";
             //assign the data to the property
             AllInventories.ThisInventory = TestInventory;
             //test to see that the two values are the same
@@ -56,6 +57,8 @@ namespace TestFramework
             TestItem.Quantity = 100;
             TestItem.Category = "Electronics";
             TestItem.DateAdded = DateTime.Now.Date;
+            TestItem.ImagePath = "computer6.png";
+
             //set ThisInventory to the test data
             AllInventories.ThisInventory = TestItem;
             //add the record
@@ -85,6 +88,7 @@ namespace TestFramework
             TestItem.Quantity = 100;
             TestItem.Category = "Electronics";
             TestItem.DateAdded = DateTime.Now.Date;
+            TestItem.ImagePath = "computer6.png";
             //set ThisAddress to the test data
             AllInventories.ThisInventory = TestItem;
             //add the record
@@ -117,6 +121,7 @@ namespace TestFramework
             TestItem.Quantity = 100;
             TestItem.Category = "Electronics";
             TestItem.DateAdded = DateTime.Now.Date;
+            TestItem.ImagePath = "computer6.png";
             //set ThisAddress to the test data
             AllInventories.ThisInventory = TestItem;
             //add the record
@@ -130,6 +135,7 @@ namespace TestFramework
             TestItem.Quantity = 50;
             TestItem.Category = "Electronics";
             TestItem.DateAdded = DateTime.Now.Date;
+            TestItem.ImagePath = "computer7.png";
             //set the record based on the new test data
             AllInventories.ThisInventory = TestItem;
             //update the record
