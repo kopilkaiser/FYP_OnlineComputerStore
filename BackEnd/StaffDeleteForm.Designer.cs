@@ -86,6 +86,7 @@ namespace BackEnd
             this.Name = "StaffDeleteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Confirm Deletion";
+            this.Load += new System.EventHandler(this.StaffDeleteForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

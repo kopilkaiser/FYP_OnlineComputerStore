@@ -68,5 +68,10 @@ namespace BackEnd
             SM.ShowDialog();
             this.Close();
         }
+
+        private void StaffDeleteForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

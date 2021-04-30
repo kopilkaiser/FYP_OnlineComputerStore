@@ -69,6 +69,9 @@ namespace BackEnd
 
         }
 
-        
+        private void InventoryDeleteForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

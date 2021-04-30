@@ -30,7 +30,7 @@ namespace BackEnd
         private void btnOK_Click(object sender, EventArgs e)
         {
             clsStaffCollection AllStaffs = new clsStaffCollection();
-            string Error = AllStaffs.ThisStaff.Valid(txtName.Text, txtPhonenum.Text, txtSalary.Text, txtDateJoined.Text, txtAccountNo.Text);
+            string Error = AllStaffs.ThisStaff.Valid(txtName.Text, txtPhonenum.Text, txtSalary.Text, txtDateJoined.Text);
             string message = "Are you sure to Update the existing Staff?";
             string caption = "User Confirmation!";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -90,7 +90,6 @@ namespace BackEnd
             txtSalary.Text = AllStaffs.ThisStaff.Salary.ToString();
             txtDateJoined.Text = AllStaffs.ThisStaff.DateJoined.ToString();
             chkActive.Checked = AllStaffs.ThisStaff.Active;
-            txtAccountNo.Text = AllStaffs.ThisStaff.AccountNo.ToString();
         }
 
         public void Update()
@@ -98,7 +97,7 @@ namespace BackEnd
             //create an instance of the Inventory Collection
             clsStaffCollection AllStaffs = new clsStaffCollection();
             //validate the data on the Windows Form
-            string Error = AllStaffs.ThisStaff.Valid(txtName.Text, txtPhonenum.Text, txtSalary.Text, txtDateJoined.Text, txtAccountNo.Text);
+            string Error = AllStaffs.ThisStaff.Valid(txtName.Text, txtPhonenum.Text, txtSalary.Text, txtDateJoined.Text);
             //if the data is OK then add it to the object
             if (Error == "")
             {

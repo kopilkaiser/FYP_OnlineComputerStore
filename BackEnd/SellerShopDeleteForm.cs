@@ -68,5 +68,10 @@ namespace BackEnd
             //delete the record
             AllSellerShops.Delete();
         }
+
+        private void SellerShopDeleteForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

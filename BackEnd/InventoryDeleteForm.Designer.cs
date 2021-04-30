@@ -88,6 +88,7 @@ namespace BackEnd
             this.Name = "InventoryDeleteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Confirm Deletion";
+            this.Load += new System.EventHandler(this.InventoryDeleteForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
