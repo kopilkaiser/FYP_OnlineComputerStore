@@ -98,7 +98,7 @@ namespace ClassLibrary
             }
         }
 
-        public string Valid(string name, string phonenum, string salary, string dateJoined, string accountNo)
+        public string Valid(string name, string phonenum, string salary, string dateJoined)
         {
             string Error = "";
             Int64 PhonenumTemp;
@@ -115,28 +115,6 @@ namespace ClassLibrary
             if (name.Length > 40)
             {
                 Error = Error + "The Name field cannot exceed 40 characters : ";
-            }
-
-            //if Account No entered is valid
-            try
-            {
-                AccountNoTemp = Convert.ToInt64(accountNo);
-
-                if (AccountNoTemp > 1000000)
-                {
-                    Error = Error + "The Account number has reached it's limit : ";
-                }
-
-                if (AccountNoTemp <= 0)
-                {
-                    Error = Error + "The Account number has to be greater than 0 : ";
-                }
-            }
-
-            //if Phone number entered is invalid
-            catch
-            {
-                Error = Error + "The Account number entered is invalid : ";
             }
 
 

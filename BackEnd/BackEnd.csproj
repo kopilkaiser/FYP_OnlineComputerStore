@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -252,6 +256,30 @@
     <Compile Include="StaffUpdateForm.Designer.cs">
       <DependentUpon>StaffUpdateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupportAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupportAddForm.Designer.cs">
+      <DependentUpon>SupportAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupportDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupportDeleteForm.Designer.cs">
+      <DependentUpon>SupportDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupportManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupportManageForm.Designer.cs">
+      <DependentUpon>SupportManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupportUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupportUpdateForm.Designer.cs">
+      <DependentUpon>SupportUpdateForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="InventoryAddForm.resx">
       <DependentUpon>InventoryAddForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -363,6 +391,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffUpdateForm.resx">
       <DependentUpon>StaffUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupportAddForm.resx">
+      <DependentUpon>SupportAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupportDeleteForm.resx">
+      <DependentUpon>SupportDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupportManageForm.resx">
+      <DependentUpon>SupportManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupportUpdateForm.resx">
+      <DependentUpon>SupportUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>

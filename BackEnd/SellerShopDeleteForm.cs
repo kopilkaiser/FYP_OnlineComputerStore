@@ -29,7 +29,7 @@ namespace BackEnd
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            string message = "The Inventory has been deleted successfully.";
+            string message = "The Seller Shop has been deleted successfully.";
             string caption = "Deletion Confirmation";
             DialogResult result;
             MessageBoxButtons button = MessageBoxButtons.OK;

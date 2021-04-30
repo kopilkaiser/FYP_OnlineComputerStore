@@ -44,7 +44,7 @@ namespace BackEnd
             this.btnSellerProducts = new System.Windows.Forms.Button();
             this.btnSellerShop = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSupportManagement = new System.Windows.Forms.Button();
             this.btnManageOrder = new System.Windows.Forms.Button();
             this.btnReviewManage = new System.Windows.Forms.Button();
             this.btnManagePayment = new System.Windows.Forms.Button();
@@ -221,17 +221,17 @@ namespace BackEnd
             this.panel2.Size = new System.Drawing.Size(252, 218);
             this.panel2.TabIndex = 13;
             // 
-            // button1
+            // btnSupportManagement
             // 
-            this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(355, 121);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 67);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Customer Support Management";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSupportManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupportManagement.Location = new System.Drawing.Point(355, 121);
+            this.btnSupportManagement.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSupportManagement.Name = "btnSupportManagement";
+            this.btnSupportManagement.Size = new System.Drawing.Size(122, 67);
+            this.btnSupportManagement.TabIndex = 2;
+            this.btnSupportManagement.Text = "Support Management";
+            this.btnSupportManagement.UseVisualStyleBackColor = true;
+            this.btnSupportManagement.Click += new System.EventHandler(this.btnSupportManagement_Click);
             // 
             // btnManageOrder
             // 
@@ -303,7 +303,7 @@ namespace BackEnd
             this.panel3.Controls.Add(this.btnManagePayment);
             this.panel3.Controls.Add(this.btnReviewManage);
             this.panel3.Controls.Add(this.btnManageOrder);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnSupportManagement);
             this.panel3.Location = new System.Drawing.Point(87, 200);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(544, 218);
@@ -356,7 +356,7 @@ namespace BackEnd
         private System.Windows.Forms.Button btnSellerProducts;
         private System.Windows.Forms.Button btnSellerShop;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSupportManagement;
         private System.Windows.Forms.Button btnManageOrder;
         private System.Windows.Forms.Button btnReviewManage;
         private System.Windows.Forms.Button btnManagePayment;

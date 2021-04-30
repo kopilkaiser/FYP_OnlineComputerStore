@@ -1,7 +1,7 @@
 ﻿
 namespace BackEnd
 {
-    partial class OrderManageForm
+    partial class SupportManageForm
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@ namespace BackEnd
             this.btnDisplayAll = new System.Windows.Forms.Button();
             this.btnApply = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lstOrders = new System.Windows.Forms.ListBox();
+            this.lstSupports = new System.Windows.Forms.ListBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@ namespace BackEnd
             this.panel1.Location = new System.Drawing.Point(675, 566);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(363, 128);
-            this.panel1.TabIndex = 15;
+            this.panel1.TabIndex = 25;
             // 
             // btnDelete
             // 
@@ -73,6 +73,7 @@ namespace BackEnd
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.LightCyan;
             this.btnAdd.Location = new System.Drawing.Point(112, 14);
@@ -104,8 +105,8 @@ namespace BackEnd
             this.btnDisplayAll.Location = new System.Drawing.Point(194, 621);
             this.btnDisplayAll.Name = "btnDisplayAll";
             this.btnDisplayAll.Size = new System.Drawing.Size(154, 58);
-            this.btnDisplayAll.TabIndex = 12;
-            this.btnDisplayAll.Text = "&Display All Orders";
+            this.btnDisplayAll.TabIndex = 22;
+            this.btnDisplayAll.Text = "&Display All Supports";
             this.btnDisplayAll.UseVisualStyleBackColor = false;
             this.btnDisplayAll.Click += new System.EventHandler(this.btnDisplayAll_Click);
             // 
@@ -117,7 +118,7 @@ namespace BackEnd
             this.btnApply.Location = new System.Drawing.Point(47, 621);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(124, 35);
-            this.btnApply.TabIndex = 11;
+            this.btnApply.TabIndex = 21;
             this.btnApply.Text = "&Filter";
             this.btnApply.UseVisualStyleBackColor = false;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
@@ -129,18 +130,18 @@ namespace BackEnd
             this.label2.Location = new System.Drawing.Point(44, 523);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(256, 13);
-            this.label2.TabIndex = 14;
+            this.label2.TabIndex = 24;
             this.label2.Text = "Please Enter a Email to Filter the above List";
             // 
-            // lstOrders
+            // lstSupports
             // 
-            this.lstOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lstOrders.FormattingEnabled = true;
-            this.lstOrders.ItemHeight = 20;
-            this.lstOrders.Location = new System.Drawing.Point(41, 125);
-            this.lstOrders.Name = "lstOrders";
-            this.lstOrders.Size = new System.Drawing.Size(1450, 304);
-            this.lstOrders.TabIndex = 13;
+            this.lstSupports.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lstSupports.FormattingEnabled = true;
+            this.lstSupports.ItemHeight = 20;
+            this.lstSupports.Location = new System.Drawing.Point(41, 125);
+            this.lstSupports.Name = "lstSupports";
+            this.lstSupports.Size = new System.Drawing.Size(1450, 304);
+            this.lstSupports.TabIndex = 23;
             // 
             // txtEmail
             // 
@@ -149,7 +150,7 @@ namespace BackEnd
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(370, 49);
-            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TabIndex = 19;
             // 
             // label1
             // 
@@ -157,9 +158,9 @@ namespace BackEnd
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(524, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 39);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Order Management ";
+            this.label1.Size = new System.Drawing.Size(371, 39);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Support Management ";
             // 
             // lblError
             // 
@@ -169,18 +170,19 @@ namespace BackEnd
             this.lblError.Location = new System.Drawing.Point(53, 466);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 15);
-            this.lblError.TabIndex = 18;
+            this.lblError.TabIndex = 28;
             // 
             // btnBackToMenu
             // 
             this.btnBackToMenu.BackColor = System.Drawing.Color.Crimson;
+            this.btnBackToMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBackToMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBackToMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackToMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBackToMenu.Location = new System.Drawing.Point(1297, 636);
             this.btnBackToMenu.Name = "btnBackToMenu";
             this.btnBackToMenu.Size = new System.Drawing.Size(182, 58);
-            this.btnBackToMenu.TabIndex = 16;
+            this.btnBackToMenu.TabIndex = 26;
             this.btnBackToMenu.Text = "&Back to Main Menu";
             this.btnBackToMenu.UseVisualStyleBackColor = false;
             this.btnBackToMenu.Click += new System.EventHandler(this.btnBackToMenu_Click);
@@ -192,10 +194,10 @@ namespace BackEnd
             this.label3.Location = new System.Drawing.Point(671, 533);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(269, 17);
-            this.label3.TabIndex = 17;
+            this.label3.TabIndex = 27;
             this.label3.Text = "ADD, UPDATE and DELETE Buttons";
             // 
-            // OrderManageForm
+            // SupportManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -205,16 +207,16 @@ namespace BackEnd
             this.Controls.Add(this.btnDisplayAll);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lstOrders);
+            this.Controls.Add(this.lstSupports);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnBackToMenu);
             this.Controls.Add(this.label3);
-            this.Name = "OrderManageForm";
+            this.Name = "SupportManageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OrderManageForm";
-            this.Load += new System.EventHandler(this.OrderManageForm_Load);
+            this.Text = "SupportManageForm";
+            this.Load += new System.EventHandler(this.SupportManageForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -230,7 +232,7 @@ namespace BackEnd
         private System.Windows.Forms.Button btnDisplayAll;
         private System.Windows.Forms.Button btnApply;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox lstOrders;
+        private System.Windows.Forms.ListBox lstSupports;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblError;

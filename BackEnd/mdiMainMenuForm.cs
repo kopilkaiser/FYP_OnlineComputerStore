@@ -87,5 +87,13 @@ namespace BackEnd
             SSM.ShowDialog();
             this.Close();
         }
+
+        private void btnSupportManagement_Click(object sender, EventArgs e)
+        {
+            SupportManageForm SM = new SupportManageForm();
+            this.Hide();
+            SM.ShowDialog();
+            this.Close();
+        }
     }
 }
