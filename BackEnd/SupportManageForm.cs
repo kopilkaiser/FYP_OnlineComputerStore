@@ -52,8 +52,8 @@ namespace BackEnd
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            clsSupport ASuuport = new clsSupport();
-            ASuuport.SupportId = -1;
+            clsSupport ASupport = new clsSupport();
+            ASupport.SupportId = -1;
             SupportAddForm SA = new SupportAddForm();
             this.Hide();
             SA.ShowDialog();
@@ -138,7 +138,7 @@ namespace BackEnd
             //set the data source to the list of Inventories in the collection
             lstSupports.DataSource = AllSupports.SupportList;
             //set the name of the primary Key
-            lstSupports.ValueMember = "OrderId";
+            lstSupports.ValueMember = "SupportId";
             //set the data field to display
             lstSupports.DisplayMember = "AllDetails";
 

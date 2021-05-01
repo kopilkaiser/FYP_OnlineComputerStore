@@ -50,26 +50,28 @@ namespace BackEnd
             this.btnNo.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnNo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNo.Location = new System.Drawing.Point(195, 112);
+            this.btnNo.Location = new System.Drawing.Point(204, 112);
             this.btnNo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(66, 37);
             this.btnNo.TabIndex = 5;
             this.btnNo.Text = "No";
             this.btnNo.UseVisualStyleBackColor = false;
+            this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
             // btnYes
             // 
             this.btnYes.BackColor = System.Drawing.Color.Crimson;
             this.btnYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYes.ForeColor = System.Drawing.Color.FloralWhite;
-            this.btnYes.Location = new System.Drawing.Point(108, 112);
+            this.btnYes.Location = new System.Drawing.Point(117, 112);
             this.btnYes.Margin = new System.Windows.Forms.Padding(2);
             this.btnYes.Name = "btnYes";
             this.btnYes.Size = new System.Drawing.Size(64, 37);
             this.btnYes.TabIndex = 6;
             this.btnYes.Text = "Yes";
             this.btnYes.UseVisualStyleBackColor = false;
+            this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
             // SupportDeleteForm
             // 

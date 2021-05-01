@@ -14,7 +14,7 @@ namespace ClassLibrary
         private string mDescription;
         private string mPhonenum;
         private DateTime mDateSubmitted;
-        
+
         public int SupportId
         {
             get
@@ -136,7 +136,7 @@ namespace ClassLibrary
                     Error = Error + "The Phone number requires to be 11 digits : ";
                 }
 
-                if(PhonenumTemp < 1111111111)
+                if (PhonenumTemp < 1111111111)
                 {
                     Error = "The Phone number requires to be 11 digits : ";
                 }
@@ -193,7 +193,7 @@ namespace ClassLibrary
                 mPhonenum = Convert.ToString(DB.DataTable.Rows[0]["Phonenum"]);
                 mDescription = Convert.ToString(DB.DataTable.Rows[0]["Description"]);
                 mDateSubmitted = Convert.ToDateTime(DB.DataTable.Rows[0]["DateSubmitted"]);
-              
+
                 //return that everything worked ok
                 return true;
             }
@@ -209,8 +209,8 @@ namespace ClassLibrary
         {
             get
             {
-                return ("SupportId:" + SupportId + "__" + "Email:" + Email + "__" + "Name:" + Name + "__" + "Phonenum" 
-                    + Phonenum + "__"  + "Description:" + "Click Update to View" + "__" + "DateSubmitted:" + DateSubmitted.ToString("dd/MM/yyyy"));
+                return ("SupportId:" + SupportId + "__" + "Email:" + Email + "__" + "Name:" + Name + "__" + "Phonenum"
+                    + Phonenum + "__" + "Description:" + "Click Update to View" + "__" + "DateSubmitted:" + DateSubmitted.ToString("dd/MM/yyyy"));
             }
         }
     }

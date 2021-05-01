@@ -117,6 +117,7 @@ namespace BackEnd
             this.btnCancel.TabIndex = 103;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
@@ -129,6 +130,7 @@ namespace BackEnd
             this.btnOK.TabIndex = 102;
             this.btnOK.Text = "&OK";
             this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // label5
             // 
@@ -216,6 +218,7 @@ namespace BackEnd
             this.Name = "SupportAddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SupportAddForm";
+            this.Load += new System.EventHandler(this.SupportAddForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
