@@ -21,7 +21,6 @@ namespace ClassLibrary
             DB.Execute("sproc_tblSupport_SelectAll");
             //populate the array list with the data table
             PopulateArray(DB);
-
         }
 
 

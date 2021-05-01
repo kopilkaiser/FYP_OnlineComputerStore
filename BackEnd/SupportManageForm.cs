@@ -18,14 +18,6 @@ namespace BackEnd
             InitializeComponent();
         }
 
-        private void SupportManageForm_Load(object sender, EventArgs e)
-        {
-            //update the ListBox with the Inventory Database List
-            lblError.Text = "Total " + DisplaySupports("") + " records in the Database";
-            //Clear all selections in the ListBox
-            lstSupports.ClearSelected();
-        }
-
         private void btnApply_Click(object sender, EventArgs e)
         {
             //declare var to store the record count
@@ -144,6 +136,14 @@ namespace BackEnd
 
 
             return AllSupports.Count;
+        }
+
+        private void SupportManageForm_Load(object sender, EventArgs e)
+        {
+            //update the ListBox with the Inventory Database List
+            lblError.Text = "Total " + DisplaySupports("") + " records in the Database";
+            //Clear all selections in the ListBox
+            lstSupports.ClearSelected();
         }
     }
 }
