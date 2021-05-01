@@ -44,8 +44,8 @@ namespace BackEnd
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            clsSupport ASuuport = new clsSupport();
-            ASuuport.SupportId = -1;
+            clsSupport ASupport = new clsSupport();
+            ASupport.SupportId = -1;
             SupportAddForm SA = new SupportAddForm();
             this.Hide();
             SA.ShowDialog();

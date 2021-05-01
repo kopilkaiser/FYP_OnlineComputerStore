@@ -73,7 +73,10 @@ namespace BackEnd
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            OrderManageForm OM = new OrderManageForm();
+            this.Hide();
+            OM.ShowDialog();
+            this.Close();
         }
 
         public void DisplayOrder()
