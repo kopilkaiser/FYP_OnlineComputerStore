@@ -8,27 +8,49 @@
     <br />
     <br />
   <div class="row">
-    <div class="col-sm-5">
+    <div class="col-sm-6">
+        <br />
       <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> Leicester, United Kingdom</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +44 5599 90910</p>
+      <p><span class="glyphicon glyphicon-phone"></span>  +44 5599 90910</p>
       <p><span class="glyphicon glyphicon-envelope"></span> p17511696@my365.dmu.ac.uk</p>
     </div>
-    <div class="col-sm-7 slideanim">
+    <div class="col-sm-6 slideanim">
+              <h4><span class="glyphicon glyphicon-alert"></span>&nbsp&nbspPlease Fill up the following fields:</h4>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+            <asp:TextBox ID="txtName" placeholder="Enter your Name here" runat="server" Height="33px" Width="190px" BorderColor="White" BorderStyle="Groove" BorderWidth="1px"></asp:TextBox>
         </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+
+         <div class="col-sm-12 form-group">
+            <asp:TextBox ID="txtEmail" runat="server" Height="33px" Width="228px" BorderColor="White" BorderStyle="Groove" BorderWidth="1px" ReadOnly="True"></asp:TextBox>
+        </div>    
+          
+         <div class="col-sm-12 form-group">
+             <asp:TextBox ID="txtPhonenum" placeholder="Enter your Contact number here" runat="server" Height="33px" Width="227px" BorderColor="White" BorderStyle="Groove" BorderWidth="1px"></asp:TextBox>
+         </div>
+
+         <div class="col-sm-6 form-group">
+            <asp:Label ID="Label1" runat="server" Text="Date of Submission"></asp:Label>
+            <asp:TextBox ID="txtDateSubmitted" runat="server" Height="29px" Width="157px" BorderColor="White" BorderStyle="Groove" BorderWidth="1px" ReadOnly="True"></asp:TextBox>
         </div>
+
+      <div class="col-sm-12 form-group">
+        <asp:TextBox ID="txtDescription" placeholder="Please tell us more about your Issue" runat="server" Height="148px" Width="353px" BorderColor="White" BorderStyle="Groove" BorderWidth="1px" TextMode="MultiLine" style="resize:none"></asp:TextBox>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5" style="resize:none"></textarea><br>
+
+          <div class="col-sm-12 form-group">
+              <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+        </div>
+
+      </div>
+
       <div class="row">
         <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
+            <asp:Button ID="btnSubmit" runat="server" Text="Submit" class="btn btn-default pull-center" OnClick="btnSubmit_Click" />
         </div>
       </div>
+
     </div>
   </div>
 </div>
