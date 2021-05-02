@@ -95,5 +95,13 @@ namespace BackEnd
             SM.ShowDialog();
             this.Close();
         }
+
+        private void btnSellerProducts_Click(object sender, EventArgs e)
+        {
+            SellerProductsManageForm SPM = new SellerProductsManageForm();
+            this.Hide();
+            SPM.ShowDialog();
+            this.Close();
+        }
     }
 }

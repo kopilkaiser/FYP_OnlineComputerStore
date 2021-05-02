@@ -187,7 +187,6 @@ namespace BackEnd
             // 
             // btnSellerProducts
             // 
-            this.btnSellerProducts.Enabled = false;
             this.btnSellerProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSellerProducts.Location = new System.Drawing.Point(38, 121);
             this.btnSellerProducts.Margin = new System.Windows.Forms.Padding(2);
@@ -196,6 +195,7 @@ namespace BackEnd
             this.btnSellerProducts.TabIndex = 2;
             this.btnSellerProducts.Text = "Manage Seller Products";
             this.btnSellerProducts.UseVisualStyleBackColor = true;
+            this.btnSellerProducts.Click += new System.EventHandler(this.btnSellerProducts_Click);
             // 
             // btnSellerShop
             // 

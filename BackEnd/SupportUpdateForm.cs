@@ -27,11 +27,7 @@ namespace BackEnd
             InitializeComponent();
         }
 
-        private void SupportUpdateForm_Load(object sender, EventArgs e)
-        {
-            //display the current data for the record
-            DisplaySupport();
-        }
+
 
         private void btnOK_Click(object sender, EventArgs e)
         {
@@ -123,6 +119,12 @@ namespace BackEnd
             {
                 lblError.Text = "There were problems with the data entered: " + Error;
             }
+        }
+
+        private void SupportUpdateForm_Load(object sender, EventArgs e)
+        {
+                //display the current data for the record
+                DisplaySupport();           
         }
     }
 }

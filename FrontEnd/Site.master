@@ -92,7 +92,6 @@
                         
                         <asp:ListItem style="font-size:medium" Value="~/FindCustomer.aspx">Manage My Account Profile</asp:ListItem>
                         <asp:ListItem style="font-size:medium" Value="~/ManageSellerShop.aspx">Manage My Shop</asp:ListItem>
-                        <asp:ListItem style="font-size:medium" Value="~/AddNewReview.aspx">Write a Review on Product</asp:ListItem>
 
                          </asp:DropDownList>
                         </nav>

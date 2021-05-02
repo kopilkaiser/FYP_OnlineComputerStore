@@ -175,7 +175,7 @@ namespace ClassLibrary
             return Error;
         }
 
-        public bool Find(int ReviewId)
+        public bool Find(int SupportId)
         {
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
