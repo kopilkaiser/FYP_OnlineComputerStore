@@ -51,6 +51,7 @@ namespace BackEnd
             this.btnManageInventory = new System.Windows.Forms.Button();
             this.btnManageStaff = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnReplySupportManage = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -300,14 +301,27 @@ namespace BackEnd
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.btnManageStaff);
             this.panel3.Controls.Add(this.btnManageInventory);
+            this.panel3.Controls.Add(this.btnReplySupportManage);
             this.panel3.Controls.Add(this.btnManagePayment);
             this.panel3.Controls.Add(this.btnReviewManage);
             this.panel3.Controls.Add(this.btnManageOrder);
             this.panel3.Controls.Add(this.btnSupportManagement);
             this.panel3.Location = new System.Drawing.Point(87, 200);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(544, 218);
+            this.panel3.Size = new System.Drawing.Size(544, 287);
             this.panel3.TabIndex = 14;
+            // 
+            // btnReplySupportManage
+            // 
+            this.btnReplySupportManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReplySupportManage.Location = new System.Drawing.Point(210, 203);
+            this.btnReplySupportManage.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReplySupportManage.Name = "btnReplySupportManage";
+            this.btnReplySupportManage.Size = new System.Drawing.Size(122, 67);
+            this.btnReplySupportManage.TabIndex = 1;
+            this.btnReplySupportManage.Text = "Reply Support Management";
+            this.btnReplySupportManage.UseVisualStyleBackColor = true;
+            this.btnReplySupportManage.Click += new System.EventHandler(this.btnReplySupportManage_Click);
             // 
             // mdiMainMenuForm
             // 
@@ -363,5 +377,6 @@ namespace BackEnd
         private System.Windows.Forms.Button btnManageInventory;
         private System.Windows.Forms.Button btnManageStaff;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnReplySupportManage;
     }
 }

@@ -103,5 +103,13 @@ namespace BackEnd
             SPM.ShowDialog();
             this.Close();
         }
+
+        private void btnReplySupportManage_Click(object sender, EventArgs e)
+        {
+            ReplySupportManageForm RSM = new ReplySupportManageForm();
+            this.Hide();
+            RSM.ShowDialog();
+            this.Close();
+        }
     }
 }

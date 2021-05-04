@@ -145,5 +145,32 @@ namespace BackEnd
             //Clear all selections in the ListBox
             lstSupports.ClearSelected();
         }
+
+        private void btnReply_Click(object sender, EventArgs e)
+        {
+            //var to store the primary Key value of the record to be Edited
+            Int32 SupportId;
+            //if a record has been selected from the list
+            if (lstSupports.SelectedIndex != -1)
+            {
+                //get the Primary Key value of the record to DELETE
+                SupportId = Convert.ToInt32(lstSupports.SelectedValue);
+                //store the data in the session object
+
+                //redirect to the selected Form
+                ReplyToSupportForm RTS = new ReplyToSupportForm();
+                //store the data in the session object
+                RTS.SupportID = SupportId;
+                this.Hide();
+                RTS.ShowDialog();
+                this.Close();
+            }
+            //if no record has been selected
+            else
+            {
+                //Display an error
+                lblError.Text = "Please select a record to Reply from the List";
+            }
+        }
     }
 }

@@ -11,25 +11,25 @@ using ClassLibrary;
 
 namespace BackEnd
 {
-    public partial class SupportDeleteForm : Form
+    public partial class ReplySupportDeleteForm : Form
     {
-        private int mSupportId = 0;
+        private int mReplySupportId = 0;
 
-        public int SupportID
+        public int ReplySupportID
         {
             set
             {
-                mSupportId = value;
+                mReplySupportId = value;
             }
         }
-        public SupportDeleteForm()
+        public ReplySupportDeleteForm()
         {
             InitializeComponent();
         }
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            string message = "The Support has been deleted successfully.";
+            string message = "The Reply has been deleted successfully.";
             string caption = "Deletion Confirmation";
             DialogResult result;
             MessageBoxButtons button = MessageBoxButtons.OK;
@@ -39,11 +39,11 @@ namespace BackEnd
             if (result == DialogResult.OK)
             {
                 //delete the record
-                DeleteSupport();
+                DeleteReplySupport();
                 //All done so redirect back to the main page
-                SupportManageForm SM = new SupportManageForm();
+                ReplySupportManageForm RSM = new ReplySupportManageForm();
                 this.Hide();
-                SM.ShowDialog();
+                RSM.ShowDialog();
                 this.Close();
             }
         }
@@ -51,23 +51,22 @@ namespace BackEnd
         private void btnNo_Click(object sender, EventArgs e)
         {
             //All done so redirect back to the main page
-            SupportManageForm SM = new SupportManageForm();
+            ReplySupportManageForm RSM = new ReplySupportManageForm();
             this.Hide();
-            SM.ShowDialog();
+            RSM.ShowDialog();
             this.Close();
         }
 
-        void DeleteSupport()
+        void DeleteReplySupport()
         {
             //function to delete the selected record
 
-            //create an instance of the Support Collection
-            clsSupportCollection AllSupports = new clsSupportCollection();
+            //create an instance of the Reply Support collection
+            clsReplySupportCollection AllReplySupports = new clsReplySupportCollection();
             //find the record to delete
-            AllSupports.ThisSupport.Find(mSupportId);
+            AllReplySupports.ThisReplySupport.Find(mReplySupportId);
             //delete the record
-            AllSupports.Delete();
+            AllReplySupports.Delete();
         }
-
     }
 }
