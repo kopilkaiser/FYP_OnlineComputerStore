@@ -8,18 +8,15 @@ using ClassLibrary;
 
 namespace FrontEnd
 {
-    public partial class WebForm16 : System.Web.UI.Page
+    public partial class WebForm25 : System.Web.UI.Page
     {
         clsSecurity Sec;
         clsCart MyCart = new clsCart();
 
-        string reviewId;
+        string replySupportId;
         string email;
         string description;
-        string rating;
-        string productId;
-        string dateReviewed;
-        //dateReviewed
+        string dateReplied;
         protected void Page_Load(object sender, EventArgs e)
         {
             Sec = (clsSecurity)Session["Sec"];
@@ -32,25 +29,24 @@ namespace FrontEnd
 
             txtEmail.Text = Sec.UserEMail;
 
-            reviewId = Convert.ToString(Request.QueryString["reviewId"].Trim());
+            replySupportId = Convert.ToString(Request.QueryString["ReplySupportId"].Trim());
             email = Convert.ToString(Request.QueryString["Email"].Trim());
             description = Convert.ToString(Request.QueryString["Description"].Trim());
-            rating = Convert.ToString(Request.QueryString["Rating"].Trim());
-            productId = Convert.ToString(Request.QueryString["ProductId"].Trim());
-            dateReviewed = Convert.ToString(Request.QueryString["DateReviewed"].Trim());
+            dateReplied = Convert.ToString(Request.QueryString["DateReplied"].Trim());
 
-            lblReviewId.Text = reviewId;
-            txtEmail.Text = email;
+            lblReplySupportId.Text = replySupportId;
             txtDescription.Text = description.ToUpper();
-            txtRating.Text = Convert.ToString(rating);
-            txtProductId.Text = Convert.ToString(productId);
-            txtDateReviewed.Text = dateReviewed.ToUpper();
-
+            txtDateReplied.Text = dateReplied.ToUpper();
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            Response.Redirect("BrowseAllReviews.aspx");
+            Response.Redirect("SupportReplies.aspx");
+        }
+
+        protected void btnAddSupport_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Contact.aspx");
         }
     }
 }

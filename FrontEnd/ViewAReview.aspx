@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewAReview.aspx.cs" Inherits="FrontEnd.WebForm16" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-            <div id="header"><span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px">Review Details</span></div>    
+            <div id="header" class="text-center"><span style="font-family: Arial; font-size: 30pt; text-transform: uppercase; letter-spacing: 3px">Review Details</span><span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px"><br />
+                </span><span style="font-family: Arial; font-size: 22pt; letter-spacing: 3px" class="text-uppercase">Review Id:</span><span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px"> <strong>
+                <asp:Label ID="lblReviewId" runat="server" style="font-size: 20pt; color: #800000" Text="Label"></asp:Label>
+                </strong></span></div>    
    
     <br />
     <div>

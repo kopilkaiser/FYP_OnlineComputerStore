@@ -33,8 +33,9 @@
 
      <div>
          
-        <h2>Browse Reviews here. </h2>
-
+                <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px"><br />
+                    Browse All Reviews by Users here<br />
+                    </span><br /></div>
         <p style="font-size: 16px"> &nbsp;</p>
 
          <p style="font-size:16px; font-weight:600 ">&nbsp;</p>

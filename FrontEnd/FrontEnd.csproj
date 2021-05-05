@@ -162,6 +162,8 @@
     <Content Include="UpdateSellerShop.aspx" />
     <Content Include="DeleteSellerShop.aspx" />
     <Content Include="AddReviewForProduct.aspx" />
+    <Content Include="SupportReplies.aspx" />
+    <Content Include="ViewSupportReplies.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -240,6 +242,20 @@
     </Compile>
     <Compile Include="AddReviewForProduct.aspx.designer.cs">
       <DependentUpon>AddReviewForProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportReplies.aspx.cs">
+      <DependentUpon>SupportReplies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportReplies.aspx.designer.cs">
+      <DependentUpon>SupportReplies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSupportReplies.aspx.cs">
+      <DependentUpon>ViewSupportReplies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSupportReplies.aspx.designer.cs">
+      <DependentUpon>ViewSupportReplies.aspx</DependentUpon>
     </Compile>
     <Content Include="App_Code\MessageBox.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />

@@ -11,17 +11,17 @@ namespace FrontEnd
 {
 
 
-    public partial class WebForm16
+    public partial class WebForm25
     {
 
         /// <summary>
-        /// lblReviewId control.
+        /// lblReplySupportId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblReviewId;
+        protected global::System.Web.UI.WebControls.Label lblReplySupportId;
 
         /// <summary>
         /// txtEmail control.
@@ -42,31 +42,13 @@ namespace FrontEnd
         protected global::System.Web.UI.WebControls.TextBox txtDescription;
 
         /// <summary>
-        /// txtProductId control.
+        /// txtDateReplied control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductId;
-
-        /// <summary>
-        /// txtDateReviewed control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDateReviewed;
-
-        /// <summary>
-        /// txtRating control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRating;
+        protected global::System.Web.UI.WebControls.TextBox txtDateReplied;
 
         /// <summary>
         /// lblError control.
@@ -78,12 +60,21 @@ namespace FrontEnd
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// btnGoBackToReviews control.
+        /// btnGoBackToSupportReplies control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGoBackToReviews;
+        protected global::System.Web.UI.WebControls.Button btnGoBackToSupportReplies;
+
+        /// <summary>
+        /// btnAddSupport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddSupport;
     }
 }
