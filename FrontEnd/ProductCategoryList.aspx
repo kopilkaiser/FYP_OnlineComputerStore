@@ -31,11 +31,10 @@
 
      <div>
          
-        <h2>Browse Products here. </h2>
+        <h2 class="text-center" style="font-family: Corbel; font-weight: normal; font-size: 35px">Browse Store Products Here </h2>
 
         <p style="font-size: 16px"> You have&nbsp;Total <asp:Label ID="lblCartCount" runat="server" ForeColor="Red" ></asp:Label>&nbsp;items</p>
 
-         <p style="font-size:16px; font-weight:600 ">Please Sign In to <span style="font-style:italic; font-size:22px; font-weight:800; color:red;">"View the Cart"</span> option.</p>
           <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink> &nbsp;
             
         &nbsp;

@@ -59,14 +59,10 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" style="float: right">
+
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact Support</a></li>
-                        <li><a runat="server" href="~/SignInPage">Sign In</a></li>
-                        <li><a runat="server" href="~/SignUp">Sign Up</a></li>
-
-                        <li><br />
-                        </li>
                         
                     </ul>
                     
@@ -88,9 +84,6 @@
                          <asp:HyperLink ID="hypBrowseAllSellerProducts" runat="server" NavigateUrl="~/BrowseAllSellerProducts.aspx">Browse All Seller Products</asp:HyperLink>
                          <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink>
                          <asp:HyperLink ID="hypSignOut" runat="server" NavigateUrl="~/SignOut.aspx">Sign Out</asp:HyperLink>
-
-
-
 
 
                         <asp:TextBox ID="txtUserEmail" runat="server" ReadOnly="true" width="100%"></asp:TextBox>

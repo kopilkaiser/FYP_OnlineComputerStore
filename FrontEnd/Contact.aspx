@@ -4,7 +4,8 @@
       
     <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">Contact US</h2>
+  <h2 class="text-center">&nbsp;</h2>
+    <h2 class="text-center">Contact US</h2>
     <p class="text-center">
         <asp:Label ID="Label2" runat="server" style="font-size: large" Text="Please Sign In to able to Submit Questions" Visible="False"></asp:Label>
     </p>
