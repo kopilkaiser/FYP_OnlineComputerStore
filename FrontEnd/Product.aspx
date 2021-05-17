@@ -22,15 +22,6 @@
         lblCartCount.Text = MyCart.Products.Count.ToString();
         userEmail = "Laptop";
 
-        if(Sec.UserEMail.Length == 0 )
-        {
-           Label1.Visible = true;
-        }
-
-        else
-        {
-          Label1.Visible = false;
-        }
     }
 
     protected void Page_UnLoad(object sender, EventArgs e)

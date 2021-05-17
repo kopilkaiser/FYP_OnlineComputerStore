@@ -15,6 +15,17 @@
 			MyCart = (clsCart)Session["MyCart"];
 			//display the cart contents
 
+			if (MyCart.Products.Count == 0)
+                {
+                    Label1.Text = "Your Shopping Cart seems Empty! Please add some Products";
+                }
+
+                else
+                {
+                    Label1.Text = "Your Shopping Cart";
+                }
+			 
+
 		}
 
 		protected void Page_UnLoad(object sender, EventArgs e)
@@ -27,17 +38,27 @@
 
 
 	<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+		<br />
+        <p></p>
+        <p class="text-center">
+            <asp:Label ID="Label1" runat="server" style="font-size: 20px; font-family: Bahnschrift"></asp:Label>
+      <br />
+        <p class="text-center">
+            &nbsp;</p>
+        <p></p>
         <div class="auto-style8">
 
 			<%
-				decimal OrderTotal = 0;
-				Int32 Index = 0;
-				Int32 Count = MyCart.Products.Count;
+                decimal OrderTotal = 0;
+                Int32 Index = 0;
+                Int32 Count = MyCart.Products.Count;
 
+					  %>
 
-					  %><table border="1" class="auto-style2" style="font-size: larger; width: 100%; text-align:center;">
-						  <%
-					   %> <tr><% 
+	
+			
+			<table border="1" class="auto-style2" style="font-size: larger; width: 100%; text-align:center;">
+						   <tr><% 
 
 						%><td style="font-weight:bold" class="auto-style13"><%
 											 Response.Write("Product Id"); 
