@@ -17,6 +17,7 @@ namespace FrontEnd
         decimal Price;
         string ImagePath;
         string Description;
+        Boolean active;
         protected void Page_Load(object sender, EventArgs e)
         {
             Sec = (clsSecurity)Session["Sec"];
@@ -29,12 +30,24 @@ namespace FrontEnd
             Name = Convert.ToString(Request.QueryString["Name"].Trim());
             Price = Convert.ToDecimal(Request.QueryString["Price"].Trim());
             Description = Convert.ToString(Request.QueryString["Description"].Trim());
+            active = Convert.ToBoolean(Request.QueryString["Active"].Trim());
             //ImagePath = Convert.ToString(Request.QueryString["ImagePath"].Trim());
 
             txtName.Text = Convert.ToString(Name);         
             txtPrice.Text = Convert.ToString(Price);
             txtDescription.Text = Convert.ToString(Description);
 
+            if(active == true)
+            {
+
+                chkAge.Visible = true;
+                lblError.Text = "Please tick the box to give consent you are 18 or over";
+            }
+
+            else
+            {
+                chkAge.Visible = false;
+            }
         }
 
         protected void Page_UnLoad(object sender, EventArgs e)
@@ -57,10 +70,30 @@ namespace FrontEnd
             AnItem.Price = Convert.ToDecimal(txtPrice.Text);
             AnItem.TotalPrice = Convert.ToDecimal((AnItem.QTY) * (AnItem.Price));
 
-            //add the item to the cart's products collection
-            MyCart.Products.Add(AnItem);
-            //go back to shopping
-            Response.Redirect("Product.aspx");
+            if (active == true)
+            {
+                if(chkAge.Checked == true)
+                {
+                    //add the item to the cart's products collection
+                    MyCart.Products.Add(AnItem);
+                    //go back to shopping
+                    Response.Redirect("Product.aspx");
+                }
+
+                else
+                {
+                    lblError.Text = "Please tick the box to give consent you are 18 or over";
+                }
+            }
+
+            else
+            {
+                //add the item to the cart's products collection
+                MyCart.Products.Add(AnItem);
+                //go back to shopping
+                Response.Redirect("Product.aspx");
+            }
+        
         }
     }
 }

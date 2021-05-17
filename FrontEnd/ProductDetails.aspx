@@ -92,6 +92,37 @@
             <tr>
                 <td>&nbsp;</td>
                 <td class="modal-sm" style="width: 268px">&nbsp;</td>
+                <td class="text-right">
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="modal-sm" style="width: 268px">&nbsp;</td>
+                <td class="text-right">
+                    <asp:CheckBox ID="chkAge" runat="server" />
+                </td>
+                <td>&nbsp;&nbsp;<asp:Label ID="lblError" runat="server"></asp:Label>
+                           </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="modal-sm" style="width: 268px">&nbsp;</td>
+                <td class="text-left" colspan="2">
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="modal-sm" style="width: 268px">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>

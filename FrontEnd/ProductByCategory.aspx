@@ -1,35 +1,36 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="FrontEnd.Product" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductByCategory.aspx.cs" Inherits="FrontEnd.ProductListCategories" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <%@ Import Namespace="ClassLibrary"%> 
+     <%@ Import Namespace="ClassLibrary"%> 
 
     <script runat="server">
 
-       clsCart MyCart = new clsCart();
-       clsSecurity Sec;
-       string userEmail;
+        clsCart MyCart = new clsCart();
+        clsSecurity Sec;
+        string userEmail;
+        string category;
 
-     protected void Page_Load(object sender, EventArgs e)
-    {
-        Sec = (clsSecurity)Session["Sec"];
-        //upon loading the page you need to read in the cart from the session object
-        MyCart = (clsCart)Session["MyCart"];
-        //if the cart is null then we need to initialise it
-        if (MyCart == null)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            MyCart = new clsCart();
-        }
-        //then you can display how many items are in your cart
-        lblCartCount.Text = MyCart.Products.Count.ToString();
-        userEmail = "Laptop";
-    }
+            Sec = (clsSecurity)Session["Sec"];
+            //upon loading the page you need to read in the cart from the session object
+            MyCart = (clsCart)Session["MyCart"];
+            //if the cart is null then we need to initialise it
+            if (MyCart == null)
+            {
+                MyCart = new clsCart();
+            }
+            //then you can display how many items are in your cart
+            lblCartCount.Text = MyCart.Products.Count.ToString();
+            category = Convert.ToString(Request.QueryString["Category"].Trim());
 
-    protected void Page_UnLoad(object sender, EventArgs e)
-    {
-        //you must also save the cart every time the unload event takes place
-        Session["MyCart"]= MyCart;
-        Session["Sec"] = Sec;
-        userEmail = "Laptop";
-    }
+        }
+
+        protected void Page_UnLoad(object sender, EventArgs e)
+        {
+            //you must also save the cart every time the unload event takes place
+            Session["MyCart"]= MyCart;
+            Session["Sec"] = Sec;
+        }
 </script>
 
      <div>
@@ -39,17 +40,21 @@
         <p style="font-size: 16px"> You have&nbsp;Total <asp:Label ID="lblCartCount" runat="server" ForeColor="Red" ></asp:Label>&nbsp;items</p>
 
          <p style="font-size:16px; font-weight:600 ">Please Sign In to <span style="font-style:italic; font-size:22px; font-weight:800; color:red;">"View the Cart"</span> option.</p>
-          <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink> &nbsp;<br />
+          <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink> &nbsp;
+            
          <br />
-         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Browse Products By Category" />
-&nbsp;&nbsp;
+            
+         <br />
+         <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Back to Category List" />
+         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Browse All Products" />
+         &nbsp;
          <br />
          <br />
     </div>
     
     <div>   
         <%  clsInventoryCollection MyInventories = new clsInventoryCollection();          
-            MyInventories.ReportByCategory("");
+            MyInventories.ReportByCategory(category);
             Int32 Index = 0;
             Int32 RecordCount = MyInventories.Count;
         %>

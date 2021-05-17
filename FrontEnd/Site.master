@@ -18,8 +18,8 @@
     
     <style type="text/css">
         .auto-style1 {
-            width: 163px;
-            height: 124px;
+            width: 204px;
+            height: 156px;
         }
     </style>
 </head>
@@ -55,7 +55,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/"><span style="font-family:Arial, Helvetica, sans-serif; font-size:30px;">Tech Galaxy</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="navbar-brand" runat="server" href="~/"><span style="font-family:Arial, Helvetica, sans-serif; font-size:30px;">GalaxyTech</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" style="float: right">
@@ -73,17 +73,24 @@
                 </div>
             </div>
             
-            <nav style ="float: left ">
-            
+
+
+             <nav style ="text-align:center; justify-content:center; ">
+
                 <asp:HyperLink ID="hypViewReviews" runat="server" NavigateUrl="~/BrowseAllReviews.aspx">View Reviews</asp:HyperLink>
+                <asp:HyperLink ID="hypSignIn" runat="server" NavigateUrl="~/SignInPage.aspx">Sign In</asp:HyperLink>
+                <asp:HyperLink ID="hypSignUp" runat="server" NavigateUrl="~/SignUp.aspx">Sign Up</asp:HyperLink>
+                <asp:HyperLink ID="hypStoreProducts" runat="server" NavigateUrl="~/Product.aspx">All Store Products</asp:HyperLink>
 
             </nav>
                          <nav>   
-                          <asp:HyperLink ID="hypStoreProducts" runat="server" NavigateUrl="~/Product.aspx">Store Products</asp:HyperLink>
                          <asp:HyperLink ID="hypBrowseSellerShops" runat="server" NavigateUrl="~/BrowseSellerShops.aspx">Browse By Seller Shops</asp:HyperLink>
                          <asp:HyperLink ID="hypBrowseAllSellerProducts" runat="server" NavigateUrl="~/BrowseAllSellerProducts.aspx">Browse All Seller Products</asp:HyperLink>
                          <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink>
                          <asp:HyperLink ID="hypSignOut" runat="server" NavigateUrl="~/SignOut.aspx">Sign Out</asp:HyperLink>
+
+
+
 
 
                         <asp:TextBox ID="txtUserEmail" runat="server" ReadOnly="true" width="100%"></asp:TextBox>
@@ -100,7 +107,7 @@
         </div>
 
         <div id="body" style="text-align:center">
-            <img src="Images/TechGalaxy11.PNG" class="auto-style1"/>
+            <img src="Catalog/Images/GalaxyTechLogo.PNG" class="auto-style1"/>
 
         </div>
 
@@ -112,7 +119,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>Developer - KopilKaiser</p>
+                <p>&copy; <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>Developer - KopilKaiser @ De Montfort University</p>
             </footer>
         </div>
 

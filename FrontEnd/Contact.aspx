@@ -2,13 +2,17 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
       
-   <!-- Container (Contact Section) -->
+    <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">Contact US</h2>
+    <p class="text-center">
+        <asp:Label ID="Label2" runat="server" style="font-size: large" Text="Please Sign In to able to Submit Questions" Visible="False"></asp:Label>
+    </p>
     <br />
     <br />
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-6" style="text-align: left">
+        <br />
         <br />
       <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> Leicester, United Kingdom</p>
@@ -40,7 +44,7 @@
       </div>
 
           <div class="col-sm-12 form-group">
-              <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+              <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
         </div>
 
       </div>

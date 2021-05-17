@@ -126,8 +126,9 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Images\TechGalaxy.PNG" />
-    <Content Include="Images\TechGalaxy11.PNG" />
+    <Content Include="Catalog\Images\GalaxyTechLogo.PNG" />
+    <Content Include="ProductCategoryList.aspx" />
+    <Content Include="ProductByCategory.aspx" />
     <Content Include="SignInPage.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="EMailViewer.aspx" />
@@ -201,6 +202,20 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProductCategoryList.aspx.cs">
+      <DependentUpon>ProductCategoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCategoryList.aspx.designer.cs">
+      <DependentUpon>ProductCategoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductByCategory.aspx.cs">
+      <DependentUpon>ProductByCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductByCategory.aspx.designer.cs">
+      <DependentUpon>ProductByCategory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UpdateSellerProduct.aspx.cs">
       <DependentUpon>UpdateSellerProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

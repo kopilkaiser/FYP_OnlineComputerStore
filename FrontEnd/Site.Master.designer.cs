@@ -24,6 +24,24 @@ namespace FrontEnd
         protected global::System.Web.UI.WebControls.HyperLink hypViewReviews;
 
         /// <summary>
+        /// hypSignIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hypSignIn;
+
+        /// <summary>
+        /// hypSignUp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hypSignUp;
+
+        /// <summary>
         /// hypStoreProducts control.
         /// </summary>
         /// <remarks>

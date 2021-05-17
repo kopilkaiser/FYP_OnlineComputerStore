@@ -11,7 +11,7 @@ namespace FrontEnd
 {
 
 
-    public partial class Product
+    public partial class ProductCategories
     {
 
         /// <summary>

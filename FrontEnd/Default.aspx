@@ -4,7 +4,9 @@
 
     <br />
     <div>
-      <h2 style="text-align:center; font-family: 'Bahnschrift Light Condensed';">  <i>Please Sign In to use our Website Full Features  </i>  </h2>   
+      <h2 style="text-align:center; font-family: 'Bahnschrift Light Condensed';">  <em>
+          <asp:Label ID="Label1" runat="server" Text="Please Sign In to use our Website Full Features "></asp:Label>
+          </em>  </h2>   
 
     </div>
 

@@ -22,6 +22,17 @@ namespace FrontEnd
             if (MyCart == null)
             {
                 MyCart = new clsCart();
+
+            }
+
+            if (Sec.UserEMail.Length == 0)
+            {
+                Label2.Visible = true;
+            }
+
+            else
+            {
+                Label2.Visible = false;
             }
 
             txtEmail.Text = Sec.UserEMail;

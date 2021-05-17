@@ -162,6 +162,7 @@ namespace ClassLibrary
             PopulateArray(dBConnection);
         }
 
+
         void PopulateArray(clsDataConnection dBConnection)
         {
             //populates the array list based on the data table in the parameter DB
