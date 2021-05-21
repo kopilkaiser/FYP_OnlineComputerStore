@@ -84,6 +84,7 @@ namespace FrontEnd
                 AllSellerShopLines.ThisSellerShopLine.Price = Convert.ToDecimal(txtNewPrice.Text);
                 AllSellerShopLines.ThisSellerShopLine.Quantity = Convert.ToInt32(txtQuantity.Text);
                 AllSellerShopLines.ThisSellerShopLine.Description = txtDescription.Text;
+                AllSellerShopLines.ThisSellerShopLine.Active = Convert.ToBoolean(chkVerifyAge.Checked);
 
 
                 //UPDATE the record

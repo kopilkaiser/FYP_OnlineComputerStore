@@ -40,7 +40,7 @@ namespace FrontEnd
             email = Convert.ToString(Request.QueryString["Email"].Trim());
             dateOpened = Convert.ToString(Request.QueryString["DateOpened"].Trim());
 
-
+            txtShopId.Text = mShopId.ToString();
             txtEmail.Text = email.ToString();
             txtOldShopName.Text = shopName.ToString();
             txtOldSellerName.Text = shopName.ToString();

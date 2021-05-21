@@ -94,6 +94,20 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
+                <td style="width: 386px">&nbsp;</td>
+                <td>
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 386px">
+                    Age Verification (Tick box if &quot;Yes&quot;)</td>
+                <td>
+                    <asp:CheckBox ID="chkVerifyAge" runat="server" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
                 <td style="width: 386px">
                     &nbsp;</td>
                 <td>&nbsp;</td>
@@ -101,7 +115,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-            <asp:Label ID="lblError" runat="server"></asp:Label>
+            <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>

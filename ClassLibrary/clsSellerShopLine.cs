@@ -14,6 +14,7 @@ namespace ClassLibrary
         private decimal mPrice;
         private int mQuantity;
         private string mDescription;
+        private Boolean mActive;
 
         public int SellerShopLineId
         {
@@ -36,6 +37,18 @@ namespace ClassLibrary
             set
             {
                 mProductName = value;
+            }
+        }
+
+        public Boolean Active
+        {
+            get
+            {
+                return mActive;
+            }
+            set
+            {
+                mActive = value;
             }
         }
 
@@ -197,7 +210,7 @@ namespace ClassLibrary
                 mPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["Price"]);
                 mQuantity = Convert.ToInt32(DB.DataTable.Rows[0]["Quantity"]);
                 mDescription = Convert.ToString(DB.DataTable.Rows[0]["Description"]);
- 
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
                 //return that everything worked ok
                 return true;
             }

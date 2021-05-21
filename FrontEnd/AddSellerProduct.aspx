@@ -66,6 +66,15 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
+                <td style="width: 386px; height: 40px;">
+                    <br />
+                    Turn on Age Verification(Tick box if &quot;Yes&quot;)</td>
+                <td style="height: 40px">
+                    <asp:CheckBox ID="chkVerifyAge" runat="server" />
+                </td>
+                <td style="height: 40px"></td>
+            </tr>
+            <tr>
                 <td style="width: 386px">
                     &nbsp;</td>
                 <td>&nbsp;</td>

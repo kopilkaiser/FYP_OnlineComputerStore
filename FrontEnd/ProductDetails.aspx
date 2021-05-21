@@ -105,8 +105,8 @@
                 <td class="text-right">
                     <asp:CheckBox ID="chkAge" runat="server" />
                 </td>
-                <td>&nbsp;&nbsp;<asp:Label ID="lblError" runat="server"></asp:Label>
-                           </td>
+                <td>&nbsp;<asp:Label ID="Label5" runat="server" Text="Yes. I am 18 or over 18 years old"></asp:Label>
+                    &nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -116,6 +116,16 @@
                 <td class="modal-sm" style="width: 268px">&nbsp;</td>
                 <td class="text-left" colspan="2">
                     &nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="modal-sm" style="width: 268px">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
+                           </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>

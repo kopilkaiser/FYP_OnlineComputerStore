@@ -81,6 +81,8 @@ namespace ClassLibrary
                     //get the Description of the Inventory from the query results
                     NewSellerShopLine.Description = Convert.ToString(dBConnection.DataTable.Rows[Index]["Description"]);
                     //increment the index
+                    NewSellerShopLine.Active = Convert.ToBoolean(dBConnection.DataTable.Rows[Index]["Active"]);
+
                     Index++;
                     //add the address to the list
                     mSellerShopLineList.Add(NewSellerShopLine);
@@ -107,6 +109,7 @@ namespace ClassLibrary
             dBConnection.AddParameter("@Quantity", mThisSellerShopLine.Quantity);
             dBConnection.AddParameter("@ProductName", mThisSellerShopLine.ProductName);
             dBConnection.AddParameter("@Description", mThisSellerShopLine.Description);
+            dBConnection.AddParameter("@Active", mThisSellerShopLine.Active);
             //execute the query returning the primary key value
             return dBConnection.Execute("sproc_tblSellerShopLine_Insert");
         }
@@ -136,6 +139,7 @@ namespace ClassLibrary
             dBConnection.AddParameter("@Quantity", mThisSellerShopLine.Quantity);
             dBConnection.AddParameter("@ProductName", mThisSellerShopLine.ProductName);
             dBConnection.AddParameter("@Description", mThisSellerShopLine.Description);
+            dBConnection.AddParameter("@Active", mThisSellerShopLine.Active);
             //execute the stored procedure
             dBConnection.Execute("sproc_tblSellerShopLine_Update");
         }
@@ -177,7 +181,7 @@ namespace ClassLibrary
                 ASellerShopLine.Price = Convert.ToDecimal(dBConnection.DataTable.Rows[Index]["Price"]);
                 ASellerShopLine.Quantity = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["Quantity"]);
                 ASellerShopLine.Description = Convert.ToString(dBConnection.DataTable.Rows[Index]["Description"]);
-
+                ASellerShopLine.Active = Convert.ToBoolean(dBConnection.DataTable.Rows[Index]["Active"]);
                 //add the record to the private data member
                 mSellerShopLineList.Add(ASellerShopLine);
                 //point at the next record

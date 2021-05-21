@@ -3,36 +3,47 @@
 
 	<script runat="server">
 
-		clsCart MyCart = new clsCart();
+        clsCart MyCart = new clsCart();
 
-		protected void Page_Load(object sender, EventArgs e)
-		{
-		if (MyCart == null)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            MyCart = new clsCart();
+            if (MyCart == null)
+            {
+                MyCart = new clsCart();
+            }
+            //upon loading the page you need to read in the cart from the session object
+            MyCart = (clsCart)Session["MyCart"];
+            //display the cart contents
+
+            if (MyCart.Products.Count == 0)
+            {
+                Label1.Text = "Your Shopping Cart seems Empty! Please add some Products to proceed to Check Out";
+            }
+
+            else
+            {
+                Label1.Text = "Your Shopping Cart";
+            }
+
+            if(MyCart.Products.Count == 0)
+            {
+				hypCheckOut.Visible = false;
+				Label1.Visible = true;
+            }
+
+            else
+            {
+				hypCheckOut.Visible = true;
+				Label1.Visible = false;
+            }
+
         }
-			//upon loading the page you need to read in the cart from the session object
-			MyCart = (clsCart)Session["MyCart"];
-			//display the cart contents
 
-			if (MyCart.Products.Count == 0)
-                {
-                    Label1.Text = "Your Shopping Cart seems Empty! Please add some Products";
-                }
-
-                else
-                {
-                    Label1.Text = "Your Shopping Cart";
-                }
-			 
-
-		}
-
-		protected void Page_UnLoad(object sender, EventArgs e)
-		{
-			//you must also save the cart every time the unload event takes place
-			Session["MyCart"] = MyCart;
-		}
+        protected void Page_UnLoad(object sender, EventArgs e)
+        {
+            //you must also save the cart every time the unload event takes place
+            Session["MyCart"] = MyCart;
+        }
 	</script>
 
 

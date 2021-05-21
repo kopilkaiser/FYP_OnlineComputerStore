@@ -195,9 +195,9 @@ namespace BackEnd
             this.chkActive.Location = new System.Drawing.Point(408, 337);
             this.chkActive.Margin = new System.Windows.Forms.Padding(4);
             this.chkActive.Name = "chkActive";
-            this.chkActive.Size = new System.Drawing.Size(80, 28);
+            this.chkActive.Size = new System.Drawing.Size(212, 28);
             this.chkActive.TabIndex = 5;
-            this.chkActive.Text = "Active";
+            this.chkActive.Text = "Allow Age Verification";
             this.chkActive.UseVisualStyleBackColor = true;
             // 
             // txtName

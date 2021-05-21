@@ -31,7 +31,6 @@ namespace FrontEnd
             Price = Convert.ToDecimal(Request.QueryString["Price"].Trim());
             Description = Convert.ToString(Request.QueryString["Description"].Trim());
             active = Convert.ToBoolean(Request.QueryString["Active"].Trim());
-            //ImagePath = Convert.ToString(Request.QueryString["ImagePath"].Trim());
 
             txtName.Text = Convert.ToString(Name);         
             txtPrice.Text = Convert.ToString(Price);
@@ -41,12 +40,13 @@ namespace FrontEnd
             {
 
                 chkAge.Visible = true;
-                lblError.Text = "Please tick the box to give consent you are 18 or over";
+                Label5.Visible = true;
             }
 
             else
             {
                 chkAge.Visible = false;
+                Label5.Visible = false;
             }
         }
 
@@ -82,7 +82,7 @@ namespace FrontEnd
 
                 else
                 {
-                    lblError.Text = "Please tick the box to give consent you are 18 or over";
+                    lblError.Text = "Please tick the box to give Consent you are 18 or over!";
                 }
             }
 

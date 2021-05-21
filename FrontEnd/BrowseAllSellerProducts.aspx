@@ -74,8 +74,9 @@
                           <td class="auto-style9">
                            <a href="ProductDetails.aspx?InventoryId=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].SellerShopLineId);%>
                             &Price=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Price);%>
-                            &Name=<% Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%>
-                            &Description=<% Response.Write(AllSellerShopLines.SellerShopLineList[Index].Description);%>">
+                            &Name=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].ProductName);%>
+                            &Description=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Description);%>
+                            &Active=<%Response.Write(AllSellerShopLines.SellerShopLineList[Index].Active);%>">
                             <%Response.Write("Select Quantity");%>
                            </a>
                           </td>

@@ -44,15 +44,18 @@ namespace FrontEnd
             //if the data is OK then add it to the object
             if (Error == "")
             {
-                //get the data entered by the user
-                AllSellerProducts.ThisSellerShopLine.Email = Convert.ToString(txtEmail.Text);
-                AllSellerProducts.ThisSellerShopLine.ProductName = Convert.ToString(DDListProductName.SelectedValue);
-                AllSellerProducts.ThisSellerShopLine.Price = Convert.ToDecimal(txtPrice.Text);
-                AllSellerProducts.ThisSellerShopLine.Quantity = Convert.ToInt32(txtQuantity.Text);
-                AllSellerProducts.ThisSellerShopLine.Description = txtDescription.Text;
 
-                //add the record
-                AllSellerProducts.Add();
+                    //get the data entered by the user
+                    AllSellerProducts.ThisSellerShopLine.Email = Convert.ToString(txtEmail.Text);
+                    AllSellerProducts.ThisSellerShopLine.ProductName = Convert.ToString(DDListProductName.SelectedValue);
+                    AllSellerProducts.ThisSellerShopLine.Price = Convert.ToDecimal(txtPrice.Text);
+                    AllSellerProducts.ThisSellerShopLine.Quantity = Convert.ToInt32(txtQuantity.Text);
+                    AllSellerProducts.ThisSellerShopLine.Description = txtDescription.Text;
+                    AllSellerProducts.ThisSellerShopLine.Active = Convert.ToBoolean(chkVerifyAge.Checked);
+
+                    //add the record
+                    AllSellerProducts.Add();
+
 
             }
             else
