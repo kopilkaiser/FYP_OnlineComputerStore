@@ -40,11 +40,18 @@
             Int32 Index = 0;
             Int32 RecordCount = AllSellerShopLines.Count;
             lblRecordCount.Text = RecordCount.ToString();
+            lblCartCount.Text = MyCart.Products.Count.ToString();
+
        %>
                 
                 <div ID="PageTitle" class="text-center">  <span style="font-family: Arial; font-size: xx-large; text-transform: uppercase; letter-spacing: 3px"><br />
                     ALL Seller Products in Market<br />
                     </span><br /></div>
+
+             <p style="font-size: 16px"> You have&nbsp;Total <asp:Label ID="lblCartCount" runat="server" ForeColor="Red" ></asp:Label>&nbsp;items</p>
+
+          <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink> &nbsp;<em><strong>&nbsp;</strong></em><br />
+         <br />
                 
                  <asp:Label ID="Label2" runat="server" Text="Label">Total Products:</asp:Label>
 

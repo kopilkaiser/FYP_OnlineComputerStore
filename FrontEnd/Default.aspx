@@ -18,7 +18,10 @@
         <h1 style="font-style: oblique; color:aliceblue">Exclusive <br />Tech-Products</h1>
         <p style="color:black; font-style:oblique; font-weight: 600; background-color: beige; width: 30%" class="lead">Our products are brand new,<br /> with good service warranty,<br /> the quality is well-built</p>
 
-        <p><a href="Product.aspx" class="btn btn-primary btn-lg">Browse All Products &raquo;</a></p>
+        <p><a href="Product.aspx" class="btn btn-primary btn-lg" id="btnAllProducts" runat="server">Browse All Products &raquo;</a></p>
+         <p><a href="BrowseSellerShops.aspx" class="btn btn-primary btn-lg" id="btnSellerShops" runat="server">Browse Seller Shops &raquo;</a></p>
+         <p><a href="BrowseAllSellerProducts.aspx" class="btn btn-primary btn-lg" id="btnAllSellerProducts" runat="server">Browse All Seller Products &raquo;</a></p>
+
     </div>
 
 

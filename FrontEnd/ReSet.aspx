@@ -8,7 +8,7 @@
         &nbsp;<asp:TextBox ID="txtEMail" runat="server" Width="283px"></asp:TextBox>
         <br />
         <br />
-        <asp:Label ID="lblError" runat="server"></asp:Label>
+        <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
         <br />
         &nbsp;</div>
     &nbsp;&nbsp;<asp:Button ID="btnReSet" runat="server" OnClick="btnReSet_Click" Text="Re-Set Password" />

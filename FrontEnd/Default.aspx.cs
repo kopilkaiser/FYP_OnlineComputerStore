@@ -35,11 +35,17 @@ namespace FrontEnd
             if (Sec.UserEMail.Length == 0)
             {
                 Label1.Visible = true;
+                btnAllProducts.Visible = false;
+                btnSellerShops.Visible = false;
+                btnAllSellerProducts.Visible = false;
             }
 
             else
             {
                 Label1.Visible = false;
+                btnAllProducts.Visible = true;
+                btnSellerShops.Visible = true;
+                btnAllSellerProducts.Visible = true;
             }
         }
 

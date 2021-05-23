@@ -135,10 +135,20 @@
 		   </div>
 			<br />
 			<br />
-			<p></p>
+			
 				<div style="text-align:center; font-size: larger; font-weight:600;">
-				<asp:HyperLink ID="hypBrowseProducts" runat="server" NavigateUrl="~/Product.aspx" CssClass="auto-style12" BorderStyle="solid" >Continue Shopping</asp:HyperLink>
-				&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+				<!--<asp:HyperLink ID="hypBrowseProducts" runat="server" NavigateUrl="~/Product.aspx" CssClass="auto-style12" BorderStyle="solid" >Continue Shopping (Store Products)</asp:HyperLink> -->
+				<!--	<p><asp:HyperLink ID="hypBrowseAllSellerProducts" runat="server" NavigateUrl="~/BrowseAllSellerProducts.aspx" CssClass="auto-style12" BorderStyle="solid" >Continue Shopping ( All Seller Products)</asp:HyperLink></p> -->
+					             &nbsp<asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropdown" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" AutoPostBack="true" >
+                        <asp:ListItem style="visibility:hidden">Continue Shopping </asp:ListItem>
+                        
+                        <asp:ListItem style="font-size:medium" Value="~/Product.aspx">Store Products</asp:ListItem>
+                        <asp:ListItem style="font-size:medium" Value="~/BrowseAllSellerProducts.aspx">All Seller Products</asp:ListItem>
+                        <asp:ListItem style="font-size:medium" Value="~/BrowseSellerShops.aspx">Seller Shops</asp:ListItem>
+
+
+                         </asp:DropDownList>
+				&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
 				<asp:HyperLink ID="hypCheckOut" runat="server" NavigateUrl="~/Payment.aspx" CssClass="auto-style12" BorderStyle="solid">CheckOut</asp:HyperLink>
 		        </div>
 

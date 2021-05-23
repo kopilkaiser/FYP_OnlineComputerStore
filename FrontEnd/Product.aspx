@@ -39,12 +39,12 @@
 
         <p style="font-size: 16px"> You have&nbsp;Total <asp:Label ID="lblCartCount" runat="server" ForeColor="Red" ></asp:Label>&nbsp;items</p>
 
-          <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink> &nbsp;<br />
+          <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink> &nbsp;<em><strong>&nbsp;</strong></em><br />
          <br />
-         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Browse Products By Category" />
-&nbsp;&nbsp;
+         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Browse Products By Category" /> &nbsp;&nbsp;
          <br />
          <br />
+
     </div>
     
     <div>   

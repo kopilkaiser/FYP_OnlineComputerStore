@@ -32,6 +32,7 @@
         lblSellerName.Text = Convert.ToString(sellerName);
         lblShopName.Text = Convert.ToString(shopName);
         lblRating.Text = Convert.ToString(rating);
+                lblCartCount.Text = MyCart.Products.Count.ToString();
 
     }
 
@@ -64,6 +65,11 @@
                     Rating: <asp:Label ID="lblRating" runat="server" Text=""></asp:Label> 
                     </span>
                     <br /><br /></div>
+
+             <p style="font-size: 16px"> You have&nbsp;Total <asp:Label ID="lblCartCount" runat="server" ForeColor="Red" ></asp:Label>&nbsp;items</p>
+
+          <asp:HyperLink ID="hypViewCart" runat="server" NavigateUrl="~/ViewCart.aspx">View My Cart</asp:HyperLink> &nbsp;<em><strong>&nbsp;</strong></em><br />
+         <br />
                 
                  <asp:Label ID="Label2" runat="server" Text="Label">Total Products:</asp:Label>
 

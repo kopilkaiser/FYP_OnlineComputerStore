@@ -30,8 +30,12 @@ namespace FrontEnd
                 //update the session
                 Session["Sec"] = Sec;
             }
+
+
+    
             //set the state of the link based on the current state of authentication
             SetLinks(Sec.Authenticated);
+
 
         }
 

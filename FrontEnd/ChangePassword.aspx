@@ -31,7 +31,7 @@
             </tr>
         </table>
         <br />
-        <asp:Label ID="lblError" runat="server"></asp:Label>
+        <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
         <br />
         <br />
     </div>

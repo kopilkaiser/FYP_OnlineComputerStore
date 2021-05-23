@@ -27,6 +27,11 @@ namespace FrontEnd
             Session["MyCart"] = MyCart;
         }
 
+        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Response.Redirect(DropDownList2.SelectedValue);
+        }
+
         void DisplayCart()
         {
             decimal OrderTotal = 0;

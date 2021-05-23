@@ -83,7 +83,7 @@
             <td class="text-right" style="font-family: Arial; font-weight: bold; font-size: medium; width: 513px">Tell us About Yourself</td>
             <td>
                 &nbsp;
-            <asp:TextBox ID="txtBio" runat="server" Height="58px" TextMode="MultiLine" Width="227px"></asp:TextBox>
+            <asp:TextBox ID="txtBio" runat="server" Height="75px" TextMode="MultiLine" Width="233px" style="resize:none"></asp:TextBox>
                 </td>
             <td>&nbsp;</td>
         </tr>
@@ -103,7 +103,7 @@
         </tr>
         <tr>
             <td class="text-left" style="font-family: Arial; font-weight: bold; font-size: medium; " colspan="2">
-                <asp:Label ID="lblError" runat="server"></asp:Label>
+                <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
             </td>
             <td>&nbsp;</td>
         </tr>
