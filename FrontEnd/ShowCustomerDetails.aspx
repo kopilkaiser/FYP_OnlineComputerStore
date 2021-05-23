@@ -23,7 +23,7 @@
         <tr>
             <td class="text-left" style="width: 206px">Your Profile Id</td>
             <td class="text-left">
-                <asp:TextBox ID="txtCustomerId" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtCustomerId" runat="server" ReadOnly="True"></asp:TextBox>
             </td>
         </tr>
         <tr>

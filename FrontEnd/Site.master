@@ -101,7 +101,7 @@
 
         <div id="body" style="text-align:center">
             <br />
-            <img src="Catalog/Images/GalaxyTechLogo.PNG" class="auto-style1"/>
+           <a href="Default.aspx"> <img src="Catalog/Images/GalaxyTechLogo.PNG" class="auto-style1"/> </a>
             <br />
 
         </div>

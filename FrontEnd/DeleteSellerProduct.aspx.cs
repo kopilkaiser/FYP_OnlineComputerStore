@@ -34,8 +34,8 @@ namespace FrontEnd
            SellerShopLineID = Convert.ToInt32(Request.QueryString["SellerShopLineId"].Trim());
            productName = Convert.ToString(Request.QueryString["ProductName"].Trim());
 
-          lblProductName.Text = Convert.ToString(productName);
-
+            lblProductName.Text = Convert.ToString(productName);
+            lblProductId.Text = Convert.ToString(mSellerShopLineId);
         }
 
         protected void Page_UnLoad(object sender, EventArgs e)

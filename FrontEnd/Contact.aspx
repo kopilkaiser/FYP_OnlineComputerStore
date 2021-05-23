@@ -1,7 +1,11 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="FrontEnd.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-      
+      <style>
+          .body {
+              scroll-behavior: smooth;
+          }
+      </style>
     <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">&nbsp;</h2>
@@ -64,7 +68,7 @@
 <img src="/Catalog/Images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
 <footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
+  <a href="Contact.aspx" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
 </footer>

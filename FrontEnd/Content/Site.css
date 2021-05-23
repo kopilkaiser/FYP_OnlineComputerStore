@@ -1,10 +1,14 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     padding-top: 80px;
     padding-bottom: 20px;
     background-color: white;
     margin: 0px;
-    
+    scroll-behavior: smooth;
 }
 
 /* Wrapping element */

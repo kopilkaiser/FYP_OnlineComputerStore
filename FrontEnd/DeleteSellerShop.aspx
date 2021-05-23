@@ -56,7 +56,9 @@
                 <asp:Button ID="btnBackToShop" runat="server" OnClick="btnBackToShop_Click" Text="Back to Manage Shop" />
             </td>
             <td>
-                <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete the Shop" />
+                <strong>
+                <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete the Shop" BackColor="#990000" Font-Size="18px" ForeColor="White" />
+                </strong>
             </td>
         </tr>
         <tr>
